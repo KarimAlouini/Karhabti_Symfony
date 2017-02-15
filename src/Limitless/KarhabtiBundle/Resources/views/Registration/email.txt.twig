@@ -1,0 +1,19 @@
+{% block subject %}
+{% autoescape false %}
+[Karhabti] Please verify your email address.
+{% endautoescape %}
+{% endblock %}
+{% block body_text %}
+Hi {{user.username}}!
+
+Help us secure your GitHub account by verifying your email address. This lets you access all of Karhabti features.
+
+
+{% autoescape false %}
+Click the following link to activate your account :
+{{confirmationUrl}}
+
+{% endautoescape %}
+
+You’re receiving this email because you recently created a new Karhabti account or added a new email address. If this wasn’t you, please ignore this email.
+{% endblock %}

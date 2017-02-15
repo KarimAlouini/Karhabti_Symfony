@@ -1,0 +1,12 @@
+limitless_karhabti_reponsable_tache:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/tache.yml"
+    prefix:   /responsable/tache
+limitless_karhabti_responsable_vehicule:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/vehicule.yml"
+    prefix:   /responsable/vehicule
+limitless_karhabti_homepage:
+    path:     /
+    defaults: { _controller: LimitlessKarhabtiBundle:Default:index }
+test:
+    path:     /test
+    defaults: { _controller: LimitlessKarhabtiBundle:Default:test }

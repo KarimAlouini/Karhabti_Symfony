@@ -1,0 +1,24 @@
+reponsable_tache_index:
+    path:     /
+    defaults: { _controller: "LimitlessKarhabtiBundle:Tache:index" }
+    methods:  GET
+
+reponsable_tache_show:
+    path:     /{id}/show
+    defaults: { _controller: "LimitlessKarhabtiBundle:Tache:show" }
+    methods:  GET
+
+reponsable_tache_new:
+    path:     /new
+    defaults: { _controller: "LimitlessKarhabtiBundle:Tache:new" }
+    methods:  [GET, POST]
+
+reponsable_tache_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LimitlessKarhabtiBundle:Tache:edit" }
+    methods:  [GET, POST]
+
+reponsable_tache_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LimitlessKarhabtiBundle:Tache:delete" }
+    methods:  DELETE

@@ -1,0 +1,27 @@
+responsable_vehicule_index:
+    path:     /
+    defaults: { _controller: "LimitlessKarhabtiBundle:Vehicule:index" }
+    methods:  GET
+
+responsable_vehicule_show:
+    path:     /{id}/show
+    defaults: { _controller: "LimitlessKarhabtiBundle:Vehicule:show" }
+    methods:  GET
+
+responsable_vehicule_new:
+    path:     /new
+    defaults: { _controller: "LimitlessKarhabtiBundle:Vehicule:new" }
+    methods:  [GET, POST]
+
+responsable_vehicule_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LimitlessKarhabtiBundle:Vehicule:edit" }
+    methods:  [GET, POST]
+
+responsable_vehicule_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LimitlessKarhabtiBundle:Vehicule:delete" }
+    methods:  DELETE
+responsable_vehicule_deleteid:
+    path:     /{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Vehicule:deleteid" }
