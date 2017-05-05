@@ -38,10 +38,14 @@ return $role->getRole();
 
 }, $roles);
 // S'il s'agit d'un admin ou d'un super admin on le redirige vers le backoffice
-if (in_array('ROLE_ADMIN', $rolesTab, true))
+if (in_array('ROLE_AGENCE', $rolesTab, true))
 $redirection = new RedirectResponse($this->router->generate('limitless_karhabti_homepage'));
 // sinon, s'il s'agit d'un commercial on le redirige vers le CRM
 elseif (in_array('ROLE_MONITEUR', $rolesTab, true))
+$redirection = new RedirectResponse($this->router->generate('test'));
+elseif (in_array('ROLE_CLIENT', $rolesTab, true))
+$redirection = new RedirectResponse($this->router->generate('limitless_karhabti_Client_homepage'));
+elseif (in_array('ROLE_SUPER_ADMIN', $rolesTab, true))
 $redirection = new RedirectResponse($this->router->generate('test'));
 else
 $redirection = new RedirectResponse($this->router->generate('admin'));

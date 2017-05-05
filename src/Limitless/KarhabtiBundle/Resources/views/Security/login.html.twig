@@ -2,7 +2,7 @@
 <html >
 <head>
     <meta charset="UTF-8">
-    <title>Sign-Up/Login Form</title>
+    <title>Inscription / Connexion</title>
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -16,13 +16,13 @@
 <div class="form">
 
     <ul class="tab-group">
-        <li class="tab "><a href="{{ path('fos_user_registration_register') }}">Sign Up</a></li>
-        <li class="tab active"><a href="{{ path('fos_user_security_login') }}">Log In</a></li>
+        <li class="tab "><a href="{{ path('fos_user_registration_register') }}">Inscription</a></li>
+        <li class="tab active"><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>
     </ul>
 
     <div class="tab-content">
         <div id="signup">
-            <h1>Welcome Back!</h1>
+            <h1>Bienvenue de nouveau!</h1>
             {% trans_default_domain 'FOSUserBundle' %}
 
             {% if error %}
@@ -35,21 +35,21 @@
                 {% endif %}
                 <div class="field-wrap">
                     <label>
-                        Email Address<span class="req">*</span>
+                        Adresse E-mail<span class="req">*</span>
                     </label>
                     <input type="email"required autocomplete="off" id="username" name="_username" required="required"/>
                 </div>
 
                 <div class="field-wrap">
                     <label>
-                        Password<span class="req">*</span>
+                        Mot de Passe<span class="req">*</span>
                     </label>
                     <input type="password"required autocomplete="off" id="password" name="_password"/>
                 </div>
 
-                <p class="forgot"><a href="#">Forgot Password?</a></p>
+                <p class="forgot"><a href="#">Mot de passe oublié?</a></p>
 
-                <button class="button button-block"/>Log In</button>
+                <button class="button button-block"/>S'Identifier</button>
 
             </form>
 

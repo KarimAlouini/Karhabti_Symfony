@@ -1,0 +1,19 @@
+responsable_cours_List:
+    path:     /List
+    defaults: { _controller: "LimitlessKarhabtiBundle:Cours:List" }
+
+responsable_cours_Ajouter:
+     path:     /Ajouter
+     defaults: { _controller: "LimitlessKarhabtiBundle:Cours:Ajouter" }
+
+responsable_cours_Update:
+    path:     /Update/{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Cours:Update" }
+
+responsable_cours_delete:
+    path:     /Delete/{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Cours:Delete" }
+
+responsable_cours_Recherche:
+    path:     /Rechercher
+    defaults: { _controller: "LimitlessKarhabtiBundle:Cours:Recherche" }

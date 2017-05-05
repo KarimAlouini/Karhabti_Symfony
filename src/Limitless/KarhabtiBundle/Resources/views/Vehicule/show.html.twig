@@ -21,20 +21,20 @@
                                     <li><a href="#">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
                                         </ul>
                                     </li>
-                                    <li ><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                    <li class="active"><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
                                     <li><a href="#">Moniteur</a></li>
-                                    <li class="active"><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                    <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Cour</a></li>
-                                            <li><a href="#">Examen</a></li>
+                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">contact</a></li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -49,11 +49,8 @@
         <div class="container">
             <div class="row">
                 <div class="page-banner text-center col-xs-12">
-                    <h1>Header One</h1>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><span>header one</span></li>
-                    </ul>
+                    <h1>Responsable Auto école</h1>
+
                 </div>
             </div>
         </div>
@@ -108,7 +105,7 @@
                             <p>Sa date d'expiration de l'assurance :</p>
                             <blockquote>
                                 <ul>
-                                    <li>{% if vehicule.dateExpirationAssurance %}{{ vehicule.dateExpirationAssurance|date('Y-m-d') }}{% endif %}</li>
+                                    <li>{% if vehicule.dateExpirationVignette %}{{ vehicule.dateExpirationVignette|date('Y-m-d') }}{% endif %}</li>
                                 </ul>
                             </blockquote>
                             <p>Sa date d'expiration de la visite technique :</p>
@@ -123,13 +120,13 @@
                 </div>
                 <div class="sidebar col-md-4 col-xs-12">
 
-                    <div class="blog-image">
+                    <div class="blog-image" >
                         <ul>
                             <li style="text-align: left">
-                                <button><a  class="btn color "  href="{{ path('responsable_vehicule_index') }}">Liste</a></button>
+                                <button><a  class="btn color "  href="{{ path('responsable_vehicule_index') }}">Retour à la Liste</a></button>
                             </li>
                         </ul>
-                        <img style="padding-top: 9%;" src="{{ asset('bundles/limitlesskarhabti/Image/Vehicule/c,k/c,k.jpg') }}" alt="" />
+                        <img   src="{{ asset('bundles/limitlesskarhabti/Image/Vehicule/'~vehicule.matricule~'/'~vehicule.matricule~'.jpg') }}" alt="" />
                     </div>
 
                 </div>

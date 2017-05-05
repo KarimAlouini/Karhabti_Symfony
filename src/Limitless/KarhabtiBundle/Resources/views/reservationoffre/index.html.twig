@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% set somme=0 %}
+    <h1>Reservationoffres list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Heurecodes</th>
+                <th>Heureconduites</th>
+                <th>Prixtotale</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for Offres in Offres %}
+        {% for reservationOffre in reservationOffres %}
+            <tr>
+                {% set somme=(reservationOffre.getHeureConduiteS()*Offres.getPrixUconduite())+(reservationOffre.getHeureCodeS()*Offres.getPrixUcode)%}
+                <td><a href="{{ path('reservationoffre_show', { 'id': reservationOffre.id }) }}">{{ reservationOffre.id }}</a></td>
+                <td>{{ reservationOffre.heureCodeS }}</td>
+                <td>{{ reservationOffre.heureConduiteS }}</td>
+                <td>{{ somme }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('reservationoffre_show', { 'id': reservationOffre.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('reservationoffre_edit', { 'id': reservationOffre.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

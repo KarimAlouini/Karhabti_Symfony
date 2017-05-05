@@ -1,0 +1,58 @@
+{% extends 'LimitlessKarhabtiBundle:agence:index.html.twig' %}
+{% block title_page %}{{ agence.nom }}{% endblock %}
+{% block text_page %} <a class="btn color" href="{{ path('agence_index') }}">Liste des agences</a>{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="blog-wrapper float-right col-md-8 col-xs-12">
+        <div class="single-blog">
+
+
+            <div class="blog-meta fix">
+           <p class="float-left"><a href="{{ path('agence_avis', {'id': agence.id}) }}"><i class="icofont icofont-speech-comments"></i>Voter </a> </p>
+
+                <p class="float-right">
+
+                    <a href="#"><i class="icofont icofont-speech-comments"></i> 42 comments</a>
+                </p>
+            </div>
+
+        </div>
+        <!-- Comments -->
+
+        <!-- Comment Form -->
+
+    </div>
+    <div class="sidebar col-md-4 col-xs-12">
+        <div class="single-sidebar">
+            <h5 class="sidebar-title">{{ agence.nom }}</h5>
+            <div class="about-sidebar">
+                <p>Ouverte de  {{  agence.Ouverture }} a {{ agence.Fermeture }}.</p>
+            </div>
+        </div>
+        <div class="single-sidebar">
+            <h5 class="sidebar-title">Infos :</h5>
+            <div class="category-sidebar">
+                <ul>
+                    <li>Ville: {{ agence.ville }}</li>
+                    <li>Adresse: {{ agence.adresse }}</li>
+                    <li>code postale: {{ agence.codePostal }}</li>
+                    <li>Num telephone: {{ agence.telephone }}</li>
+                    <li>Num fiscal: {{ agence.numFiscal }}</li>
+                  {% if is_granted('ROLE_ADMIN') %}
+                    <li><button style="margin-bottom: 20px;margin-left: 20px;width: 46%;"><a class="btn color" href="{{ path('agence_edit', { 'id': agence.id }) }}">Modifier</a></button></li>
+                    <li> {{ form_start(delete_form) }}
+                 <button style="margin-bottom: 20px;margin-left: 20px;width: 46%;"><input class="btn color" type="submit" value="supprimer" /></button>
+            {{ form_end(delete_form) }}</li>
+            {% endif %}
+
+                </ul>
+            </div>
+        </div>
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -17,9 +17,13 @@ class Vehicule
     private $id;
 
     /**
-     * @ORM\Column(type="string",length=255, nullable=false)
+     * @ORM\Column(type="string",length=255, nullable=false, unique=true)
      */
     private $matricule;
+    /**
+     * @ORM\Column(type="boolean", nullable=false)
+     */
+    private $reserved=false;
 
     /**
      * @Assert\File(maxSize="6000k")
@@ -55,6 +59,29 @@ class Vehicule
      * @ORM\JoinColumn(name="typeV_id",referencedColumnName="id")
      */
     private $typeV;
+    /**
+     * @ORM\ManyToOne(targetEntity="Agence")
+     * @ORM\JoinColumn(name="agence_id",referencedColumnName="id")
+     */
+    private $agence;
+
+    /**
+     * @return mixed
+     */
+    public function getReserved()
+    {
+        return $this->reserved;
+    }
+
+    /**
+     * @param mixed $reserved
+     */
+    public function setReserved($reserved)
+    {
+        $this->reserved = $reserved;
+    }
+
+
 
     /**
      * @return mixed
@@ -185,6 +212,23 @@ class Vehicule
     {
         $this->modele = $modele;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAgence()
+    {
+        return $this->agence;
+    }
+
+    /**
+     * @param mixed $agence
+     */
+    public function setAgence($agence)
+    {
+        $this->agence = $agence;
+    }
+
 
     function __toString()
     {

@@ -1,12 +1,76 @@
 limitless_karhabti_reponsable_tache:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/tache.yml"
     prefix:   /responsable/tache
-limitless_karhabti_responsable_vehicule:
+limitless_karhabti_responsable_marque:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/vehicule.yml"
     prefix:   /responsable/vehicule
+limitless_karhabti_responsable_vehicule:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/modele.yml"
+    prefix:   /superadmin/modele
+limitless_karhabti_responsable_modele:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/marque.yml"
+    prefix:   /superadmin/marque
+
+
+limitless_karhabti_responsable_cours:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/cours.yml"
+    prefix:   /responsable/cours
+limitless_karhabti_responsable_question:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/question.yml"
+    prefix:   /responsable/question
+limitless_karhabti_responsable_examen:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/examen.yml"
+    prefix:   /responsable/examen
+
+limitless_karhabti_responsable_offre:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/offre.yml"
+    prefix:   /responsable/offre
+limitless_karhabti_responsable_pack:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/pack.yml"
+    prefix:   /responsable/pack
+
+
+limitless_karhabti_client:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/client.yml"
+    prefix:   /client/profil
+
+limitless_karhabti_reservationoffre:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/reservationoffre.yml"
+    prefix:   /client/reservationoffre
+
+limitless_karhabti_reservationpack:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/reservationpack.yml"
+    prefix:   /client/reservationpack
+
+limitless_karhabti_agence:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/agence.yml"
+    prefix:   /responsable/agences
+
+
 limitless_karhabti_homepage:
-    path:     /
+    path:     /responsable/
     defaults: { _controller: LimitlessKarhabtiBundle:Default:index }
+
+limitless_karhabti_Client_homepage:
+    path:     /client/
+    defaults: { _controller: LimitlessKarhabtiBundle:Default:indexClient }
 test:
     path:     /test
     defaults: { _controller: LimitlessKarhabtiBundle:Default:test }
+
+limitless_karhabti_mail:
+    path:     /responsable/mail
+    defaults: { _controller: LimitlessKarhabtiBundle:Contact:mail }
+limitless_karhabti_accuse_mail:
+    path:     /sucess
+    defaults: { _controller: LimitlessKarhabtiBundle:Contact:success }
+limitless_karhabti_pdf:
+    path:     /pdf
+    defaults: { _controller: LimitlessKarhabtiBundle:PDF:pdf }
+
+limitless_karhabti_allmarque:
+    path:     /allmarque
+    defaults: { _controller: LimitlessKarhabtiBundle:Marque:allmarque }
+limitless_karhabti_moddemar:
+    path:     /moddemar/{marque}
+    defaults: { _controller: LimitlessKarhabtiBundle:Modele:mardemodele }

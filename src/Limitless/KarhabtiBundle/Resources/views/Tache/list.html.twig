@@ -21,20 +21,20 @@
                                     <li><a href="#">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
                                         </ul>
                                     </li>
                                     <li ><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
                                     <li><a href="#">Moniteur</a></li>
-                                    <li class="active"><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                    <li class="active" ><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Cour</a></li>
-                                            <li><a href="#">Examen</a></li>
+                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">contact</a></li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -49,11 +49,8 @@
         <div class="container">
             <div class="row">
                 <div class="page-banner text-center col-xs-12">
-                    <h1>Header One</h1>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><span>header one</span></li>
-                    </ul>
+                    <h1>Responsable Auto école</h1>
+
                 </div>
             </div>
         </div>
@@ -194,9 +191,19 @@
                     </li>
                 </ul>
 
+                <form method="POST" style="padding-bottom: 2%;padding-top: 2%;padding-left: 13.7%">
+                    <h3>
+                    Rechercher : <input placeholder="Client ID" type="text" name="client">
+                    <input type="submit" value="recherche"></h3>
+                </form>
+
+
+
                 <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
                     <tr >
+                        <th>ID Client</th>
                         <th>Client</th>
+                        <th>Date</th>
                         <th>Heure_debut</th>
                         <th>Heure_fin</th>
                         <th>Moniteur</th>
@@ -206,24 +213,33 @@
 
                     {% for tache in taches %}
                         <tr class='even'>
-                            <td><a style="text-transform: uppercase;" href="{{ path('reponsable_tache_show', { 'id': tache.id }) }}">{{ tache.client }}</a></td>
-                            <td>{% if tache.heuredebut %}{{ tache.heuredebut|date('Y-m-d H:i:s') }}{% endif %}</td>
-                            <td>{% if tache.heurefin %}{{ tache.heurefin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td>{{ tache.client.id }}</td>
+                            <td>{{ tache.client }}</td>
+                            <td>{% if tache.heurefin %}{{ tache.date|date('Y-m-d') }}{% endif %}</td>
+                            <td>{% if tache.heuredebut %}{{ tache.heuredebut|date('H:i:s') }}{% endif %}</td>
+                            <td>{% if tache.heurefin %}{{ tache.heurefin|date('H:i:s') }}{% endif %}</td>
                             <td>{{ tache.moniteur }}</td>
                             <td>{{ tache.vehicule }}</td>
                             <td>
                                 <ul>
                                     <li>
-                                        <a href="{{ path('reponsable_tache_show', { 'id': tache.id }) }}">show</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ path('reponsable_tache_edit', { 'id': tache.id }) }}">edit</a>
+                                        <a href="{{ path('reponsable_tache_edit', { 'id': tache.id }) }}">Modifier</a>
                                     </li>
                                 </ul>
                             </td>
                         </tr>
                     {% endfor %}
+
+
                 </table>
+                
+                <ul >
+                    <li style="margin-top: 3% ;text-align:center;"><button  ><a  class="btn color " href="{{ path('limitless_karhabti_pdf') }}">Generer planning</a></button></li>
+                </ul>
+
+
+
+
 
             </div>
 

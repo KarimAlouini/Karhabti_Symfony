@@ -1,0 +1,28 @@
+agence_index:
+    path:     /
+    defaults: { _controller: "LimitlessKarhabtiBundle:Agence:index" }
+    methods:  GET
+
+agence_show:
+    path:     /{id}/profil
+    defaults: { _controller: "LimitlessKarhabtiBundle:Agence:show" }
+    methods:  [GET, POST]
+
+agence_new:
+    path:     /ajouter
+    defaults: { _controller: "LimitlessKarhabtiBundle:Agence:new" }
+    methods:  [GET, POST]
+
+agence_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LimitlessKarhabtiBundle:Agence:edit" }
+    methods:  [GET, POST]
+agence_avis:
+    path:     /{id}/avis
+    defaults: { _controller: "LimitlessKarhabtiBundle:Agence:avis" }
+    methods:  [GET, POST]
+
+agence_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LimitlessKarhabtiBundle:Agence:delete" }
+    methods:  DELETE

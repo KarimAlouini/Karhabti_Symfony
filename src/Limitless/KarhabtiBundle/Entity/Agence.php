@@ -8,6 +8,7 @@
 
 namespace Limitless\KarhabtiBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -68,27 +69,27 @@ class Agence
 
     private $num_fiscal;
     /**
-     *
-     *
-     * @ORM\Column(name="image", type="string", length=255, nullable=true)
-     */
-    private $image;
-    /**
-     * @ORM\Column(name="heure_ouverture", type="datetime")
+     * @ORM\Column(name="Ouverture", type="string")
      */
 
-    private $heure_ouverture;
+    private $Ouverture;
 
     /**
-     * @ORM\Column(name="heure_fermeture", type="datetime")
+     * @ORM\Column(name="Fermeture", type="string")
      */
 
-    private $heure_fermeture;
+    private $Fermeture;
+
     /**
-     * @ORM\OneToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumn(name="user_id",referencedColumnName="id")
      */
     private $user;
+
+    /**
+     * @Assert\File(maxSize="6000k")
+     */
+    public $file;
 
 
     /**
@@ -206,49 +207,33 @@ class Agence
     /**
      * @return mixed
      */
-    public function getImage()
+    public function getOuverture()
     {
-        return $this->image;
+        return $this->Ouverture;
     }
 
     /**
-     * @param mixed $image
+     * @param mixed $Ouverture
      */
-    public function setImage($image)
+    public function setOuverture($Ouverture)
     {
-        $this->image = $image;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getHeureOuverture()
-    {
-        return $this->heure_ouverture;
-    }
-
-    /**
-     * @param mixed $heure_ouverture
-     */
-    public function setHeureOuverture($heure_ouverture)
-    {
-        $this->heure_ouverture = $heure_ouverture;
+        $this->Ouverture = $Ouverture;
     }
 
     /**
      * @return mixed
      */
-    public function getHeureFermeture()
+    public function getFermeture()
     {
-        return $this->heure_fermeture;
+        return $this->Fermeture;
     }
 
     /**
-     * @param mixed $heure_fermeture
+     * @param mixed $Fermeture
      */
-    public function setHeureFermeture($heure_fermeture)
+    public function setFermeture($Fermeture)
     {
-        $this->heure_fermeture = $heure_fermeture;
+        $this->Fermeture = $Fermeture;
     }
 
     /**
@@ -266,6 +251,5 @@ class Agence
     {
         $this->user = $user;
     }
-
 
 }

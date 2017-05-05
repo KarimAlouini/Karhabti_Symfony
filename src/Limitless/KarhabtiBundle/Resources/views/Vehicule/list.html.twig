@@ -3,6 +3,23 @@
     {{ parent() }}
 {% endblock %}
 {% block body%}
+    {% set myVal = 0 %}
+    {% for vehicule in vehicule %}
+        {% set difference = date(vehicule.dateExpirationAssurance).diff(date('now'))   %}
+        {% set leftDays = difference.days %}
+
+        {% set difference1 = date(vehicule.dateExpirationVisite).diff(date('now'))   %}
+        {% set leftDays1 = difference1.days %}
+
+        {% set difference2 = date(vehicule.dateExpirationVignette).diff(date('now'))   %}
+        {% set leftDays2 = difference2.days %}
+
+        {% if (leftDays <= 5) or (leftDays1<= 5) or (leftDays2<= 5) %}
+            {% set myVal = myVal + 1 %}
+            {% endif %}
+
+
+            {% endfor %}
     <!-- Header 1
  ============================================ -->
     <div class="header-area header-absolute header-transparent">
@@ -21,20 +38,24 @@
                                     <li><a href="#">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
                                         </ul>
                                     </li>
-                                    <li class="active"><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                    {% if myVal >0 %}
+                                    <li class="active"><a href="{{ path('responsable_vehicule_index') }}">Vehicule  ({{ myVal }})</a></li>
+                                        {% else %}
+                                            <li class="active"><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                            {% endif %}
                                     <li><a href="#">Moniteur</a></li>
                                     <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Cour</a></li>
-                                            <li><a href="#">Examen</a></li>
+                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">contact</a></li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -49,11 +70,8 @@
         <div class="container">
             <div class="row">
                 <div class="page-banner text-center col-xs-12">
-                    <h1>Header One</h1>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><span>header one</span></li>
-                    </ul>
+                    <h1>Responsable Auto école</h1>
+
                 </div>
             </div>
         </div>
@@ -84,152 +102,109 @@
                         width: auto;
                         line-height: 30px;
                     }
-                    table a:link {
-                        color: #666;
-                        font-weight: bold;
-                        text-decoration:none;
-                    }
-                    table a:visited {
-                        color: #999999;
-                        font-weight:bold;
-                        text-decoration:none;
-                    }
-                    table a:active,
-                    table a:hover {
-                        color: #bd5a35;
-                        text-decoration:underline;
-                    }
-                    table {
-                        font-family:Arial, Helvetica, sans-serif;
-                        color:#666;
-                        font-size:12px;
-                        text-shadow: 1px 1px 0px #fff;
-                        background:#eaebec;
-                        margin-left: auto;
-                        margin-right: auto;
-                        margin-top: 20px;
-                        width: auto;
-                        border:#ccc 1px solid;
-
-                        -moz-border-radius:3px;
-                        -webkit-border-radius:3px;
-                        border-radius:3px;
-
-                        -moz-box-shadow: 0 1px 2px #d1d1d1;
-                        -webkit-box-shadow: 0 1px 2px #d1d1d1;
-                        box-shadow: 0 1px 2px #d1d1d1;
-                    }
-                    table th {
-                        padding:21px 25px 22px 25px;
-                        border-top:1px solid #fafafa;
-                        border-bottom:1px solid #e0e0e0;
-                        text-align: center;
-
-                        background: #ededed;
-                        background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
-                        background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
-                    }
-                    table th:first-child{
-                        text-align: center;
-                        padding-left:20px;
-                    }
-                    table tr:first-child th:first-child{
-                        -moz-border-radius-topleft:3px;
-                        -webkit-border-top-left-radius:3px;
-                        border-top-left-radius:3px;
-                    }
-                    table tr:first-child th:last-child{
-                        -moz-border-radius-topright:3px;
-                        -webkit-border-top-right-radius:3px;
-                        border-top-right-radius:3px;
-                    }
-                    table tr{
-                        text-align: center;
-                        padding-left:20px;
-                    }
-                    table tr td:first-child{
-                        text-align: left;
-                        padding-left:20px;
-                        border-left: 0;
-                    }
-                    table tr td {
-                        padding:18px;
-                        border-top: 1px solid #ffffff;
-                        border-bottom:1px solid #e0e0e0;
-                        border-left: 1px solid #e0e0e0;
-
-                        background: #fafafa;
-                        background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-                        background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
-                    }
-                    table tr.even td{
-                        background: #f6f6f6;
-                        background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
-                        background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
-                    }
-                    table tr:last-child td{
-                        border-bottom:0;
-                    }
-                    table tr:last-child td:first-child{
-                        -moz-border-radius-bottomleft:3px;
-                        -webkit-border-bottom-left-radius:3px;
-                        border-bottom-left-radius:3px;
-                    }
-                    table tr:last-child td:last-child{
-                        -moz-border-radius-bottomright:3px;
-                        -webkit-border-bottom-right-radius:3px;
-                        border-bottom-right-radius:3px;
-                    }
-                    table tr:hover td{
-                        background: #f2f2f2;
-                        background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-                        background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
-                    }
 
                 </style>
 
                 <ul>
                     <li style="text-align: center">
-                       <button><a  class="btn color "  href="{{ path('responsable_vehicule_new') }}">créer une nouvelle vehicule</a></button>
+                       <button><a  class="btn color "  href="{{ path('responsable_vehicule_new') }}">créer un nouveau vehicule</a></button>
                     </li>
                 </ul>
 
-                <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
-                    <tr >
-                        <th>Matricule</th>
-                        <th>Type Vehicule</th>
-                        <th>Marque</th>
-                        <th>Modele</th>
-                        <th>Image</th>
-                        <th>Date d'expiration de l'assurance</th>
-                        <th>Date d'expiration du vignette</th>
-                        <th>Date d'expiration du visite</th>
-                        <th>Actions</th>
-                    </tr><!-- Table Header -->
+                <form method="POST" style="padding-bottom: 2%;padding-top: 2%;padding-left: 1.7%">
+                    <h3>Rechercher : <input  placeholder="Matricule" type="text" name="matricule">
+                    <input  type="submit" value="Recherche"></h3>
+                </form>
+            {% if myVal>0 %}
+            <h4 style="color: red;text-align: center">Vous avez {{ myVal }} véhicule(s) où la date d'expiration de (Assurance, Vignette ou Visite) qui va expirer bientôt !!!</h4>
+            {% endif %}
+                {% for vehicule in vehicule %}
+                <div id="offre">
 
-                    {% for vehicule in vehicules %}
-                        <tr class='even'>
-                            <td><a style="text-transform: uppercase;" href="{{ path('responsable_vehicule_show', { 'id': vehicule.id }) }}">{{ vehicule.matricule }}</a></td>
-                            <td>{{ vehicule.typeV }}</td>
-                            <td>{{ vehicule.marque }}</td>
-                            <td>{{ vehicule.modele }}</td>
-                            <td>{{ vehicule.file }}</td>
-                            <td>{% if vehicule.dateexpirationassurance %}{{ vehicule.dateexpirationassurance|date('Y-m-d') }}{% endif %}</td>
-                            <td>{% if vehicule.dateexpirationvignette %}{{ vehicule.dateexpirationvignette|date('Y-m-d') }}{% endif %}</td>
-                            <td>{% if vehicule.dateexpirationvisite %}{{ vehicule.dateexpirationvisite|date('Y-m-d') }}{% endif %}</td>
-                            <td>
-                                <ul>
-                                    <li>
-                                        <a  href="{{ path('responsable_vehicule_show', { 'id': vehicule.id }) }}">Afficher</a>
-                                    </li>
-                                    <li>
-                                        <a  href="{{ path('responsable_vehicule_edit', { 'id': vehicule.id }) }}">Modifier</a>
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
+                    <div class="col-md-4" >
+
+                <div class="thumbnail" align="center" style="background-color: ghostwhite">
+
+                    <h1 style="color: #efe24b"><a style="text-transform: uppercase;" href="{{ path('responsable_vehicule_show', { 'id': vehicule.id }) }}"> <b>{{ vehicule.matricule }}</b></a><br></h1>
+
+                    <label>Type Vehicule : </label>{{ vehicule.typeV }} <br>
+                    <label>Marque :</label> {{ vehicule.marque }} <br>
+                    <label>Modele :</label> {{ vehicule.modele }}<br>
+
+
+                    {% set difference = date(vehicule.dateExpirationAssurance).diff(date('now'))   %}
+                    {% set leftDays = difference.days %}
+
+                    {% if leftDays <= 5 %}
+                        {% set myVal = myVal + 1 %}
+
+                        <label>Date d'expiration de l'assurance :</label>
+                        <h5 style="color: red">Assurance Expirera bientôt !!</h5>
+                            {% if vehicule.dateExpirationAssurance %}{{ vehicule.dateExpirationAssurance|date('Y-m-d') }}{% endif %}
+
+                    {% else %}
+                        <label>Date d'expiration de l'assurance :</label>
+                        <h5 style="color: ghostwhite">fdsfdsf</h5>
+                            {% if vehicule.dateExpirationAssurance %}{{ vehicule.dateExpirationAssurance|date('Y-m-d') }}{% endif %}
+
+                    {% endif %}
+                    <br>
+
+
+                    {% set difference = date(vehicule.dateExpirationVignette).diff(date('now'))   %}
+                    {% set leftDays = difference.days %}
+
+                    {% if leftDays <= 5 %}
+                        {% set myVal = myVal + 1 %}
+                        <label>Date d'expiration de la vignette :</label>
+                        <h5 style="color: red">Vignette Expirera bientôt !!</h5>
+
+
+
+                            {% if vehicule.dateExpirationVignette %}{{ vehicule.dateExpirationVignette|date('Y-m-d') }}{% endif %}
+
+                    {% else %}
+                        <label>Date d'expiration de la vignette :</label>
+                        <h5 style="color: ghostwhite">fdsfdsf</h5>
+
+                            {% if vehicule.dateExpirationVignette %}{{ vehicule.dateExpirationVignette|date('Y-m-d') }}{% endif %}
+
+                    {% endif %}
+                    <br>
+
+
+                    {% set difference = date(vehicule.dateExpirationVisite).diff(date('now'))   %}
+                    {% set leftDays = difference.days %}
+
+                    {% if leftDays <= 5 %}
+                        {% set myVal = myVal + 1 %}
+                        <label>Date d'expiration de la visite :</label>
+                        <h5 style="color: red">Vignette Expirera bientôt !!</h5>
+
+
+
+                            {% if vehicule.dateExpirationVisite %}{{ vehicule.dateExpirationVisite|date('Y-m-d') }}{% endif %}
+
+                    {% else %}
+                        <label>Date d'expiration de la visite :</label>
+                        <h5 style="color: ghostwhite">fdsfdsf</h5>
+
+                            {% if vehicule.dateExpirationVisite %}{{ vehicule.dateExpirationVisite|date('Y-m-d') }}{% endif %}
+
+                    {% endif %}
+                    <br>
+
+
+
+
+
+                    <button style="margin-bottom: 2%;margin-top: 2%" >
+                        <a  class="btn color " href="{{ path('responsable_vehicule_show', { 'id': vehicule.id }) }}">Voir les details de la voiture</a>
+                    </button>
+                </div>
+                        </div>
+                    </div>
+            {% endfor %}
 
             </div>
 

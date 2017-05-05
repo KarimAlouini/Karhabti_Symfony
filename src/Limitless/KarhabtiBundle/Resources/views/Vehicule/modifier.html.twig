@@ -21,8 +21,8 @@
                                     <li><a href="#">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
                                         </ul>
                                     </li>
                                     <li class="active"><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
@@ -30,11 +30,11 @@
                                     <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Cour</a></li>
-                                            <li><a href="#">Examen</a></li>
+                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">contact</a></li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -49,11 +49,8 @@
         <div class="container">
             <div class="row">
                 <div class="page-banner text-center col-xs-12">
-                    <h1>Header One</h1>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><span>header one</span></li>
-                    </ul>
+                    <h1>Responsable Auto école</h1>
+
                 </div>
             </div>
         </div>
@@ -88,7 +85,7 @@
                         }
                     </style>
                     <ul>
-                        <li style="margin-bottom: 3%"><button ><a class="btn transparent "   href="{{ path('responsable_vehicule_index') }}">Back to the list</a></button></li>
+                        <li style="margin-bottom: 4%"><button ><a class="btn color"   href="{{ path('responsable_vehicule_index') }}">Back to the list</a></button></li>
                     </ul>
 
 
@@ -96,19 +93,57 @@
 
 
                     <div class="input-2">
-                        <div class="input">{{ form_widget(edit_form.matricule,{'attr':{'placeholder':'Matricule'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.file,{'attr':{'placeholder':'Image'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.date_expiration_assurance,{'attr':{'placeholder':'Date Expiration Assurance'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.date_expiration_vignette,{'attr':{'placeholder':'Date Expiration Vignette'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.date_expiration_visite,{'attr':{'placeholder':'Date Expiration Visite'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.marque,{'attr':{'placeholder':'Marque','class' : 'input'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.modele,{'attr':{'placeholder':'Modele'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.typeV,{'attr':{'placeholder':'Type Vehicule'}}) }}</div>
+                        <div class="input">
+                            <h3 class="panel-title">Matricule</h3>
+                            {{ form_widget(edit_form.matricule) }}
+                        </div>
+
+                        <div class="input">
+                            <h3 class="panel-title">Type Vehicule</h3>
+                            {{ form_widget(edit_form.typeV) }}
+                        </div>
+
+                        <div class="input">
+                            <h3 class="panel-title">Marque</h3>
+                            {{ form_widget(edit_form.marque) }}
+                        </div>
+
+                        <div class="input">
+                            <h3 class="panel-title">Modele</h3>
+                            {{ form_widget(edit_form.modele) }}
+                        </div>
+
+                        <div class="input">
+                            <h3 class="panel-title">Image</h3>
+                            {{ form_widget(edit_form.file) }}
+                        </div>
+
+                        <div class="input">
+                            <h3 class="panel-title">Date Expiration Assurance</h3>
+                            <label style="color: red;">{{ err1 }}</label>
+                            {{ form_widget(edit_form.date_expiration_assurance) }}
+                        </div>
+
+                        <div class="input">
+                            <h3 class="panel-title">Date Expiration Vignette</h3>
+                            <label style="color: red;">{{ err2 }}</label>
+                            {{ form_widget(edit_form.date_expiration_vignette) }}
+                        </div>
+
+                        <div class="input">
+                            <h3 class="panel-title">Date Expiration Visite</h3>
+                            <label style="color: red;">{{ err3 }}</label>
+                            {{ form_widget(edit_form.date_expiration_visite) }}
+                        </div>
+
+
+
                     </div>
-                    <div class="input input-submit">
-                        <input style="margin-right: 1%" type="submit" value="Edit" />
-                       <button><a class="btn color" href="{{ path('responsable_vehicule_deleteid',{id:vehicule.id}) }}">Supprimer</a></button>
+                    <div style="text-align: right" class="input input-submit">
+                        <input type="submit" value="Edit" />
+
                     </div>
+                    <button><a class="btn color" href="{{ path('responsable_vehicule_deleteid',{id:vehicule.id}) }}">Supprimer</a></button>
                     {{ form_end(edit_form) }}
 
 

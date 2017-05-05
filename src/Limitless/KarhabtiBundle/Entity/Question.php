@@ -13,23 +13,33 @@ class Question
      * @ORM\Id
      * @ORM\Column(type="integer")
      */
-     private $id;
+    private $id;
 
     /**
      * @ORM\Column(type="string",length=255)
      */
-      private $contenue;
+    private $contenue;
     /**
-     * @ORM\ManyToOne(targetEntity="Permis")
-     * @ORM\JoinColumn(name="permis_id",referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Categorie")
+     * @ORM\JoinColumn(name="categorie_id",referencedColumnName="id" ,nullable=true)
      */
-    private $typePermis;
-
+    private $categorie;
     /**
-     * @ORM\ManyToOne(targetEntity="Examen")
-     * @ORM\JoinColumn(name="examen_id",referencedColumnName="id")
+     * @ORM\Column(type="string", length=255)
      */
-    private $examen;
+    private $Proposition3;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Proposition1;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Proposition2;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $repvrai;
 
     /**
      * @return mixed
@@ -50,6 +60,70 @@ class Question
     /**
      * @return mixed
      */
+    public function getProposition3()
+    {
+        return $this->Proposition3;
+    }
+
+    /**
+     * @param mixed $Proposition3
+     */
+    public function setProposition3($Proposition3)
+    {
+        $this->Proposition3 = $Proposition3;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProposition1()
+    {
+        return $this->Proposition1;
+    }
+
+    /**
+     * @param mixed $Proposition1
+     */
+    public function setProposition1($Proposition1)
+    {
+        $this->Proposition1 = $Proposition1;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProposition2()
+    {
+        return $this->Proposition2;
+    }
+
+    /**
+     * @param mixed $Proposition2
+     */
+    public function setProposition2($Proposition2)
+    {
+        $this->Proposition2 = $Proposition2;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRepvrai()
+    {
+        return $this->repvrai;
+    }
+
+    /**
+     * @param mixed $repvrai
+     */
+    public function setRepvrai($repvrai)
+    {
+        $this->repvrai = $repvrai;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getContenue()
     {
         return $this->contenue;
@@ -63,40 +137,29 @@ class Question
         $this->contenue = $contenue;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTypePermis()
-    {
-        return $this->typePermis;
-    }
 
-    /**
-     * @param mixed $typePermis
-     */
-    public function setTypePermis($typePermis)
-    {
-        $this->typePermis = $typePermis;
-    }
+
 
     /**
      * @return mixed
      */
-    public function getExamen()
+    public function getCategorie()
     {
-        return $this->examen;
+        return $this->categorie;
     }
 
     /**
-     * @param mixed $examen
+     * @param mixed $categorie
      */
-    public function setExamen($examen)
+    public function setCategorie($categorie)
     {
-        $this->examen = $examen;
+        $this->categorie = $categorie;
     }
 
-
-
+    function __toString()
+    {
+        return $this->getContenue();
+    }
 
 
 }

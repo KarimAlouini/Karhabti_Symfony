@@ -1,0 +1,75 @@
+{% extends 'LimitlessKarhabtiBundle:agence:index.html.twig' %}
+
+{% block title_page %}Nouvelle Agence{% endblock %}
+{% block text_page %} <a   href="{{ path('agence_index') }}">Liste des agences</a>{% endblock %}
+{% block body %}
+
+<div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12"style="width: 100%">
+    <style type="text/css">
+        button {
+            background-color: #dec839; /* Green */
+            border: 1px solid #dec839;
+            color: white;
+            padding: 0px 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            width: auto;
+            line-height: 30px;
+        }
+    </style>
+
+    </br>
+    <div>
+
+        {{ form_start(edit_form) }}
+
+
+        <div class="input-2">
+            <div class="input">
+                {{ form_widget(edit_form.nom,{'attr':{'placeholder':'Nom'}}) }}
+            </div>
+            <div class="input">
+                {{ form_widget(edit_form.ville,{'attr':{'placeholder':'ville'}}) }}
+            </div>
+            <div class="input">
+                {{ form_widget(edit_form.adresse,{'attr':{'placeholder':'adresse', 'class': 'limitless_karhabtibundle_agence_code_postal'} }) }}
+            </div>
+            <div class="input">
+                {{ form_widget(edit_form.code_postal,{'attr':{'placeholder':'code postal'}}) }}
+            </div>
+            <div class="input">
+                {{ form_widget(edit_form.telephone,{'attr':{'placeholder':'Telephone'}}) }}
+            </div>
+            <div class="input">
+                {{ form_widget(edit_form.num_fiscal,{'attr':{'placeholder':'numero fiscal'}}) }}
+            </div>
+            <div class="input">
+                {{ form_widget(edit_form.image,{'attr':{'placeholder':'image'}}) }}
+            </div>
+            <div class="input">
+                {{ form_widget(edit_form.Ouverture,{'attr':{'placeholder':'ouverture'}}) }}
+            </div>
+            <div class="input">
+                {{ form_widget(edit_form.Fermeture,{'attr':{'placeholder':'fermuture'}}) }}
+            </div>
+
+        </div>
+
+
+
+        <div class="input input-submit"><input type="submit" value="sauvgarder" /></div>
+
+
+        {{ form_end(edit_form) }}
+        {{ form_start(delete_form) }}
+        <div class="input input-submit" style="    float: right;margin-right: 250px;"><input type="submit" value="supprimer" /></div>
+        {{ form_end(delete_form) }}
+        <p class="form-messege"></p>
+    </div>
+
+
+
+{% endblock %}
+

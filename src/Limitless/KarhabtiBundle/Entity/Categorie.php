@@ -20,12 +20,6 @@ class Categorie
     private $nom;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Question")
-     * @ORM\JoinColumn(name="question_id",referencedColumnName="id")
-     */
-    private $question;
-
-    /**
      * @return mixed
      */
     public function getId()
@@ -57,20 +51,9 @@ class Categorie
         $this->nom = $nom;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getQuestion()
+    function __toString()
     {
-        return $this->question;
-    }
-
-    /**
-     * @param mixed $question
-     */
-    public function setQuestion($question)
-    {
-        $this->question = $question;
+        return $this->getNom();
     }
 
 

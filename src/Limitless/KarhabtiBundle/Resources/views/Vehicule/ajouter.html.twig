@@ -21,8 +21,8 @@
                                     <li><a href="#">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
                                         </ul>
                                     </li>
                                     <li class="active"><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
@@ -30,11 +30,11 @@
                                     <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Cour</a></li>
-                                            <li><a href="#">Examen</a></li>
+                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">contact</a></li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -49,11 +49,8 @@
         <div class="container">
             <div class="row">
                 <div class="page-banner text-center col-xs-12">
-                    <h1>Header One</h1>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><span>header one</span></li>
-                    </ul>
+                    <h1>Responsable Auto école</h1>
+
                 </div>
             </div>
         </div>
@@ -98,36 +95,50 @@
 
                         <div class="input-2">
                             <div class="input">
-                                {{ form_widget(form.matricule,{'attr':{'placeholder':'Matricule'}}) }}
+                                <h3 class="panel-title">Matricule</h3>
+                                {{ form_widget(form.matricule) }}
                             </div>
                             <div class="input">
-                                {{ form_widget(form.typeV,{'attr':{'placeholder':'Type Vehicule'}}) }}
+                                <h3 class="panel-title">Type Vehicule</h3>
+                                {{ form_widget(form.typeV) }}
                             </div>
                             <div class="input">
-                                {{ form_widget(form.marque,{'attr':{'placeholder':'Marque'}}) }}
+                                <h3 class="panel-title">Marque</h3>
+                                {{ form_widget(form.marque) }}
                             </div>
                             <div class="input">
-                                {{ form_widget(form.modele,{'attr':{'placeholder':'Modele'}}) }}
+                                <h3 class="panel-title">Modele</h3>
+                                {{ form_widget(form.modele) }}
                             </div>
                             <div class="input">
-                                {{ form_widget(form.file,{'attr':{'placeholder':'Image'}}) }}
+                                <h3 class="panel-title">Image</h3>
+                                {{ form_widget(form.file) }}
                             </div>
                             <div class="input">
-                                {{ form_widget(form.date_expiration_assurance,{'attr':{'placeholder':'Date Expiration Assurance'}}) }}
+                                <h3 class="panel-title">Date expiration assurance</h3>
+                                <label style="color: red;">{{ err1 }}</label>
+                                {{ form_widget(form.date_expiration_assurance) }}
                             </div>
                             <div class="input">
-                                {{ form_widget(form.date_expiration_vignette,{'attr':{'placeholder':'Date Expiration Vignette'}}) }}
+                                <h3 class="panel-title">Date expiration vignette</h3>
+                                <label style="color: red;">{{ err2 }}</label>
+                                {{ form_widget(form.date_expiration_vignette) }}
                             </div>
                             <div class="input">
-                                {{ form_widget(form.date_expiration_visite,{'attr':{'placeholder':'Date Expiration Visite'}}) }}
+                                <h3 class="panel-title">Date expiration visite</h3>
+                                <label style="color: red;">{{ err3 }}</label>
+                                {{ form_widget(form.date_expiration_visite) }}
                             </div>
+
 
 
                         </div>
 
 
 
-                        <div style="text-align: right" class="input input-submit"><input type="submit" value="Valider" /></div>
+                        <div style="text-align: right" class="input input-submit">
+                            <input type="submit" value="Valider" />
+                        </div>
 
 
                     {{ form_end(form) }}
@@ -137,4 +148,7 @@
 
         </div>
     </div>
-{% endblock %}
+    <script src="{{ asset('bundles/limitlesskarhabti/js/jquery-1.9.1.min.js')}}"></script>
+    <script src="{{ asset('bundles/limitlesskarhabti/js/marque.js')}}"></script>
+    <!-- Ajax Mail JS --!>
+    {% endblock %}

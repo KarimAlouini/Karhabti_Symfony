@@ -16,13 +16,13 @@
 <div class="form">
 
     <ul class="tab-group">
-        <li class="tab active"><a href="{{ path('fos_user_registration_register') }}">Sign Up</a></li>
-        <li class="tab "><a href="{{ path('fos_user_security_login') }}">Log In</a></li>
+        <li class="tab active"><a href="{{ path('fos_user_registration_register') }}">Inscription</a></li>
+        <li class="tab "><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>
     </ul>
 
     <div class="tab-content">
         <div id="signup">
-            <h1>Sign Up for Free</h1>
+            <h1>Inscrivez-vous GRATUITEMENT</h1>
 
             {% trans_default_domain 'FOSUserBundle' %}
 
@@ -31,10 +31,10 @@
 
                     <div class="field-wrap">
                         <label>
-                          UserName<span class="req">*</span>
+                            Nom d'Utilisateur<span class="req">*</span>
                         </label>
 
-                        {{ form_widget(form.username,{'attr':{'required autocomplete':'off'}}) }}
+                        {{ form_widget(form.username,{'attr':{'required autocomplete':'on'}}) }}
 
                     </div>
 
@@ -42,22 +42,38 @@
 
                 <div class="field-wrap">
                     <label>
-                        Email Address<span class="req">*</span>
+                        Adresse E-mail<span class="req">*</span>
                     </label>
 
-                    {{ form_widget(form.email,{'attr':{'required autocomplete':'off'}}) }}
+                    {{ form_widget(form.email,{'attr':{'required autocomplete':'on'}}) }}
                 </div>
+
             <div class="top-row">
+            <div class="field-wrap">
+                <label>
+                    Rôle<span class="req">*</span>
+                </label>
+
+            </div>
+
+                <div class="field-wrap">
+                            {{ form_widget(form.roles) }}
+
+
+                </div>
+                </div>
+
+
                 <div class="field-wrap">
                     <label>
-                        Set A Password<span class="req">*</span>
+                        Créez un mot de passe<span class="req">*</span>
                     </label>
 
                     {{ form_widget(form.plainPassword.first,{'attr':{'required autocomplete':'off'}}) }}
                 </div>
                 <div class="field-wrap">
                     <label>
-                        Set A Password<span class="req">*</span>
+                        Confirmez votre mot de passe<span class="req">*</span>
                     </label>
 
                     {{ form_widget(form.plainPassword.second,{'attr':{'required autocomplete':'off'}}) }}
@@ -66,8 +82,7 @@
 
 
 
-                </div>
-                <button type="submit" class="button button-block"/>Get Started</button>
+                <button type="submit" class="button button-block"/>CRÉER UN COMPTE</button>
 
             {{ form_end(form) }}
 

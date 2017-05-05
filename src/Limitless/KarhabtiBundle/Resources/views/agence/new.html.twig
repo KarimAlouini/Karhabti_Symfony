@@ -1,0 +1,152 @@
+{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body%}
+<!-- Header 1
+============================================ -->
+<div class="header-area header-absolute header-transparent">
+    <div class="header-bottom-2 sticky">
+        <div class="container">
+            <div class="row">
+                <!-- Header Bottom -->
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
+                    </div>
+                    <div class="main-menu menu-style-6 mean-menu float-right">
+                        <nav>
+                            <ul>
+                                <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                <li class="active"><a href="{{ path('agence_index') }}">Mes Agences</a>
+
+                                </li>
+                                <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
+                                    <ul>
+                                        <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                        <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
+                                    </ul>
+                                </li>
+                                <li ><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                <li><a href="#">Moniteur</a></li>
+                                <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                    <ul>
+                                        <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                        <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner -->
+<div class="page-banner-area overlay overlay-black overlay-70">
+    <div class="container">
+        <div class="row">
+            <div class="page-banner text-center col-xs-12">
+                <h1>Responsable Auto école</h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-area bg-white pt-90 pb-90">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="row">
+            <div class="section-title text-center col-xs-12 mb-45">
+                <h3 class="heading">Ajouter une agence</h3>
+
+                <i class="icofont icofont-traffic-light"></i>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <!-- Contact Form -->
+<div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12"style="width: 100%">
+    <style type="text/css">
+        button {
+            background-color: #dec839; /* Green */
+            border: 1px solid #dec839;
+            color: white;
+            padding: 0px 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            width: auto;
+            line-height: 30px;
+        }
+    </style>
+
+    <br>
+    <div>
+
+    {{ form_start(form) }}
+
+
+    <div class="input-2">
+        <div class="input">
+            <h3 class="panel-title">Nom</h3>
+            {{ form_widget(form.nom) }}
+        </div>
+        <div class="input">
+            <h3 class="panel-title">Telephone</h3>
+            {{ form_widget(form.telephone) }}
+        </div>
+        <div class="input">
+            <h3 class="panel-title">Numero fiscal</h3>
+            {{ form_widget(form.num_fiscal) }}
+        </div>
+        <div class="input">
+            <h3 class="panel-title">Adresse</h3>
+            {{ form_widget(form.adresse) }}
+        </div>
+        <div class="input">
+            <h3 class="panel-title">Ville</h3>
+            {{ form_widget(form.ville) }}
+        </div>
+        <div class="input">
+            <h3 class="panel-title">Ouverture</h3>
+            {{ form_widget(form.Ouverture) }}
+        </div>
+        <div class="input">
+            <h3 class="panel-title">Fermuture</h3>
+            {{ form_widget(form.Fermeture) }}
+        </div>
+
+        <div class="input">
+            <h3 class="panel-title">Image</h3>
+            {{ form_widget(form.file) }}
+        </div>
+        <div class="input">
+            <h3 class="panel-title">Code postal</h3>
+            {{ form_widget(form.code_postal) }}
+        </div>
+    </div>
+    </div>
+
+
+
+        <div style="text-align: right" class="input input-submit">
+            <input type="submit" value="Valider" />
+        </div>
+
+
+    {{ form_end(form) }}
+    <p class="form-messege"></p>
+</div>
+</div>
+            </div>
+        </div>
+</div>
+{% endblock %}

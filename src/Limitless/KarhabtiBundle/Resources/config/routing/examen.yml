@@ -1,0 +1,24 @@
+responsable_examen_Liste:
+    path:     /List
+    defaults: { _controller: "LimitlessKarhabtiBundle:Examen:List" }
+
+responsable_examen_Ajouter:
+     path:     /Ajouter
+     defaults: { _controller: "LimitlessKarhabtiBundle:Examen:Ajouter" }
+
+responsable_examen_Update:
+    path:     /Update/{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Examen:Updatexam" }
+
+responsable_examen_delete:
+    path:     /Delete/{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Examen:Delete" }
+
+responsable_examen_add:
+    path:     /Add
+    defaults: { _controller: "LimitlessKarhabtiBundle:Examen:add" }
+
+responsable_examen_recherche:
+    path:     /Recherche
+    defaults: { _controller: "LimitlessKarhabtiBundle:Examen:Rechercher" }
+

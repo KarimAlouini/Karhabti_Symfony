@@ -1,0 +1,133 @@
+{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body%}
+    <!-- Header 1
+ ============================================ -->
+    <div class="header-area header-absolute header-transparent">
+        <div class="header-bottom-2 sticky">
+            <div class="container">
+                <div class="row">
+                    <!-- Header Bottom -->
+                    <div class="col-xs-12">
+                        <div class="navbar-header">
+                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
+                        </div>
+                        <div class="main-menu menu-style-6 mean-menu float-right">
+                        </div>
+                        <div class="main-menu menu-style-6 mean-menu float-right">
+                            <nav>
+                                <ul>
+                                    <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                    <li class="active"><a href="{{ path('client_new') }}">Profil</a></li>
+                                    <li><a href="#">Pack/Offre<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack<i class="icofont icofont-simple-right"></i></a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre<i class="icofont icofont-simple-right"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Plannig<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="shortcode-alert.html">Plannig client</a></li>
+                                            <li><a href="shortcode-button.html">Plannig Moniteur</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="gallery.html">Vehicule<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="gallery-2-column.html">rechercher Vehicule</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="service.html">Agence</a>
+                                        <ul>
+                                            <li><a href="page-title-default.html">Consulter agences</a></li>
+                                            <li><a href="page-title-parallax.html">rechercher agences</a></li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li><a href="blog.html">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="blog.html">Consulter Cours</a></li>
+                                            <li><a href="blog-details.html">Consulter examen</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">contact</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div class="page-banner-area overlay overlay-black overlay-70">
+        <div class="container">
+            <div class="row">
+                <div class="page-banner text-center col-xs-12">
+                    <h1>Header One</h1>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><span>header one</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-area bg-white pt-90 pb-90">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-xs-12 mb-45">
+                    <h3 class="heading">Modifier Votre compte</h3>
+                    <div class="excerpt">
+                        <p>Vous pouvez modifier votre compte,ici</p>
+                    </div>
+                    <i class="icofont icofont-traffic-light"></i>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12"style="width: 100%">
+                    <style type="text/css">
+                        button {
+                            background-color: #dec839; /* Green */
+                            border: none;
+                            color: white;
+                            padding: 10px 15px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                        }
+                    </style>
+
+
+
+                    {{ form_start(edit_form) }}
+                    {{ form_widget(edit_form) }}
+                    <input type="submit" value="Edit" />
+                    {{ form_end(edit_form) }}
+
+                    <ul>
+                        <li>
+                            <a href="{{ path('client_reservationpack_index') }}">Back to the list</a>
+                        </li>
+                        <li>
+                            {{ form_start(delete_form) }}
+                            <input type="submit" value="Delete">
+                            {{ form_end(delete_form) }}
+                        </li>
+                    </ul>
+
+                    <p class="form-messege"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

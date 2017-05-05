@@ -1,0 +1,164 @@
+{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body%}
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker-standalone.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!-- Header 1
+============================================ -->
+    <div class="header-area header-absolute header-transparent">
+        <div class="header-bottom-2 sticky">
+            <div class="container">
+                <div class="row">
+                    <!-- Header Bottom -->
+                    <div class="col-xs-12">
+                        <div class="navbar-header">
+                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
+                        </div>
+                        <div class="main-menu menu-style-6 mean-menu float-right">
+                            <nav>
+                                <ul>
+                                    <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
+                                        </ul>
+                                    </li>
+                                    <li ><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                    <li><a href="#">Moniteur</a></li>
+                                    <li class="active" ><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                    <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div class="page-banner-area overlay overlay-black overlay-70">
+        <div class="container">
+            <div class="row">
+                <div class="page-banner text-center col-xs-12">
+                    <h1>Responsable Auto école</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-area bg-white pt-90 pb-90">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-xs-12 mb-45">
+                    <h3 class="heading">Modifier une Tache</h3>
+
+                    <i class="icofont icofont-traffic-light"></i>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12"style="width: 100%">
+                    <style type="text/css">
+                        button {
+                            background-color: #dec839; /* Green */
+                            border: 1px solid #dec839;
+                            color: white;
+                            padding: 0px 0px;
+                            text-align: center;
+                            text-decoration: none;
+                            font-size: 16px;
+                            display: inline-block;
+                            width: auto;
+                            line-height: 30px;
+                        }
+                    </style>
+                    <ul>
+                        <li style="margin-bottom: 4%"><button ><a class="btn color"   href="{{ path('reponsable_tache_index') }}">Back to the list</a></button></li>
+                    </ul>
+
+
+                    {{ form_start(edit_form) }}
+
+
+                    <div class="input-2">
+                        <div class="input">
+                                    <h3 class="panel-title">Client</h3>
+                                    {{ form_widget(edit_form.client,{'attr':{'placeholder':'Client'}}) }}
+                        </div>
+
+                        <div class="input">
+                                    <h3 class="panel-title">Moniteur</h3>
+                                    {{ form_widget(edit_form.moniteur,{'attr':{'placeholder':'Moniteur'}}) }}
+                        </div>
+
+                        <div class="input">
+                                    <h3 class="panel-title">Vehicule</h3>
+                                    {{ form_widget(edit_form.vehicule,{'attr':{'placeholder':'Vehicule'}}) }}
+                        </div>
+
+
+                        <div class="input">
+                                    <h3 class="panel-title">Date</h3>
+                                    <label style="color:red;">{{ err1 }}</label>
+                                    {{ form_widget(edit_form.date,{'attr':{'placeholder':'Vehicule'}}) }}
+                        </div>
+
+                        <div class="input">
+                            <div class="panel panel-panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Date Debut</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label style="color:red;">{{ err2 }}</label>
+                                    {{ form_widget(edit_form.heure_debut,{'attr':{'placeholder':'Heure de debut'}}) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <div class="panel panel-panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Date Fin</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label style="color:red;">{{ err2 }}</label>
+                                    {{ form_widget(edit_form.heure_fin,{'attr':{'placeholder':'Heure de fin'}}) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+
+
+                    </div>
+
+
+
+                    <div style="text-align: right" class="input input-submit"><input type="submit" value="Modifier" /></div>
+
+
+                    {{ form_end(edit_form) }}
+                    <p class="form-messege"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

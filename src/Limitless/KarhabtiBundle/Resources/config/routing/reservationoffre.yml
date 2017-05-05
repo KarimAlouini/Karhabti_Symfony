@@ -1,0 +1,26 @@
+reservationoffre_index:
+    path:     /
+    defaults: { _controller: "LimitlessKarhabtiBundle:ReservationOffre:index" }
+    methods:  GET
+
+reservationoffre_show:
+    path:     /{id}/show
+    defaults: { _controller: "LimitlessKarhabtiBundle:ReservationOffre:show" }
+    methods:  GET
+
+reservationoffre_new:
+    path:     /new/{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:ReservationOffre:new" }
+    methods:  [GET, POST]
+
+reservationoffre_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LimitlessKarhabtiBundle:ReservationOffre:edit" }
+    methods:  [GET, POST]
+
+reservationoffre_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LimitlessKarhabtiBundle:ReservationOffre:delete" }
+    methods:  DELETE
+
+

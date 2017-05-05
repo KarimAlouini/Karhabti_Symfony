@@ -1,0 +1,13 @@
+{% extends 'LimitlessKarhabtiBundle::layout.html.twig' %}
+
+{% block slide %}
+{#{{form(form)}}#}
+<h1>Uploading cours</h1>
+<div class="col-lg-4">
+    {{ form_start(form) }}
+    {# ... #}
+    {{ form_row(form.contenue) }}
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

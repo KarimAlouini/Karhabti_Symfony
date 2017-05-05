@@ -1,6 +1,7 @@
 <?php
 namespace Limitless\KarhabtiBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -20,6 +21,7 @@ class Cours
     private $titre;
     /**
      * @ORM\Column(type="string",length=255)
+     * @Assert\NotBlank(message="")
      */
 
     private $contenue;
@@ -32,6 +34,10 @@ class Cours
      * @ORM\JoinColumn(name="permis_id",referencedColumnName="id")
      */
     private $typePermis;
+    /**
+     * @Assert\File(maxSize="6000000")
+     */
+    private $file;
 
     /**
      * @return mixed
@@ -113,6 +119,26 @@ class Cours
         $this->typePermis = $typePermis;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param mixed $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+    public  function __construct()
+    {
+        $this->dateajout=new \DateTime();
+    }
 
 
 }

@@ -14,17 +14,22 @@ class Tache
      * @ORM\Column(type="integer")
      */
     private $id;
+    /**
+     * @ORM\Column(name="date",type="datetime", nullable=false)
+     */
+    private $date;
 
     /**
-     * @ORM\Column(name="heure_debut",type="datetime", nullable=false)
+     * @ORM\Column(name="heure_debut",type="time", nullable=false)
      */
     private $heure_debut;
+
     /**
-     * @ORM\Column(name="heure_fin",type="datetime", nullable=false)
+     * @ORM\Column(name="heure_fin",type="time", nullable=false)
      */
     private $heure_fin;
     /**
-     * @ORM\OneToOne(targetEntity="Vehicule")
+     * @ORM\ManyToOne(targetEntity="Vehicule")
      * @ORM\JoinColumn(name="vehicule_id",referencedColumnName="id")
      */
     private $vehicule;
@@ -38,6 +43,28 @@ class Tache
      * @ORM\JoinColumn(name="moniteur_id",referencedColumnName="id")
      */
     private $moniteur;
+    /**
+     * @ORM\ManyToOne(targetEntity="Agence")
+     * @ORM\JoinColumn(name="agence_id",referencedColumnName="id")
+     */
+    private $agence;
+
+    /**
+     * @return mixed
+     */
+    public function getAgence()
+    {
+        return $this->agence;
+    }
+
+    /**
+     * @param mixed $agence
+     */
+    public function setAgence($agence)
+    {
+        $this->agence = $agence;
+    }
+
 
     /**
      * @return mixed
@@ -53,38 +80,6 @@ class Tache
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getHeureDebut()
-    {
-        return $this->heure_debut;
-    }
-
-    /**
-     * @param mixed $heure_debut
-     */
-    public function setHeureDebut($heure_debut)
-    {
-        $this->heure_debut = $heure_debut;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getHeureFin()
-    {
-        return $this->heure_fin;
-    }
-
-    /**
-     * @param mixed $heure_fin
-     */
-    public function setHeureFin($heure_fin)
-    {
-        $this->heure_fin = $heure_fin;
     }
 
     /**
@@ -134,6 +129,56 @@ class Tache
     {
         $this->moniteur = $moniteur;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHeureDebut()
+    {
+        return $this->heure_debut;
+    }
+
+    /**
+     * @param mixed $heure_debut
+     */
+    public function setHeureDebut($heure_debut)
+    {
+        $this->heure_debut = $heure_debut;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHeureFin()
+    {
+        return $this->heure_fin;
+    }
+
+    /**
+     * @param mixed $heure_fin
+     */
+    public function setHeureFin($heure_fin)
+    {
+        $this->heure_fin = $heure_fin;
+    }
+
+
 
 
 }

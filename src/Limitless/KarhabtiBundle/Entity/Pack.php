@@ -27,15 +27,15 @@ class Pack
      */
     private $nbr_heure_conduite;
     /**
-     * @ORM\Column(type="float", nullable=false)
+     * @ORM\Column(type="integer", nullable=false)
      */
     private $prixUcode;
     /**
-     * @ORM\Column(type="float", nullable=false)
+     * @ORM\Column(type="integer", nullable=false)
      */
     private $prixUconduite;
     /**
-     * @ORM\Column(type="float", nullable=false)
+     * @ORM\Column(type="integer", nullable=false)
      */
     private $prixtotal;
     /**
@@ -43,11 +43,7 @@ class Pack
      */
     private $description;
     /**
-     * @ORM\Column(type="string",length=255, nullable=true)
-     */
-    private $image;
-    /**
-     * @ORM\Column(type="float", nullable=false)
+     * @ORM\Column(type="integer", nullable=false)
      */
     private $promotion;
 
@@ -183,22 +179,6 @@ class Pack
     public function setDescription($description)
     {
         $this->description = $description;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getImage()
-    {
-        return $this->image;
-    }
-
-    /**
-     * @param mixed $image
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
     }
 
     /**

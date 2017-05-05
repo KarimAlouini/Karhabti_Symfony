@@ -1,0 +1,24 @@
+superadmin_marque_index:
+    path:     /
+    defaults: { _controller: "LimitlessKarhabtiBundle:Marque:index" }
+    methods:  GET
+
+superadmin_marque_show:
+    path:     /{id}/show
+    defaults: { _controller: "LimitlessKarhabtiBundle:Marque:show" }
+    methods:  GET
+
+superadmin_marque_new:
+    path:     /new
+    defaults: { _controller: "LimitlessKarhabtiBundle:Marque:new" }
+    methods:  [GET, POST]
+
+superadmin_marque_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "LimitlessKarhabtiBundle:Marque:edit" }
+    methods:  [GET, POST]
+
+superadmin_marque_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "LimitlessKarhabtiBundle:Marque:delete" }
+    methods:  DELETE

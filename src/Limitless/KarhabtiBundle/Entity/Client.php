@@ -19,6 +19,12 @@ class Client
     private $id;
     /**
      * @var string
+     * @ORM\Column(name="image", type="string", length=255, nullable=false)
+
+     */
+    private $image;
+    /**
+     * @var string
      * @ORM\Column(name="civilite",type="string",length=255, nullable=false)
      */
 
@@ -89,6 +95,45 @@ class Client
      * @ORM\JoinColumn(name="user_id",referencedColumnName="id")
      */
     private $user;
+    /**
+     * @ORM\OneToOne(targetEntity="Agence")
+     * @ORM\JoinColumn(name="agence_id",referencedColumnName="id")
+     */
+    private $agence;
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getAgence()
+    {
+        return $this->agence;
+    }
+
+    /**
+     * @param mixed $agence
+     */
+    public function setAgence($agence)
+    {
+        $this->agence = $agence;
+    }
+
 
     /**
      * @return mixed
@@ -298,9 +343,10 @@ class Client
         $this->user = $user;
     }
 
-
-
-
+    function __toString()
+    {
+        return $this->getNom().' '.$this->getPrenom();
+    }
 
 
 }

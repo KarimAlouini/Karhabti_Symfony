@@ -3,8 +3,12 @@
     {{ parent() }}
 {% endblock %}
 {% block body%}
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker-standalone.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <!-- Header 1
- ============================================ -->
+============================================ -->
     <div class="header-area header-absolute header-transparent">
         <div class="header-bottom-2 sticky">
             <div class="container">
@@ -21,20 +25,20 @@
                                     <li><a href="#">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
                                         </ul>
                                     </li>
                                     <li ><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
                                     <li><a href="#">Moniteur</a></li>
-                                    <li class="active"><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                    <li class="active" ><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Cour</a></li>
-                                            <li><a href="#">Examen</a></li>
+                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">contact</a></li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -49,11 +53,8 @@
         <div class="container">
             <div class="row">
                 <div class="page-banner text-center col-xs-12">
-                    <h1>Header One</h1>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><span>header one</span></li>
-                    </ul>
+                    <h1>Responsable Auto école</h1>
+
                 </div>
             </div>
         </div>
@@ -89,29 +90,76 @@
                         }
                     </style>
                     <ul>
-                        <li style="margin-bottom: 4%"><button ><a class="btn color"   href="{{ path('reponsable_tache_index') }}">Back to the list</a></button></li>
+                        <li style="margin-bottom: 4%"><button ><a class="btn color"   href="{{ path('reponsable_tache_index') }}">Retour à la liste</a></button></li>
                     </ul>
 
 
                     {{ form_start(form) }}
 
 
+
                     <div class="input-2">
+
+
                         <div class="input">
-                            {{ form_widget(form.client,{'attr':{'placeholder':'Client'}}) }}
+                            <h3 class="panel-title">Client</h3>
+                            {{ form_widget(form.client) }}
+                        </div>
+
+                        <div class="input">
+                            <h3 class="panel-title">Moniteur</h3>
+                            {{ form_widget(form.moniteur) }}
+                        </div>
+
+
+                        <div class="input">
+                            <h3 class="panel-title">Vehicule</h3>
+                            <select id="vehicule" name="vehicule" required=true>
+                                <option value=""></option>
+                                {% for v in vehicule %}
+
+                                    <option value="{{ v.matricule }}">
+                                        {{ v }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="input">
+                            <h3 class="panel-title">Date</h3>
+                            <label style="color:red;">{{ err1 }}</label>
+                            {{ form_widget(form.date) }}
+                        </div>
+
+                        <div class="input">
+                            <div class="panel panel-panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Date Debut</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label style="color:red;">{{ err2 }}</label>
+                                    {{ form_widget(form.heure_debut,{'attr':{'placeholder':'Heure de debut'}}) }}
+                                </div>
+                            </div>
                         </div>
                         <div class="input">
-                            {{ form_widget(form.moniteur,{'attr':{'placeholder':'Moniteur'}}) }}
+                            <div class="panel panel-panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Date Fin</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <label style="color:red;">{{ err2 }}</label>
+                                    {{ form_widget(form.heure_fin,{'attr':{'placeholder':'Heure de fin'}}) }}
+                                </div>
+                            </div>
                         </div>
-                        <div class="input">
-                            {{ form_widget(form.vehicule,{'attr':{'placeholder':'Vehicule'}}) }}
-                        </div>
-                        <div class="input">
-                            {{ form_widget(form.heure_debut,{'attr':{'placeholder':'Heure de debut'}}) }}
-                        </div>
-                        <div class="input">
-                            {{ form_widget(form.heure_fin,{'attr':{'placeholder':'Heure de fin'}}) }}
-                        </div>
+
+                        <br>
+
+
 
 
                     </div>
@@ -128,4 +176,5 @@
 
         </div>
     </div>
+
 {% endblock %}

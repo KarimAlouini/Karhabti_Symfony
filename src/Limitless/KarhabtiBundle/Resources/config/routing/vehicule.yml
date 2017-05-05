@@ -1,7 +1,6 @@
 responsable_vehicule_index:
     path:     /
-    defaults: { _controller: "LimitlessKarhabtiBundle:Vehicule:index" }
-    methods:  GET
+    defaults: { _controller: "LimitlessKarhabtiBundle:Vehicule:recherche" }
 
 responsable_vehicule_show:
     path:     /{id}/show

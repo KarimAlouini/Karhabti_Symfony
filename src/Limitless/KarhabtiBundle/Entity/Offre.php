@@ -20,11 +20,11 @@ class Offre
      */
     private $nom;
     /**
-     * @ORM\Column(type="float", nullable=false)
+     * @ORM\Column(type="integer", nullable=false)
      */
     private $prixUcode;
     /**
-     * @ORM\Column(type="float", nullable=false)
+     * @ORM\Column(type="integer", nullable=false)
      */
     private $prixUconduite;
     /**

@@ -1,0 +1,16 @@
+responsable_question_List:
+    path:     /List
+    defaults: { _controller: "LimitlessKarhabtiBundle:Question:List" }
+
+responsable_question_Ajouter:
+     path:     /Ajouter
+     defaults: { _controller: "LimitlessKarhabtiBundle:Question:Ajouter" }
+
+responsable_question_Update:
+    path:     /Update/{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Question:Updateques" }
+
+responsable_question_delete:
+    path:     /Delete/{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Question:Delete" }
+

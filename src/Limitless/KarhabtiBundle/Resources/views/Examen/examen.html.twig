@@ -1,0 +1,285 @@
+{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% block title %}
+    {{ parent() }}
+    {% endblock %}
+    {% block body%}
+        <!-- Header 1
+     ============================================ -->
+        <div class="header-area header-absolute header-transparent">
+            <div class="header-bottom-2 sticky">
+                <div class="container">
+                    <div class="row">
+                        <!-- Header Bottom -->
+                        <div class="col-xs-12">
+                            <div class="navbar-header">
+                                <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
+                            </div>
+                            <div class="main-menu menu-style-6 mean-menu float-right">
+                                <nav>
+                                    <ul>
+                                        <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                        <li><a href="#">Profil</a></li>
+                                        <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
+                                            <ul>
+                                                <li><a href="#">Offre</a></li>
+                                                <li><a href="#">Pack</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Moniteur</a></li>
+                                        <li><a href="#">Planning</a></li>
+                                        <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                            <ul>
+                                                <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                                <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="mobile-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner -->
+        <div class="page-banner-area overlay overlay-black overlay-70">
+            <div class="container">
+                <div class="row">
+                    <div class="page-banner text-center col-xs-12">
+                        <h1>Responsable Auto école</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-area bg-white pt-90 pb-90">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-xs-12 mb-45">
+                    <h3 class="heading">Ajouter un Examen</h3>
+                    <div class="excerpt">
+                    </div>
+                    <i class="icofont icofont-traffic-light"></i>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12"style="width: 100% ; background-color : white;">
+                    <style type="text/css">
+                        button {
+                            background-color: #dec839; /* Green */
+                            border: none;
+                            color: white;
+                            padding: 10px 15px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                        }
+                    </style>
+                    {{ form_start(form) }}
+
+                                    <div class="form-group col-sm-10">
+                                        <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Titre</label>
+                                        <div class="col-sm-7">{{ form_widget(form.titre, {'attr' :{'class': 'form-control nom-field'}}) }}</div>
+                                            </div>
+
+                                        <div class="form-group col-sm-10">
+                                            <label class="col-sm-3 control-label">Type de Permis</label>
+                                            <div class="col-sm-7">{{ form_widget(form.typePermis, {'attr' :{'class': 'form-control nom-field'}}) }}</div>
+                                        </div>
+
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Image </label>
+                                        <div class="col-sm-7">{{ form_widget(form.image, {'attr' :{'class': 'form-control image-field'}}) }}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°1</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question1 , { 'id' : 'q1' ,'placeholder':' '}) }}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°2</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question2 , { 'id' : 'q2' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°3</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question3 , { 'id' : 'q3' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°4</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question4 , { 'id' : 'q4' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°5</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question5 , { 'id' : 'q5' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°6</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question6 , { 'id' : 'q6' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°7</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question7 , { 'id' : 'q7' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°8</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question8 , { 'id' : 'q8' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°9</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question9 , { 'id' : 'q9' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="col-sm-3 control-label">Choisir Question n°10</label>
+                                        <div class="col-sm-7">
+                                            {{ form_widget(form.Question10 , { 'id' : 'q10' ,'placeholder':' ' }) }}
+                                        </div>
+                                    </div>
+
+
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2-rc.1/css/select2.min.css" rel="stylesheet" />
+                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2-rc.1/js/select2.min.js"></script>
+
+                        <script>
+                            function add(){
+                                console.log("add");
+                                var url = "../../web/app_dev.php/Addtest";
+                                var picture = $('.image-field').prop('files')[0];
+                                var form_data = new FormData();
+                                form_data.append('nom', $('.nom-field').val());
+                                form_data.append('file', picture);
+                                form_data.append('q1', $('#q1').val());
+                                form_data.append('q2', $('#q2').val());
+                                form_data.append('q3', $('#q3').val());
+                                form_data.append('q4', $('#q4').val());
+                                form_data.append('q5', $('#q5').val());
+                                form_data.append('q6', $('#q6').val());
+                                form_data.append('q7', $('#q7').val());
+                                form_data.append('q8', $('#q8').val());
+                                form_data.append('q9', $('#q9').val());
+                                form_data.append('q10', $('#q10').val());
+
+                                $.ajax({
+                                    url: url, // point to server-side PHP script
+                                    dataType: 'json', // what to expect back from the PHP script, if anything
+                                    cache: false,
+                                    contentType: false,
+                                    processData: false,
+                                    data: form_data,
+                                    type: 'post',
+                                    success: function (response) {
+                                        window.location.href = "http://localhost/PI/web/app_dev.php/Affichetest";
+                                    }});
+                            }
+                            //$("#q1").select2();
+                            document.getElementById("q1").className = "form-control";
+                            document.getElementById("q2").className = "form-control";
+                            document.getElementById("q3").className = "form-control";
+                            document.getElementById("q4").className = "form-control";
+                            document.getElementById("q5").className = "form-control";
+                            document.getElementById("q6").className = "form-control";
+                            document.getElementById("q7").className = "form-control";
+                            document.getElementById("q8").className = "form-control";
+                            document.getElementById("q9").className = "form-control";
+                            document.getElementById("q10").className = "form-control";
+
+
+                            $('#q1').on('change', function() {
+                                for(var i=2; i<1; i++) {
+                                    $("#q"+i+" option[value='" + $("#q1").val() + "']").remove();
+                                }
+                            });
+                            $('#q2').on('change', function() {
+                                for(var i=3; i<2; i++) {
+                                    $("#q"+i+" option[value='" + $("#q2").val() + "']").remove();
+                                }
+                                $("#q1 option[value='" + $("#q2").val() + "']").remove();
+                            });
+                            $('#q3').on('change', function() {
+                                for(var i=1; i<3; i++) {
+                                    $("#q"+i+" option[value='" + $("#q3").val() + "']").remove();
+                                }
+
+
+                            });
+                            $('#q4').on('change', function() {
+                                for(var i=1; i<4; i++) {
+                                    $("#q"+i+" option[value='" + $("#q4").val() + "']").remove();
+                                }
+
+                            });
+                            $('#q5').on('change', function() {
+                                for(var i=1; i<5; i++) {
+                                    $("#q"+i+" option[value='" + $("#q5").val() + "']").remove();
+                                }
+
+                            });
+                            $('#q6').on('change', function() {
+                                for(var i=1; i<6; i++) {
+                                    $("#q"+i+" option[value='" + $("#q6").val() + "']").remove();
+                                }
+
+                            });
+                            $('#q7').on('change', function() {
+                                for(var i=1; i<7; i++) {
+                                    $("#q" + i + " option[value='" + $("#q7").val() + "']").remove();
+                                }
+                            });
+                            $('#q8').on('change', function() {
+                                for(var i=1; i<8; i++) {
+                                    $("#q"+i+" option[value='" + $("#q8").val() + "']").remove();
+                                }
+
+                            });
+                            $('#q9').on('change', function() {
+                                for(var i=1; i<9; i++) {
+                                    $("#q"+i+" option[value='" + $("#q9").val() + "']").remove();
+                                }
+
+                            });
+                            $('#q10').on('change', function() {
+                                for(var i=1; i<10; i++) {
+                                    $("#q"+i+" option[value='" + $("#q10").val() + "']").remove();
+                                }
+
+                            });
+                        </script>
+                                        <div class="input input-submit"><input type="submit" value="Ajouter" /></div>
+                                        {{ form_end(form) }}
+                    <ul style="text-align:right">
+                <li>
+                    <button class="btn color"><a href="{{ path('responsable_examen_Liste') }}">Retourner a la liste </a></button>
+                </li></ul>
+        </div>
+    </div>
+        </div>
+        </div>
+{% endblock %}

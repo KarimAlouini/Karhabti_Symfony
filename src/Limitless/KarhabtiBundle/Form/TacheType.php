@@ -2,7 +2,11 @@
 
 namespace Limitless\KarhabtiBundle\Form;
 
+
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\TimeType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,7 +17,20 @@ class TacheType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('heure_debut')->add('heure_fin')->add('vehicule')->add('client')->add('moniteur')        ;
+        $builder
+            ->add('date',DateType::class , array( 'widget' =>
+                'single_text', 'format' => 'dd-MM-yyyy','attr' =>
+                array('class' => 'input','data-provide' =>
+                    'datepicker','data-date-format' => 'dd-mm-yyyy')))
+            ->add('heure_debut',TimeType::class, array(
+                'placeholder' => array(
+                    'hour' => 'Hours','minute'=>'Minutes') ) )
+            ->add('heure_fin',TimeType::class, array(
+                'placeholder' => array(
+                    'hour' => 'Hours','minute'=>'Minutes') ) )
+
+            ->add('client')
+            ->add('moniteur')        ;
     }
     
     /**

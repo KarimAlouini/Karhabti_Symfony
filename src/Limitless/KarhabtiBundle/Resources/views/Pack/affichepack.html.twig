@@ -1,0 +1,243 @@
+{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body%}
+    {% set counter = 0 %}
+    <!-- Header 1
+ ============================================ -->
+    <div class="header-area header-absolute header-transparent">
+        <div class="header-bottom-2 sticky">
+            <div class="container">
+                <div class="row">
+                    <!-- Header Bottom -->
+                    <div class="col-xs-12">
+                        <div class="navbar-header">
+                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
+                        </div>
+                        <div class="main-menu menu-style-6 mean-menu float-right">
+                            <nav>
+                                <ul>
+                                    <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                    <li><a href="#">Profil</a></li>
+                                    <li class="active"><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
+                                        </ul>
+                                    </li>
+                                    <li ><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                    <li><a href="#">Moniteur</a></li>
+                                    <li ><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                    <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">Cour</a></li>
+                                            <li><a href="#">Examen</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div class="page-banner-area overlay overlay-black overlay-70">
+        <div class="container">
+            <div class="row">
+                <div class="page-banner text-center col-xs-12">
+                    <h1>RESPONSABLE AUTO éCOLE</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blog-area bg-white pt-90 pb-90">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-xs-12 mb-45">
+                    <h3 class="heading">Liste des Packs</h3>
+
+                    <i class="icofont icofont-traffic-light"></i>
+                </div>
+            </div>
+            <div class="row">
+                <style type="text/css">
+                    /*Table Style - This is what you want*/
+                    button {
+                        background-color: #dec839; /* Green */
+                        border: 1px solid #dec839;
+                        color: white;
+                        padding: 0px 0px;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 16px;
+                        display: inline-block;
+                        width: auto;
+                        line-height: 30px;
+                    }
+                    table a:link {
+                        color: #666;
+                        font-weight: bold;
+                        text-decoration:none;
+                    }
+                    table a:visited {
+                        color: #999999;
+                        font-weight:bold;
+                        text-decoration:none;
+                    }
+                    table a:active,
+                    table a:hover {
+                        color: #bd5a35;
+                        text-decoration:underline;
+                    }
+                    table {
+                        font-family:Arial, Helvetica, sans-serif;
+                        color:#666;
+                        font-size:12px;
+                        text-shadow: 1px 1px 0px #fff;
+                        background:#eaebec;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 20px;
+                        width: auto;
+                        border:#ccc 1px solid;
+
+                        -moz-border-radius:3px;
+                        -webkit-border-radius:3px;
+                        border-radius:3px;
+
+                        -moz-box-shadow: 0 1px 2px #d1d1d1;
+                        -webkit-box-shadow: 0 1px 2px #d1d1d1;
+                        box-shadow: 0 1px 2px #d1d1d1;
+                    }
+                    table th {
+                        padding:21px 25px 22px 25px;
+                        border-top:1px solid #fafafa;
+                        border-bottom:1px solid #e0e0e0;
+                        text-align: center;
+
+                        background: #ededed;
+                        background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+                        background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+                    }
+                    table th:first-child{
+                        text-align: center;
+                        padding-left:20px;
+                    }
+                    table tr:first-child th:first-child{
+                        -moz-border-radius-topleft:3px;
+                        -webkit-border-top-left-radius:3px;
+                        border-top-left-radius:3px;
+                    }
+                    table tr:first-child th:last-child{
+                        -moz-border-radius-topright:3px;
+                        -webkit-border-top-right-radius:3px;
+                        border-top-right-radius:3px;
+                    }
+                    table tr{
+                        text-align: center;
+                        padding-left:20px;
+                    }
+                    table tr td:first-child{
+                        text-align: left;
+                        padding-left:20px;
+                        border-left: 0;
+                    }
+                    table tr td {
+                        padding:18px;
+                        border-top: 1px solid #ffffff;
+                        border-bottom:1px solid #e0e0e0;
+                        border-left: 1px solid #e0e0e0;
+
+                        background: #fafafa;
+                        background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+                        background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+                    }
+                    table tr.even td{
+                        background: #f6f6f6;
+                        background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+                        background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+                    }
+                    table tr:last-child td{
+                        border-bottom:0;
+                    }
+                    table tr:last-child td:first-child{
+                        -moz-border-radius-bottomleft:3px;
+                        -webkit-border-bottom-left-radius:3px;
+                        border-bottom-left-radius:3px;
+                    }
+                    table tr:last-child td:last-child{
+                        -moz-border-radius-bottomright:3px;
+                        -webkit-border-bottom-right-radius:3px;
+                        border-bottom-right-radius:3px;
+                    }
+                    table tr:hover td{
+                        background: #f2f2f2;
+                        background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+                        background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+                    }
+
+                </style>
+
+                <ul>
+                    <li style="text-align: center">
+                        <button><a  class="btn color "  href="{{ path('responsable_pack_new') }}">Ajouter un nouveau pack</a></button>
+
+
+                    </li>
+                </ul><br>
+
+                <form method="POST" style="padding-bottom: 2%;padding-top: 2%;padding-left: 1.7%">
+                    <h3>Rechercher : <input  placeholder="Prix Total" type="text" name="prixtotal">
+                        <input  type="submit" value="Recherche"></h3>
+                </form>
+
+                    {% for modele in modeles %}
+
+ {% set counter =counter + 1 %}
+                        <div id="pack">
+
+                            <div class="col-md-4" >
+                                <div class="thumbnail" align="center" style="background-color: #f9ecec">
+                                    <img src="{{ asset('bundles/limitlesskarhabti/images/offre/pack.png') }}">
+                                    <h1 style="color: #efe24b"><a style="text-transform: uppercase;" href="{{ path('responsable_pack_show', { 'id': modele.id }) }}"> <b>{{ modele.nom }}</b></a><br></h1>
+                                    <label>Agence : </label>{{ modele.agence }}<br>
+                                    <label>Nombre Heure Code : </label>{{ modele.nbrHeureCode }}<br>
+                                    <label>Nombre Heure Conduite : </label>{{ modele.nbrHeureConduite }} <br>
+                                    <label>Description : </label>{{ modele.description }}<br>
+                                    <label>Promotion: </label>{{ modele.promotion }}<br>
+                                    <label>Prix total: </label>{{ modele.prixtotal }}<br><br>
+
+
+                                   <button style="margin-bottom: 2%;margin-top: 2%" >
+                                       <a class="btn color" href="{{ path('responsable_pack_show',{'id':modele.id}) }}">Voir le pack en details</a>
+                                   </button>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    {% endfor %}
+
+                </table>
+
+            </div>
+            <h2 align="center" style="color: #C82829">{{ counter }} Pack(s) trouvée(s) </h2>
+        </div>
+    </div>
+{% endblock %}

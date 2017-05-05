@@ -78,4 +78,9 @@ class Permis
         $this->agence = $agence;
     }
 
+    function __toString()
+    {
+        return $this->getType();
+    }
+
 }

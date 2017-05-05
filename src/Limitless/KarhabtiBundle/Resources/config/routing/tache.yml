@@ -1,12 +1,6 @@
 reponsable_tache_index:
     path:     /
-    defaults: { _controller: "LimitlessKarhabtiBundle:Tache:index" }
-    methods:  GET
-
-reponsable_tache_show:
-    path:     /{id}/show
-    defaults: { _controller: "LimitlessKarhabtiBundle:Tache:show" }
-    methods:  GET
+    defaults: { _controller: "LimitlessKarhabtiBundle:Tache:recherche" }
 
 reponsable_tache_new:
     path:     /new
@@ -22,3 +16,6 @@ reponsable_tache_delete:
     path:     /{id}/delete
     defaults: { _controller: "LimitlessKarhabtiBundle:Tache:delete" }
     methods:  DELETE
+
+
+

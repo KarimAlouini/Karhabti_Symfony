@@ -1,0 +1,23 @@
+responsable_offre_index:
+    path:     /
+    defaults: { _controller: "LimitlessKarhabtiBundle:Offre:find" }
+
+
+responsable_offre_new:
+    path:     /add
+    defaults: { _controller: "LimitlessKarhabtiBundle:Offre:add" }
+
+responsable_offre_show:
+    path:     /{id}/show
+    defaults: { _controller: "LimitlessKarhabtiBundle:Offre:show" }
+
+
+responsable_offre_edit:
+    path:     /update{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Offre:update" }
+
+
+responsable_offre_delete:
+    path:     /delete/{id}
+    defaults: { _controller: "LimitlessKarhabtiBundle:Offre:delete" }
+

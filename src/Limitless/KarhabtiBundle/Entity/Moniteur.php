@@ -306,6 +306,10 @@ class Moniteur
     {
         $this->user = $user;
     }
+    function __toString()
+    {
+        return $this->getNom().' '.$this->getPrenom();
+    }
 
 
 
