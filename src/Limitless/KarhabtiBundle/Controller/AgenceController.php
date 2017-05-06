@@ -21,7 +21,7 @@ class AgenceController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $user = $this->getUser();
-        $agences=  $em->getRepository('LimitlessKarhabtiBundle:Agence')->findBy(array('user' => $user));
+        $agences = $em->getRepository('LimitlessKarhabtiBundle:Agence')->findBy(array('user' => $user));
 
         return $this->render('LimitlessKarhabtiBundle:agence:index.html.twig', array(
             'agences' => $agences,

@@ -174,6 +174,45 @@ namespace Limitless\KarhabtiBundle\Controller;
 
         }
 
+        public function findClientAction(Request $Request){
+
+            $em=$this->getDoctrine()->getManager();
+
+            $modeles=  $em->getRepository('LimitlessKarhabtiBundle:Offre')->findAll();
+
+
+            if($Request->isMethod('POST'))
+
+            {
+                $search=$Request->get('prixu');
+                $modeles=$em->getRepository('LimitlessKarhabtiBundle:Offre')->findBy(array("prixUcode"=>$search));
+
+            }
+
+            return $this->render("LimitlessKarhabtiBundle:Offre:afficheClient.html.twig",
+                array("modeles"=>$modeles));
+
+
+        }
+
+        public function ListClientAction() {
+            $request = $this->container->get('request_stack')->getCurrentRequest();
+            $em = $this->container->get('doctrine')->getEntityManager();
+            if ($request->isXmlHttpRequest()) {
+
+                $motcle = $request->request->get('motcle');
+                $query = $em->createQuery("SELECT m FROM LimitlessKarhabtiBundle:Offre m WHERE m.nom LIKE '$motcle%'");
+                $produits = $query->getResult();
+
+
+                return $this->container->get('templating')->renderResponse('LimitlessKarhabtiBundle:Offre:list.html.twig', array(
+                    'modeles' => $produits
+                ));
+            } else {
+                return $this->afficheAction();
+            }
+        }
+
         public function showAction(Offre $offre)
         {
 

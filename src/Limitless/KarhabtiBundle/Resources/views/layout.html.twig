@@ -51,156 +51,222 @@
 <div class="wrapper fix">
     {% block body %}
 
-        <!-- Header 1
-     ============================================ -->
-        <div class="header-area header-absolute header-transparent">
-            <div class="header-bottom-2 sticky">
-                <div class="container">
-                    <div class="row">
-                        <!-- Header Bottom -->
-                        <div class="col-xs-12">
-                            <div class="navbar-header">
-                                <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img
-                                            id="logo_img"
-                                            src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
-                                            alt="logo"/></a>
-                            </div>
-                            <div class="main-menu menu-style-6 mean-menu float-right">
-                                <nav>
-                                    <ul>
-                                        <li class="active"><a href="{{ path('limitless_karhabti_homepage') }}">home</a>
-                                        </li>
-                                        <li><a href="#">Profil</a></li>
-                                        <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
-                                            <ul>
-                                                <li><a href="#">Offre</a></li>
-                                                <li><a href="#">Pack</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
-                                        <li><a href="#">Moniteur</a></li>
-                                        <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
-                                        <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
-                                            <ul>
-                                                <li><a href="#">Cour</a></li>
-                                                <li><a href="#">Examen</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="mobile-menu"></div>
+    <!-- Header 1
+ ============================================ -->
+    <div class="header-area header-absolute header-transparent">
+        <div class="header-top hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <!-- Header Top -->
+                    <div class="header-top-wrapper fix">
+                        <div class="header-top-left text-left col-sm-6">
+                            <p><i class="icofont icofont-ui-call"></i><span>(+216) {{ user.telephone }}</span></p>
+                            <p><i class="icofont icofont-clock-time"></i><span>{{ user.ouverture }}
+                                    - {{ user.fermeture }} </span></p>
+                        </div>
+                        <div class="header-top-right text-right col-sm-6">
+                            <p><i class="icofont icofont-clock-time"></i><span>{{ user.user }} - <a
+                                            href="">LOGOUT</a></span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Hero Slide Area
+        <div class="header-bottom-2 sticky">
+            <div class="container">
+                <div class="row">
+                    <!-- Header Bottom -->
+                    <div class="col-xs-12">
+                        <div class="navbar-header">
+                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img
+                                        id="logo_img"
+                                        src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
+                                        alt="logo"/></a>
+                        </div>
+                        <div class="main-menu menu-style-6 mean-menu float-right">
+                            <nav>
+                                <ul>
+                                    <li class="active"><a href="{{ path('limitless_karhabti_homepage') }}">home</a>
+                                    </li>
+                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">Offre</a></li>
+                                            <li><a href="#">Pack</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                    <li><a href="#">Moniteur</a></li>
+                                    <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                    <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">Cour</a></li>
+                                            <li><a href="#">Examen</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Slide Area
+============================================ -->
+    <div id="hero-area" class="hero-slider-area">
+        <div id="hero-slider" class="nivoSlider slider-image">
+            <img src="{{ asset('bundles/limitlesskarhabti/img/slider/1.jpg') }}" alt="main slider"
+                 title="#htmlcaption1"/>
+        </div>
+        <div id="htmlcaption1" class="nivo-html-caption">
+            <div class="slide-table container">
+                <div class="table-cell">
+                    <div class="hero-slide-content float-right text-right">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h3 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="0.8s">Bienvenue à</h3>
+                        <h1 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="1.2s">
+                            <span>Limitless Groupe</span>
+                        </h1>
+
+                        <h1 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="1.6s">PROFITEZ DE NOTRE
+                            PLATEFORME</h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Feature Area
     ============================================ -->
-        <div id="hero-area" class="hero-slider-area">
-            <div id="hero-slider" class="nivoSlider slider-image">
-                <img src="{{ asset('bundles/limitlesskarhabti/img/slider/1.jpg') }}" alt="main slider"
-                     title="#htmlcaption1"/>
-            </div>
-            <div id="htmlcaption1" class="nivo-html-caption">
-                <div class="slide-table container">
-                    <div class="table-cell">
-                        <div class="hero-slide-content float-right text-right">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <h3 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="0.8s">Bienvenue à</h3>
-                            <h1 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="1.2s"><span>Limitless Groupe</span>
-                            </h1>
-
-                            <h1 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="1.6s">PROFITEZ DE NOTRE
-                                PLATEFORME</h1>
-                        </div>
-
+        <div id="feature-area" class="feature-area bg-gray pt-90 pb-90">
+            <div class="container">
+                <!-- Section Title -->
+                <div class="row">
+                    <div class="section-title text-center col-xs-12 mb-45">
+                        <h3 class="heading">Nos mission</h3>
+                        <i class="icofont icofont-traffic-light"></i>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <!-- Left Feature -->
 
-
-            <!-- Feature Area
-        ============================================ -->
-            <div id="feature-area" class="feature-area bg-gray pt-90 pb-90">
-                <div class="container">
-                    <!-- Section Title -->
-                    <div class="row">
-                        <div class="section-title text-center col-xs-12 mb-45">
-                            <h3 class="heading">Nos mission</h3>
-                            <i class="icofont icofont-traffic-light"></i>
+                    <div class="feature-wrapper feature-left text-right col-md-4 col-xs-12">
+                        <div class="single-feature">
+                            <div class="icon"><i class="icofont icofont-file-spreadsheet"></i></div>
+                            <div class="text fix">
+                                <h4>Gestion des cours</h4>
+                                <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
+                                    tempor.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="single-feature">
+                            <div class="icon"><i class="icofont icofont-video-alt"></i></div>
+                            <div class="text fix">
+                                <h4>Gestion des vehicules</h4>
+                                <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
+                                    tempor.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <!-- Left Feature -->
-
-                        <div class="feature-wrapper feature-left text-right col-md-4 col-xs-12">
-                            <div class="single-feature">
-                                <div class="icon"><i class="icofont icofont-file-spreadsheet"></i></div>
-                                <div class="text fix">
-                                    <h4>Gestion des cours</h4>
-                                    <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
-                                        tempor.</p>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <div class="single-feature">
-                                <div class="icon"><i class="icofont icofont-video-alt"></i></div>
-                                <div class="text fix">
-                                    <h4>Gestion des vehicules</h4>
-                                    <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
-                                        tempor.</p>
-                                </div>
+                    <!-- Feature Image -->
+                    <div class="feature-image text-center col-md-4 col-xs-12">
+                        <img src="{{ asset('bundles/limitlesskarhabti/img/feature.png') }}" alt="feature"/>
+                    </div>
+                    <!-- Right Feature -->
+                    <div class="feature-wrapper feature-right text-left col-md-4 col-xs-12">
+                        <div class="single-feature">
+                            <div class="icon"><i class="icofont icofont-man-in-glasses"></i></div>
+                            <div class="text fix">
+                                <h4>Gestion des clients</h4>
+                                <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
+                                    tempor.</p>
                             </div>
                         </div>
-                        <!-- Feature Image -->
-                        <div class="feature-image text-center col-md-4 col-xs-12">
-                            <img src="{{ asset('bundles/limitlesskarhabti/img/feature.png') }}" alt="feature"/>
-                        </div>
-                        <!-- Right Feature -->
-                        <div class="feature-wrapper feature-right text-left col-md-4 col-xs-12">
-                            <div class="single-feature">
-                                <div class="icon"><i class="icofont icofont-man-in-glasses"></i></div>
-                                <div class="text fix">
-                                    <h4>Gestion des clients</h4>
-                                    <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
-                                        tempor.</p>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
 
-                            <div class="single-feature">
-                                <div class="icon"><i class="icofont icofont-direction-sign"></i></div>
-                                <div class="text fix">
-                                    <h4>Gestions moniteurs</h4>
-                                    <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
-                                        tempor.</p>
-                                </div>
+                        <div class="single-feature">
+                            <div class="icon"><i class="icofont icofont-direction-sign"></i></div>
+                            <div class="text fix">
+                                <h4>Gestions moniteurs</h4>
+                                <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
+                                    tempor.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-    {% endblock %}
+
+
+    </div>
 </div>
+<!-- Funfact Area
+============================================ -->
+{% set veh = 0 %}
+{% set agen = 0 %}
+{% set moni = 0 %}
+{% set cli = 0 %}
+
+{% for vehicule in vehicule %}
+    {% set veh = veh + 1 %}
+{% endfor %}
+{% for moniteur in moniteur %}
+    {% set moni = moni + 1 %}
+{% endfor %}
+{% for agence in agences %}
+    {% set agen = agen + 1 %}
+{% endfor %}
+{% for client in client %}
+    {% set cli = cli + 1 %}
+{% endfor %}
+<div class="funfact-area overlay overlay-white overlay-80 pt-90 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+                <i class="icofont icofont-hat-alt"></i>
+                <h1 class="counter plus">{{ veh }}</h1>
+                <p>Nombre de vehicule</p>
+            </div>
+            <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+                <i class="icofont icofont-user-suited"></i>
+                <h1 class="counter">{{ moni }}</h1>
+                <p>Nombre de moniteur</p>
+            </div>
+            <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+                <i class="icofont icofont-history"></i>
+                <h1 class="counter">{{ agen }}</h1>
+                <p>Nombre d'agence</p>
+            </div>
+            <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+                <i class="icofont icofont-users-social"></i>
+                <h1 class="counter plus">{{ cli }}</h1>
+                <p>Nombre de client</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
 
 
 <!-- CTA Area
