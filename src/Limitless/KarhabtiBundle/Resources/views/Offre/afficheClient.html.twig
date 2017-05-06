@@ -1,0 +1,132 @@
+{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    {% set counter = 0 %}
+    <!-- Header 1
+ ============================================ -->
+    <div class="header-area header-absolute header-transparent">
+        <div class="header-bottom-2 sticky">
+            <div class="container">
+                <div class="row">
+                    <!-- Header Bottom -->
+                    <div class="col-xs-12">
+                        <div class="navbar-header">
+                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img
+                                        id="logo_img"
+                                        src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}" alt="logo"/></a>
+                        </div>
+                        <div class="main-menu menu-style-6 mean-menu float-right">
+                            <nav>
+                                <ul>
+                                    <li><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                    <li><a href="#">Profil</a></li>
+                                    <li class="active"><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                    <li><a href="#">Moniteur</a></li>
+                                    <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                    <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                        <ul>
+                                            <li><a href="#">Cour</a></li>
+                                            <li><a href="#">Examen</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner -->
+    <div class="page-banner-area overlay overlay-black overlay-70">
+        <div class="container">
+            <div class="row">
+                <div class="page-banner text-center col-xs-12">
+                    <h1>Client</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blog-area bg-white pt-90 pb-90">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-xs-12 mb-45">
+                    <h3 class="heading">Liste des Offres</h3>
+                    <div class="excerpt">
+                    </div>
+                    <i class="icofont icofont-traffic-light"></i>
+                </div>
+            </div>
+            <div class="row">
+                <style type="text/css">
+                    /*Table Style - This is what you want*/
+                    button {
+                        background-color: #dec839; /* Green */
+                        border: 1px solid #dec839;
+                        color: white;
+                        padding: 0px 0px;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 16px;
+                        display: inline-block;
+                        width: auto;
+                        line-height: 30px;
+                    }
+
+                </style>
+
+                <form method="POST" style="padding-bottom: 1%;padding-left: 1.7%">
+                    <h3>Rechercher : <input placeholder="Prix Unitaire Code" type="text" name="prixu">
+                        <input type="submit" value="Recherche"></h3>
+                </form>
+
+
+                <div class="row">
+                    {% for modele in modeles %}
+                        <div class="col-md-3 col-sm-6 col-xs-12 mb-30">
+                            <div class="single-pricing text-center">
+
+                                {% set counter =counter + 1 %}
+                                <div class="pricing-head">
+                                    <h4><a style="text-transform: uppercase;"
+                                           href="{{ path('responsable_offre_show', { 'id': modele.id }) }}">
+                                            <b>{{ modele.nom }}</b></a></h4>
+                                </div>
+                                <div class="pricing-price">
+                                    <img src="{{ asset('bundles/limitlesskarhabti/images/offre/offre.png') }}">
+                                </div>
+                                <ul class="pricing-details">
+                                    <li>Prix unitaire code : {{ modele.prixUcode }}</li>
+                                    <li>Prix unitaire conduite : {{ modele.prixUconduite }}</li>
+                                    <li>Description : {{ modele.description }}</li>
+                                    <li>Nom de moniteur : {{ modele.moniteur }}</li>
+                                    <li>Modele de vehicule : {{ modele.vehicule }}</li>
+                                </ul>
+                                <a class="pricing-action" href="{{ path('responsable_offre_show',{'id':modele.id}) }}">Voir
+                                    l'offre en details</a>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

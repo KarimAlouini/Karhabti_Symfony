@@ -1,0 +1,4 @@
+moniteur_reponsable_index:
+    path:     /
+    defaults: { _controller: "LimitlessKarhabtiBundle:Moniteur:recherche" }
+    methods:  GET

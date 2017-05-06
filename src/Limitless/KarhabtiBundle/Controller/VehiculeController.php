@@ -230,7 +230,9 @@ class VehiculeController extends Controller
         }
 
         return $this->render('LimitlessKarhabtiBundle:Vehicule:list.html.twig',
-            array("vehicule"=>$vehicule));
+            array(
+                "vehicule"=>$vehicule,
+            'user' => $profil,));
 
 
 

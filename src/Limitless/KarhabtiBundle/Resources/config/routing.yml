@@ -32,7 +32,7 @@ limitless_karhabti_responsable_pack:
 
 limitless_karhabti_client:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/client.yml"
-    prefix:   /client/profil
+    prefix:   /client
 
 limitless_karhabti_reservationoffre:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/reservationoffre.yml"
@@ -47,12 +47,17 @@ limitless_karhabti_agence:
     prefix:   /responsable/agences
 
 
+limitless_karhabti_agence_moniteur:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/moniteur.yml"
+    prefix:   /responsable/moniteurs
+
+
 limitless_karhabti_homepage:
-    path:     /responsable/
+    path:     /responsable/accueil
     defaults: { _controller: LimitlessKarhabtiBundle:Default:index }
 
 limitless_karhabti_Client_homepage:
-    path:     /client/
+    path:     /client/accueil
     defaults: { _controller: LimitlessKarhabtiBundle:Default:indexClient }
 test:
     path:     /test

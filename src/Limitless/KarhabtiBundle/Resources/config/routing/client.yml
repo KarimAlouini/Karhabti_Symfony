@@ -1,5 +1,5 @@
 client_index:
-    path:     /
+    path:     /profil
     defaults: { _controller: "LimitlessKarhabtiBundle:Client:index" }
     methods:  GET
 
@@ -25,6 +25,11 @@ client_delete:
 client_Home:
     path:    /home
     defaults: { _controller: "LimitlessKarhabtiBundle:Client:home" }
+
+client_offre_index:
+    path:     /offres
+    defaults: { _controller: "LimitlessKarhabtiBundle:Offre:findClient" }
+
 Clientreserve_offre_index:
     path:     /reserverOffre
     defaults: { _controller: "LimitlessKarhabtiBundle:ReservationOffre:index" }
