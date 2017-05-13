@@ -8,10 +8,7 @@ agence_show:
     defaults: { _controller: "LimitlessKarhabtiBundle:Agence:show" }
     methods:  [GET, POST]
 
-agence_new:
-    path:     /ajouter
-    defaults: { _controller: "LimitlessKarhabtiBundle:Agence:new" }
-    methods:  [GET, POST]
+
 
 agence_edit:
     path:     /{id}/edit

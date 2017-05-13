@@ -9,6 +9,7 @@
 namespace Limitless\KarhabtiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -98,6 +99,30 @@ class Moniteur
      * @ORM\JoinColumn(name="user_id",referencedColumnName="id")
      */
     private $user;
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank(message="Please, upload the profile image.")
+     * @Assert\File(mimeTypes={ "image/jpeg", "image/gif", "image/png" })
+     */
+    private $photo;
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @param mixed $photo
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    }
+
 
     /**
      * @return mixed

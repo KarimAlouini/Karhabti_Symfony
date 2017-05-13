@@ -49,29 +49,38 @@
 </div>
 <!-- Body main wrapper start -->
 <div class="wrapper fix">
-    {% block body %}
+
 
     <!-- Header 1
  ============================================ -->
     <div class="header-area header-absolute header-transparent">
         <div class="header-top hidden-xs">
+
             <div class="container">
                 <div class="row">
                     <!-- Header Top -->
                     <div class="header-top-wrapper fix">
                         <div class="header-top-left text-left col-sm-6">
-                            <p><i class="icofont icofont-ui-call"></i><span>(+216) {{ user.telephone }}</span></p>
-                            <p><i class="icofont icofont-clock-time"></i><span>{{ user.ouverture }}
-                                    - {{ user.fermeture }} </span></p>
+                            {% if (user.telephone is defined) %}
+                                <p><i class="icofont icofont-ui-call"></i><span>(+216) {{ user.telephone }}</span></p>
+                            {% endif %}
+                            {% if (user.ouverture is defined) %}
+                                <p><i class="icofont icofont-clock-time"></i><span>{{ user.ouverture }}
+                                        - {{ user.fermeture }} </span></p>
+                            {% endif %}
                         </div>
                         <div class="header-top-right text-right col-sm-6">
-                            <p><i class="icofont icofont-clock-time"></i><span>{{ user.user }} - <a
-                                            href="">LOGOUT</a></span></p>
+                            {% if (user.user is defined) %}
+                                <p><i class="icofont icofont-auto-mobile"></i><span>{{ app.user.username }}</span></p>
+                                 <p>     </p><p><i class="icofont icofont-logout"></i><span><a
+                                                href="{{ path('fos_user_security_logout') }}">LOGOUT</a></span></p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% block body %}
 
         <div class="header-bottom-2 sticky">
             <div class="container">
@@ -87,22 +96,25 @@
                         <div class="main-menu menu-style-6 mean-menu float-right">
                             <nav>
                                 <ul>
-                                    <li class="active"><a href="{{ path('limitless_karhabti_homepage') }}">home</a>
-                                    </li>
-                                    <li><a href="#">Profil</a></li>
+                                    <li class="active"><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                    <li><a href="{{ path('agence_index') }}">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('limitless_karhabti_responsable_reservationoffre') }}">Réservation
+                                                    Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
+                                            <li><a href="{{ path('limitless_karhabti_responsable_reservationpack') }}">Réservation
+                                                    Pack</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
-                                    <li><a href="#">Moniteur</a></li>
+                                    <li><a href="{{ path('moniteur_reponsable_index') }}">Moniteur</a></li>
                                     <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Cour</a></li>
-                                            <li><a href="#">Examen</a></li>
+                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
@@ -147,7 +159,7 @@
 
         <!-- Feature Area
     ============================================ -->
-        <div id="feature-area" class="feature-area bg-gray pt-90 pb-90">
+        <div id="feature-area" class="feature-area  pt-90 pb-90">
             <div class="container">
                 <!-- Section Title -->
                 <div class="row">
@@ -243,23 +255,23 @@
     <div class="container">
         <div class="row">
             <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
-                <i class="icofont icofont-hat-alt"></i>
-                <h1 class="counter plus">{{ veh }}</h1>
+                <i class="icofont icofont-auto-mobile"></i>
+                <h1 class="counter">{{ veh }}</h1>
                 <p>Nombre de vehicule</p>
             </div>
             <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
-                <i class="icofont icofont-user-suited"></i>
+                <i class="icofont icofont-ui-user-group"></i>
                 <h1 class="counter">{{ moni }}</h1>
                 <p>Nombre de moniteur</p>
             </div>
             <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
-                <i class="icofont icofont-history"></i>
+                <i class="icofont icofont-company"></i>
                 <h1 class="counter">{{ agen }}</h1>
                 <p>Nombre d'agence</p>
             </div>
             <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
                 <i class="icofont icofont-users-social"></i>
-                <h1 class="counter plus">{{ cli }}</h1>
+                <h1 class="counter">{{ cli }}</h1>
                 <p>Nombre de client</p>
             </div>
         </div>

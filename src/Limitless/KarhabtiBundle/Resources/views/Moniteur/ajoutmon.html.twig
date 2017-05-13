@@ -1,0 +1,83 @@
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body%}
+    <div class="page-banner-area overlay overlay-black overlay-70">
+        <div class="container">
+            <div class="row">
+                <div class="page-banner text-center col-xs-12">
+                    <h1>Header One</h1>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><span>header one</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-area" class="contact-area bg-gray">
+    <div class="container pb-90 pt-90">
+    <!-- Section Title -->
+    <div class="row">
+        <div class="section-title text-center col-xs-12 mb-45">
+            <h3 class="heading">Ajout Moniteur</h3>
+            <div class="excerpt">
+                <p></p>
+            </div>
+            <i class="icofont icofont-traffic-light"></i>
+        </div>
+    </div>
+  {#  <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('font-awesome/css/font-awesome.min.css') }}" />#}
+{{ form(form) }}
+    {#   <center><a class="btn color" href="{{ path('Ajout') }}">Ajouter</a></center>#}
+      <center>                     <h5>   </h5>                                </center>
+      <center>                     <h5>   </h5>                                </center>
+  {#
+  <form action="{{path('AjoutMoniteur')}}" method="POST" >
+          <div class="input-4">
+              <table >
+                  <tr><td>Nom</td><td><input type="text" name="nom" placeholder="Name" /> </td> </tr>
+                  <tr> <td>Prenom</td><td> <input type="text" name="prenom" placeholder="Last Name" /></td></tr>
+                  <tr> <td> Adresse</td><td> <input type="text" name="adresse" placeholder="Adress" /></td></tr>
+                  <tr> <td>Civilié</td><td> <input type="text" name="civilite" placeholder="Civility" /> </td></tr>
+                  <tr> <td>Telephone</td><td> <input type="number" name="tel" placeholder="Phone" />  </td></tr>
+                  <tr> <td>Ville</td><td> <input type="text" name="ville" placeholder="City" /></td></tr>
+                  <tr> <td>Date Naissance</td><td> <input type="date" name="date" placeholder="Date of Birth" /></td></tr>
+                  <tr> <td>E-mail</td><td> <input type="email" name="email" placeholder="E-mail" /> </td></tr>
+                  <tr> <td>Code Postal</td><td> <input type="number" name="code" placeholder="Postal Code" /> </td></tr>
+                  <tr> <td>Rating</td><td> <input type="number" name="rating" placeholder="rating" /> </td></tr>
+
+                 <tr><td></td><td><input type="submit" value="Ajouter" /></td>   </tr>
+              <table>
+              <!--div class="single-info text-left fix">
+                  <div class="icon"><i class="icofont icofont-location-pin"></i></div>
+                  <div class="content fix">
+                      <h5>our location</h5>
+                      <p>3756 Melrose place, <br />CA 87031, Australia</p>
+                  </div>
+              </div-->
+
+
+      <form>
+  #}
+
+
+
+
+    <div class="cta-area pb-40 pt-40">
+        <div class="container">
+            <div class="row">
+                <div class="call-to-action text-left col-md-10 col-md-offset-1 col-xs-12">
+                    <h3>try to get our amazing free lesson</h3>
+                    <a href="#" class="btn transparent ">get  lesson</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

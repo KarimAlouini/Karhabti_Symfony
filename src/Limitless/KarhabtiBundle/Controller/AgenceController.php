@@ -49,7 +49,7 @@ class AgenceController extends Controller
 
             }
 
-            mkdir("bundles/limitlesskarhabti/Image/Vehicule/".$id);
+            mkdir("bundles/limitlesskarhabti/Image/Agence/".$id);
             move_uploaded_file ($image,"bundles/limitlesskarhabti/Image/Agence/".$id."/".$image->getFileName());
             rename("bundles/limitlesskarhabti/Image/Agence/".$id."/".$image->getFileName(), "bundles/limitlesskarhabti/Image/Agence/".$id."/".$id.".jpg");
 
@@ -59,9 +59,12 @@ class AgenceController extends Controller
             $agence->setUser($user);
 
             $em->persist($agence);
+            $roles=array('ROLE_AGENCE');
+            $user->setRoles($roles);
             $em->flush();
+            $token = $this->get('security.token_storage')->getToken()->setAuthenticated(False);
 
-            return $this->redirectToRoute('agence_show', array('id' => $agence->getId()));
+            return $this->redirectToRoute('agence_index', array('id' => $agence->getId()));
         }
 
 

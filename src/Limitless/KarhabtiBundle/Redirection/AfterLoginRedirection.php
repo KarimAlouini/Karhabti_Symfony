@@ -41,6 +41,8 @@ return $role->getRole();
 if (in_array('ROLE_AGENCE', $rolesTab, true))
 $redirection = new RedirectResponse($this->router->generate('limitless_karhabti_homepage'));
 // sinon, s'il s'agit d'un commercial on le redirige vers le CRM
+elseif (in_array('ROLE_PREAGENCE', $rolesTab, true))
+$redirection = new RedirectResponse($this->router->generate('agence_new'));
 elseif (in_array('ROLE_MONITEUR', $rolesTab, true))
 $redirection = new RedirectResponse($this->router->generate('test'));
 elseif (in_array('ROLE_CLIENT', $rolesTab, true))

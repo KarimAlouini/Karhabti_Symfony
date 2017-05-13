@@ -38,6 +38,7 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/responsable/, role: ROLE_AGENCE }
+        - { path: ^/preresponsable/, role: ROLE_PREAGENCE }
         - { path: ^/client/, role: ROLE_CLIENT }
         - { path: ^/moniteur/, role: ROLE_MONITEUR }
         - { path: ^/superadmin/, role: ROLE_SUPER_ADMIN }

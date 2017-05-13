@@ -1,0 +1,62 @@
+{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('font-awesome/css/font-awesome.min.css') }}"/>
+
+
+    <div class="page-banner-area overlay overlay-black overlay-70">
+        <div class="container">
+            <div class="row">
+                <div class="page-banner text-center col-xs-12">
+                    <h1>Header One</h1>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><span>header one</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-area" class="contact-area bg-gray">
+        <div class="container pb-90 pt-90">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-xs-12 mb-45">
+                    <h3 class="heading">Liste Des Moniteurs</h3>
+                    <div class="excerpt">
+                        <p></p>
+                        <i class="icofont icofont-traffic-light"></i>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- CTA Area
+    ============================================ -->
+    <div class="cta-area pb-40 pt-40">
+        <div class="container">
+            <div class="row">
+                <div class="call-to-action text-left col-md-10 col-md-offset-1 col-xs-12">
+                    <h3>try to get our amazing free lesson</h3>
+                    <a href="#" class="btn transparent ">get lesson</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    Fin de la discussion
+
+{% endblock %}

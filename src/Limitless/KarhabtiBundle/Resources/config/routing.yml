@@ -29,6 +29,10 @@ limitless_karhabti_responsable_pack:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/pack.yml"
     prefix:   /responsable/pack
 
+limitless_karhabti_moniteur:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/moniteurM.yml"
+    prefix:   /moniteur
+
 
 limitless_karhabti_client:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/client.yml"
@@ -42,6 +46,15 @@ limitless_karhabti_reservationpack:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/reservationpack.yml"
     prefix:   /client/reservationpack
 
+
+
+limitless_karhabti_responsable_reservationoffre:
+    path:     /responsable/reservationoffre
+    defaults: { _controller: LimitlessKarhabtiBundle:Default:indexClient }
+limitless_karhabti_responsable_reservationpack:
+    path:     /responsable/reservationpack
+    defaults: { _controller: LimitlessKarhabtiBundle:Default:indexClient }
+
 limitless_karhabti_agence:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/agence.yml"
     prefix:   /responsable/agences
@@ -50,6 +63,11 @@ limitless_karhabti_agence:
 limitless_karhabti_agence_moniteur:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/moniteur.yml"
     prefix:   /responsable/moniteurs
+
+agence_new:
+    path:     /preresponsable/ajouter
+    defaults: { _controller: "LimitlessKarhabtiBundle:Agence:new" }
+    methods:  [GET, POST]
 
 
 limitless_karhabti_homepage:

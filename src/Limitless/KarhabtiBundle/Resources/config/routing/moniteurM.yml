@@ -1,0 +1,20 @@
+limitless_karhabti_homepage:
+    path:     /
+    defaults: { _controller: LimitlessKarhabtiBundle:Default:index }
+test:
+    path:     /test
+    defaults: { _controller: LimitlessKarhabtiBundle:Default:test }
+AffichageMoniteur:
+    path:     /ListMoniteur
+    defaults: { _controller: LimitlessKarhabtiBundle:Moniteur:Affichage }
+
+Ajout:
+    path:     /Ajout
+    defaults: { _controller: LimitlessKarhabtiBundle:Moniteur:Ajout }
+DeleteMoniteur:
+    path:     /DeleteMoniteur/{id}
+    defaults: { _controller: LimitlessKarhabtiBundle:Moniteur:Delete }
+
+UpdateMoniteur:
+    path:     /UpdateMoniteur/{id}
+    defaults: { _controller: LimitlessKarhabtiBundle:Moniteur:Update }

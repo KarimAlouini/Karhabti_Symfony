@@ -5,7 +5,6 @@
 {% block body%}
     <!-- Header 1
  ============================================ -->
-    <div class="header-area header-absolute header-transparent">
         <div class="header-bottom-2 sticky">
             <div class="container">
                 <div class="row">
@@ -17,23 +16,27 @@
                         <div class="main-menu menu-style-6 mean-menu float-right">
                             <nav>
                                 <ul>
-                                    <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
-                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                    <li ><a href="{{ path('agence_index') }}">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('limitless_karhabti_responsable_reservationoffre') }}">Réservation Offre</a></li>
+                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
+                                            <li><a href="{{ path('limitless_karhabti_responsable_reservationpack') }}">Réservation Pack</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Moniteur</a></li>
-                                    <li><a href="#">Planning</a></li>
+                                    <li ><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a>
+                                    </li>
+                                    <li><a href="{{ path('moniteur_reponsable_index') }}">Moniteur</a></li>
+                                    <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                            <li class="active"><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
                                             <li><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">contact</a></li>
+                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
                                 </ul>
                             </nav>
                         </div>

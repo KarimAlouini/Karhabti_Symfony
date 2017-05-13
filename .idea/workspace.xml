@@ -2,23 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d25b1ab5-ea01-43fb-a673-c8ef9b9fa429" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/MoniteurController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/moniteur.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/list.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/afficheClient.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/MoniteurType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/UpdateMoniteurType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/moniteurM.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/affichage.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/ajoutmon.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/listMon.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/testUpdate.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/updateMoniteur.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Registration/check_email.html.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/recherche.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/recherchepack.html.twig" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/AgenceController.php" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/AgenceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/OffreController.php" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/OffreController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/VehiculeController.php" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/VehiculeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/MoniteurController.php" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/MoniteurController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Agence.php" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Agence.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Moniteur.php" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Moniteur.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Redirection/AfterLoginRedirection.php" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Redirection/AfterLoginRedirection.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/client.yml" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/client.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/public/css/shortcode/default.css" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/public/css/shortcode/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/agence.yml" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/agence.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/form.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/form.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/sucess.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/sucess.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/Update.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/Update.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/cours.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/cours.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/list.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/rechercher.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/rechercher.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/Update.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/Update.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/examen.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/examen.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/list.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/quiz.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/quiz.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/rechercher.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/rechercher.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/list.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/add.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/add.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/affiche.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/affiche.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/show.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/addpack.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/addpack.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/affichepack.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/affichepack.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/showpack.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/showpack.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/Update.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/Update.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/list.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/question.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/question.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/ajouter.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/ajouter.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/list.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/modifier.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/modifier.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/ajouter.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/ajouter.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/list.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/modifier.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/modifier.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/show.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/index.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/new.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/new.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layoutClient.html.twig" afterPath="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layoutClient.html.twig" />
     </list>
     <ignored path="PI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +78,28 @@
     <favorites_list name="PI" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/client.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -94,57 +150,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/PackType.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/list.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/ajouter.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/modifier.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/ajouter.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/modifier.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/form.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/cours.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/list.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/list.html.twig" />
-        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php" />
-        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/SecurityController.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Security/login.html.twig" />
-        <option value="$PROJECT_DIR$/web/bundles/limitlesskarhabti/login/css/style.css" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Registration/register.html.twig" />
-        <option value="$PROJECT_DIR$/web/bundles/limitlesskarhabti/css/plugins/nivo-slider.css" />
-        <option value="$PROJECT_DIR$/web/bundles/limitlesskarhabti/css/style-customizer.css" />
-        <option value="$PROJECT_DIR$/web/bundles/limitlesskarhabti/css/shortcode/hero-slider.css" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/PackController.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/affichepack.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/showpack.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Redirection/AfterLoginRedirection.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Client.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/ClientController.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Image.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/AgenceType.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Agence.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/MoniteurController.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/agence.yml" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/moniteur.yml" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/list.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/AgenceController.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/affiche.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/client.yml" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/VehiculeController.php" />
-        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layoutClient.html.twig" />
         <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/OffreController.php" />
         <option value="$PROJECT_DIR$/web/bundles/limitlesskarhabti/css/shortcode/default.css" />
         <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/public/css/shortcode/default.css" />
         <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/afficheClient.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/agence.yml" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Redirection/AfterLoginRedirection.php" />
+        <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/AgenceController.php" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Registration/check_email.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Agence.php" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/form.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/sucess.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/cours.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/rechercher.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/Update.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/examen.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/quiz.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/rechercher.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/Update.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/affiche.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/recherche.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/addpack.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/affichepack.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/showpack.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/question.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/Update.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/ajouter.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/modifier.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/modifier.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/ajouter.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/MoniteurController.php" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/moniteurM.yml" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Moniteur.php" />
+        <option value="$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/affichage.html.twig" />
       </list>
     </option>
   </component>
@@ -251,8 +307,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,98 +335,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="limitlesskarhabti" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="limitlesskarhabti" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="limitlesskarhabti" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shortcode" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -459,7 +421,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Vehicule" />
+              <option name="myItemId" value="Moniteur" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -486,116 +448,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Offre" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Limitless" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KarhabtiBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Limitless" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KarhabtiBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Limitless" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KarhabtiBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shortcode" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -715,26 +567,14 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PI" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PIDevWeb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -743,18 +583,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\views\Offre" />
       <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\config\routing" />
       <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\views\Moniteur" />
-      <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle" />
       <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\views" />
+      <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Form" />
+      <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\views\Registration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp\www\PI\web\bundles\limitlesskarhabti\Image\Agence\ZoghlamiAutoSfax" />
+      <recent name="D:\wamp\www\PI\web\bundles\limitlesskarhabti\Image\Agence\ZoghlamiAuto" />
       <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\views\Contact" />
       <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\public\js" />
       <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\public\css" />
-      <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Redirection" />
-      <recent name="D:\wamp\www\PI\src\Limitless\KarhabtiBundle\Resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -866,18 +706,30 @@
       <workItem from="1493818362241" duration="11665000" />
       <workItem from="1493917132341" duration="5443000" />
       <workItem from="1493936568702" duration="11387000" />
-      <workItem from="1493992975806" duration="17225000" />
+      <workItem from="1493992975806" duration="17666000" />
+      <workItem from="1494189192873" duration="5181000" />
+      <workItem from="1494238243131" duration="6389000" />
+      <workItem from="1494433566593" duration="2675000" />
+      <workItem from="1494685169011" duration="871000" />
     </task>
+    <task id="LOCAL-00001" summary="commit 06/05">
+      <created>1494075188211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1494075188211</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309002000" />
+    <option name="totallyTimeSpent" value="324559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20204978" sideWeight="0.49344262" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22547585" sideWeight="0.49344262" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -927,7 +779,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="commit 06/05" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 06/05" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -936,19 +789,25 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/MailType.php">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Agence.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="437">
+          <caret line="256" column="31" selection-start-line="256" selection-start-column="31" selection-end-line="256" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/ReservationOffreController.php">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/agence.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/email.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -959,412 +818,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/ImageForm.php" />
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/ImageController.php" />
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Image.php" />
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/aa.html">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Image/upload.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding>
-            <element signature="e#13#54#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#52#94#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/vehicule.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/VehiculeType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="7" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Vehicule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="4" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/ClientType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/AgenceType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="uml://PHP/\Limitless\KarhabtiBundle\Controller\AgenceController">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\Limitless\KarhabtiBundle\Controller\AgenceController</OriginalElement>
-          <nodes>
-            <node x="" y="">\Limitless\KarhabtiBundle\Controller\AgenceController</node>
-            <node x="" y="">\Symfony\Component\DependencyInjection\ContainerAwareInterface</node>
-            <node x="" y="">\Symfony\Bundle\FrameworkBundle\Controller\Controller</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="82.5" y="95.0" />
-          <SelectedNodes />
-          <Categories />
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Agence.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding>
-            <element signature="e#131#163#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Moniteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/agence.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="27" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/moniteur.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/limitlesskarhabti/images/customizer/bodybg/01.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/limitlesskarhabti/css/icofont.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/MoniteurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="22" selection-end-column="111" />
-          <folding>
-            <element signature="e#137#194#0#PHP" expanded="false" />
-            <element signature="e#465#497#1#PHP" expanded="false" />
-            <element signature="e#575#609#1#PHP" expanded="false" />
-            <element signature="e#788#822#1#PHP" expanded="false" />
-            <element signature="e#1008#1042#1#PHP" expanded="false" />
-            <element signature="e#1119#1168#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/ajouter.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="112" column="28" selection-start-line="112" selection-start-column="28" selection-end-line="115" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="32" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/agence/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
-          <folding>
-            <element signature="e#3561#4174#0#HTML" expanded="false" />
-            <element signature="e#4221#4247#0#HTML" expanded="true" />
-            <element signature="e#4318#4328#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/profile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/AgenceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="e#646#694#0#PHP" expanded="true" />
-            <element signature="e#1958#1971#0#PHP" expanded="true" />
-            <element signature="e#2404#2451#0#PHP" expanded="true" />
-            <element signature="e#3077#3090#0#PHP" expanded="true" />
-            <element signature="e#3904#3917#0#PHP" expanded="true" />
-            <element signature="e#4636#4650#1#PHP" expanded="true" />
-            <element signature="e#4984#4999#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1093">
-          <caret line="81" column="9" selection-start-line="78" selection-start-column="77" selection-end-line="81" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/offre.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/CoursController.php">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Contact/sucess.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="36" selection-end-column="83" />
-          <folding />
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
-          <folding>
-            <element signature="e#1598#1625#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/VehiculeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="233" column="38" selection-start-line="233" selection-start-column="38" selection-end-line="233" selection-end-column="38" />
-          <folding>
-            <element signature="e#7652#7684#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-          <folding>
-            <element signature="e#320#352#1#PHP" expanded="true" />
-            <element signature="e#429#463#1#PHP" expanded="true" />
-            <element signature="e#541#575#1#PHP" expanded="true" />
-            <element signature="e#651#683#1#PHP" expanded="true" />
-            <element signature="e#857#900#0#PHP" expanded="true" />
-            <element signature="e#1266#1298#1#PHP" expanded="true" />
-            <element signature="e#1375#1409#1#PHP" expanded="true" />
-            <element signature="e#1459#1489#1#PHP" expanded="true" />
-            <element signature="e#1541#1573#1#PHP" expanded="true" />
-            <element signature="e#1642#1673#1#PHP" expanded="true" />
-            <element signature="e#1716#1765#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/OffreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="178" column="51" selection-start-line="178" selection-start-column="51" selection-end-line="178" selection-end-column="51" />
-          <folding>
-            <element signature="e#6482#6513#1#PHP" expanded="true" />
-            <element signature="e#6679#6710#1#PHP" expanded="true" />
-            <element signature="e#6799#6854#0#PHP" expanded="true" />
-            <marker date="1494073440310" expanded="true" signature="5162:5235" ph="SELECT m FRO... LimitlessKarhabtiBundle" />
-            <marker date="1494073440310" expanded="true" signature="7268:7341" ph="SELECT m FRO... LimitlessKarhabtiBundle" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layoutClient.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/client.yml">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/cours.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="21" />
-          <folding />
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="268" column="14" selection-start-line="222" selection-start-column="0" selection-end-line="268" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/affiche.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/rechercher.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="224" column="107" selection-start-line="224" selection-start-column="32" selection-end-line="224" selection-end-column="107" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/public/css/shortcode/default.css">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Cours/Update.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="82" column="486" selection-start-line="82" selection-start-column="486" selection-end-line="82" selection-end-column="486" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/limitlesskarhabti/css/shortcode/default.css">
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/examen.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="102" column="10" selection-start-line="102" selection-start-column="10" selection-end-line="102" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/quiz.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/rechercher.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Examen/Update.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1372,11 +913,239 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="122" column="20" selection-start-line="122" selection-start-column="20" selection-end-line="122" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/recherche.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Offre/affiche.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/affichepack.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/recherchepack.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/addpack.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/PDF/pdf.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2958">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Pack/showpack.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="39" column="34" selection-start-line="16" selection-start-column="28" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="34" selection-start-line="16" selection-start-column="28" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/question.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Question/Update.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/ajouter.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="43" column="34" selection-start-line="20" selection-start-column="28" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Tache/modifier.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="39" column="34" selection-start-line="16" selection-start-column="28" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/modifier.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Vehicule/ajouter.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding>
-            <element signature="e#12#53#0#Twig" expanded="true" />
-            <element signature="e#586#613#0#Twig" expanded="true" />
-            <element signature="e#5863#5885#0#Twig" expanded="true" />
+            <element signature="e#651#683#1#PHP" expanded="false" />
+            <element signature="e#760#792#1#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="258" column="34" selection-start-line="258" selection-start-column="34" selection-end-line="258" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/MoniteurType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-419">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/AgenceType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-842">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Form/UpdateMoniteurType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/moniteur.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/moniteurM.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/MoniteurController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+          <folding>
+            <element signature="e#137#194#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Controller/AgenceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="58" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Entity/Moniteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/views/Moniteur/affichage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Limitless/KarhabtiBundle/Resources/config/routing/client.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

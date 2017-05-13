@@ -252,4 +252,10 @@ class Agence
         $this->user = $user;
     }
 
+    function __toString()
+    {
+        return $this->getNom();
+    }
+
+
 }

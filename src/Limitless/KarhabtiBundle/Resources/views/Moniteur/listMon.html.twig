@@ -1,0 +1,41 @@
+ <table class="table">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>#</th>
+                    <th>Photo</th>
+                    <th>Name & Last Name</th>
+                    <th>E-mail</th>
+                    <th>Phone</th>
+                    <th>Adresse</th>
+                    <th>Ville</th>
+                    <th>Civilité</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for x in moniteur %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>
+                        <img src="{{ asset('uploads/photos/' ~ x.photo) }}" height="100" width="100">
+                        </td>
+                        <td>{{ x.prenom }}  {{ x.nom }}</td>
+                        <td>{{ x.mail }}</td>
+                        <td>{{ x.telephone }}</td>
+                        <td>{{ x.adresse }}</td>
+                        <td>{{ x.ville }}</td>
+                        <td>{{ x.civilite }}</td>
+                        <td>
+                            <a class="btn color" href="{{ path('UpdateMoniteur',{id:x.id}) }}">Modifier</a>
+                            <a class="btn color" href="{{ path('DeleteMoniteur',{id:x.id}) }}">Supprimer</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+  <center><a class="btn color" href="{{ path('Ajout') }}">Ajouter nouveau moniteur</a></center>
+
+
+          {#   <div class="input"><input type="text" name="name"
+                                       placeholder="Rating"/> {{ x.rating|rating }}</div> #}
