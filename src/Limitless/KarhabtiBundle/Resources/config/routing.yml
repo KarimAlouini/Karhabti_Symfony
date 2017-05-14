@@ -84,6 +84,9 @@ test:
 limitless_karhabti_mail:
     path:     /responsable/mail
     defaults: { _controller: LimitlessKarhabtiBundle:Contact:mail }
+limitless_karhabti_mail_client:
+    path:     /client/mail
+    defaults: { _controller: LimitlessKarhabtiBundle:Contact:mailClient }
 limitless_karhabti_accuse_mail:
     path:     /sucess
     defaults: { _controller: LimitlessKarhabtiBundle:Contact:success }

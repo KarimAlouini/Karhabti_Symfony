@@ -30,6 +30,26 @@ client_offre_index:
     path:     /offres
     defaults: { _controller: "LimitlessKarhabtiBundle:Offre:findClient" }
 
+client_agence_index:
+    path:     /agences
+    defaults: { _controller: "LimitlessKarhabtiBundle:Client:rechercheAgence" }
+
+client_cours_index:
+    path:     /cours
+    defaults: { _controller: "LimitlessKarhabtiBundle:Cours:ListClient" }
+
+client_examens_index:
+    path:     /examens
+    defaults: { _controller: "LimitlessKarhabtiBundle:Examen:ListClient" }
+
+client_passr_examen:
+    path:     /examen/passer
+    defaults: { _controller: "LimitlessKarhabtiBundle:Examen:passerexamen" }
+
+client_pack_index:
+    path:     /packs
+    defaults: { _controller: "LimitlessKarhabtiBundle:Pack:findpackClient" }
+
 Clientreserve_offre_index:
     path:     /reserverOffre
     defaults: { _controller: "LimitlessKarhabtiBundle:ReservationOffre:index" }

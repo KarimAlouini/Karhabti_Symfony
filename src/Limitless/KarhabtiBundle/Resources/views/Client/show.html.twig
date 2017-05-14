@@ -1,78 +1,53 @@
-{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% extends "LimitlessKarhabtiBundle::layoutClient.html.twig" %}
 {% block title %}
     {{ parent() }}
 {% endblock %}
-{% block body%}
+{% block body %}
     <!-- Header 1
     ============================================ -->
-    <div class="header-area header-absolute header-transparent">
-        <div class="header-bottom-2 sticky">
-            <div class="container">
-                <div class="row">
-                    <!-- Header Bottom -->
-                    <div class="col-xs-12">
-                        <div class="navbar-header">
-                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
-                        </div>
-                        <div class="main-menu menu-style-6 mean-menu float-right">
-                        </div>
-                        <div class="main-menu menu-style-6 mean-menu float-right">
-                            <nav>
-                                <ul>
-                                    <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
-                                    <li class="active"><a href="{{ path('client_index') }}">Profil</a></li>
-                                    <li><a href="#">Pack/Offre<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="{{ path('responsable_pack_index') }}">Pack<i class="icofont icofont-simple-right"></i></a></li>
-                                            <li><a href="{{ path('responsable_offre_index') }}">Offre<i class="icofont icofont-simple-right"></i></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Plannig<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="shortcode-alert.html">Plannig client</a></li>
-                                            <li><a href="shortcode-button.html">Plannig Moniteur</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="gallery.html">Vehicule<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="gallery-2-column.html">rechercher Vehicule</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="service.html">Agence</a>
-                                        <ul>
-                                            <li><a href="page-title-default.html">Consulter agences</a></li>
-                                            <li><a href="page-title-parallax.html">rechercher agences</a></li>
-                                        </ul>
-
-                                    </li>
-
-                                    <li><a href="blog.html">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="blog.html">Consulter Cours</a></li>
-                                            <li><a href="blog-details.html">Consulter examen</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">contact</a></li>
-
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="mobile-menu"></div>
+    <div class="header-bottom-2 sticky">
+        <div class="container">
+            <div class="row">
+                <!-- Header Bottom -->
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img"
+                                                                                                           src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
+                                                                                                           alt="logo"/></a>
                     </div>
+                    <div class="main-menu menu-style-6 mean-menu float-right">
+                        <nav>
+                            <ul>
+                                <li ><a href="{{ path('limitless_karhabti_Client_homepage') }}">home</a>
+                                </li>
+                                <li class="active"><a href="{{ path('client_index') }}">Profil</a></li>
+
+                                <li ><a href="{{ path('client_pack_index') }}">Pack</a></li>
+                                <li ><a href="{{ path('client_offre_index') }}">Offre</a></li>
+                                <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                    <ul>
+                                        <li><a href="{{ path('client_cours_index') }}">Cour</a></li>
+                                        <li><a href="{{ path('client_examens_index') }}">Examen</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('client_agence_index') }}">Agences</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu"></div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Banner -->
     <div class="page-banner-area overlay overlay-black overlay-70">
         <div class="container">
             <div class="row">
                 <div class="page-banner text-center col-xs-12">
-                    <h1>Header One</h1>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><span>header one</span></li>
-                    </ul>
+                    <h1>Client</h1>
+
                 </div>
             </div>
         </div>
@@ -84,208 +59,112 @@
             <div class="row">
                 <div class="section-title text-center col-xs-12 mb-45">
                     <h3 class="heading">Votre Profil</h3>
-                    <div class="excerpt">
-                        <p></p>
-                    </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
             </div>
             <div class="row">
+
                 <style type="text/css">
                     /*Table Style - This is what you want*/
                     button {
                         background-color: #dec839; /* Green */
-                        border: none;
+                        border: 1px solid #dec839;
                         color: white;
-                        padding: 15px 32px;
+                        padding: 0px 0px;
                         text-align: center;
                         text-decoration: none;
-                        display: inline-block;
                         font-size: 16px;
-                    }
-                    table a:link {
-                        color: #666;
-                        font-weight: bold;
-                        text-decoration:none;
-                    }
-                    table a:visited {
-                        color: #999999;
-                        font-weight:bold;
-                        text-decoration:none;
-                    }
-                    table a:active,
-                    table a:hover {
-                        color: #bd5a35;
-                        text-decoration:underline;
-                    }
-                    table {
-                        font-family:Arial, Helvetica, sans-serif;
-                        color:#666;
-                        font-size:12px;
-                        text-shadow: 1px 1px 0px #fff;
-                        background:#eaebec;
-                        margin-left: auto;
-                        margin-right: auto;
-                        margin-top: 20px;
+                        display: inline-block;
                         width: auto;
-                        border:#ccc 1px solid;
-
-                        -moz-border-radius:3px;
-                        -webkit-border-radius:3px;
-                        border-radius:3px;
-
-                        -moz-box-shadow: 0 1px 2px #d1d1d1;
-                        -webkit-box-shadow: 0 1px 2px #d1d1d1;
-                        box-shadow: 0 1px 2px #d1d1d1;
-                    }
-                    table th {
-                        padding:21px 25px 22px 25px;
-                        border-top:1px solid #fafafa;
-                        border-bottom:1px solid #e0e0e0;
-                        text-align: center;
-
-                        background: #ededed;
-                        background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
-                        background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
-                    }
-                    table th:first-child{
-                        text-align: center;
-                        padding-left:20px;
-                    }
-                    table tr:first-child th:first-child{
-                        -moz-border-radius-topleft:3px;
-                        -webkit-border-top-left-radius:3px;
-                        border-top-left-radius:3px;
-                    }
-                    table tr:first-child th:last-child{
-                        -moz-border-radius-topright:3px;
-                        -webkit-border-top-right-radius:3px;
-                        border-top-right-radius:3px;
-                    }
-                    table tr{
-                        text-align: center;
-                        padding-left:20px;
-                    }
-                    table tr td:first-child{
-                        text-align: left;
-                        padding-left:20px;
-                        border-left: 0;
-                    }
-                    table tr td {
-                        padding:18px;
-                        border-top: 1px solid #ffffff;
-                        border-bottom:1px solid #e0e0e0;
-                        border-left: 1px solid #e0e0e0;
-
-                        background: #fafafa;
-                        background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-                        background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
-                    }
-                    table tr.even td{
-                        background: #f6f6f6;
-                        background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
-                        background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
-                    }
-                    table tr:last-child td{
-                        border-bottom:0;
-                    }
-                    table tr:last-child td:first-child{
-                        -moz-border-radius-bottomleft:3px;
-                        -webkit-border-bottom-left-radius:3px;
-                        border-bottom-left-radius:3px;
-                    }
-                    table tr:last-child td:last-child{
-                        -moz-border-radius-bottomright:3px;
-                        -webkit-border-bottom-right-radius:3px;
-                        border-bottom-right-radius:3px;
-                    }
-                    table tr:hover td{
-                        background: #f2f2f2;
-                        background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-                        background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+                        line-height: 30px;
                     }
 
                 </style>
+                {% set myVal = 0 %}
+                {% if(client.civilite) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.nom) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.prenom) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.adresse) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.ville) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.codePostal) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.telephone) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.dateNaissance) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.villeNaissance) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.etatCode) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
 
+                <div style="width: 100%  ;  " class="blog-wrapper float-right col-md-8 col-xs-12">
 
-                <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
+                    <p class="progress-text">
+                        <h4>Votre profil est complété à {{ myVal }}%</h4>
+                    </p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active" style="width: {{ myVal }}%;"></div>
+                    </div>
 
+                    <div class="single-blog">
 
-
-
-
-
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ client.id }}</td>
-            </tr>
-            <tr>
-                <th>Civilite</th>
-                <td>{{ client.civilite }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ client.nom }}</td>
-            </tr>
-            <tr>
-                <th>Prenom</th>
-                <td>{{ client.prenom }}</td>
-            </tr>
-            <tr>
-                <th>Adresse</th>
-                <td>{{ client.adresse }}</td>
-            </tr>
-            <tr>
-                <th>Ville</th>
-                <td>{{ client.ville }}</td>
-            </tr>
-            <tr>
-                <th>Codepostal</th>
-                <td>{{ client.codePostal }}</td>
-            </tr>
-            <tr>
-                <th>Telephone</th>
-                <td>{{ client.telephone }}</td>
-            </tr>
-            <tr>
-                <th>Datenaissance</th>
-                <td>{% if client.dateNaissance %}{{ client.dateNaissance|date('Y-m-d') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Villenaissance</th>
-                <td>{{ client.villeNaissance }}</td>
-            </tr>
-            <tr>
-                <th>Etatcode</th>
-                <td>{% if client.etatCode %}Yes{% else %}No{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td><img src="{{ asset('Uploads/' ~ client.image )}}"></td>
-            </tr>
-        </tbody>
-</table>
-                {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': client.id} %}
-                                <ul>
-                                    <li>
-                                        <a href="{{ path('client_index') }}">Back to the list</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ path('client_edit', { 'id': client.id }) }}">Edit</a>
-                                    </li>
-                                    <li>
-                                        {{ form_start(delete_form) }}
-                                        <input type="submit" value="Delete">
-                                        {{ form_end(delete_form) }}
-                                    </li>
-               
-                                </ul>
-                            </td>
-                        </tr>
+                        <div class="avatar float-left">
+                            <a href="{{ asset('bundles/limitlesskarhabti/img/comment/1.jpg') }}"
+                               class="gallery-image image-popup">
+                                <img src="{{ asset('bundles/limitlesskarhabti/img/comment/1.jpg') }}" alt=""/>
+                                <div class="content">
+                                    <i class="icofont icofont-search"></i>
+                                    <h4>VOIR</h4>
+                                </div>
+                            </a>
+                        </div>
 
 
 
+                        <div class="content fix" style="padding-left: 20%;">
+                            <h3 class="heading">{{ client.civilite }} {{ client.nom }} {{ client.prenom }}</h3>
+                            <br>
+                            <h5>
+                                Né(e)
+                                le {% if client.dateNaissance %}{{ client.dateNaissance|date('Y-m-d') }}{% endif %}
+                                à {{ client.villeNaissance }}
+                            </h5>
+                            <h5>
+                                Habite à {{ client.adresse }}, {{ client.ville }}
+                            </h5>
+
+                            <h5>
+                                Mon code postal : {{ client.codePostal }}
+                            </h5>
+
+                            <h5>
+                                Numéro : (+216) {{ client.telephone }}
+                            </h5>
+                            <p class="float-right">
+                                <button><a class="btn color" href="{{ path('client_edit', { 'id': client.id }) }}">Modifier</a></button>
+                            </p>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
 
         </div>

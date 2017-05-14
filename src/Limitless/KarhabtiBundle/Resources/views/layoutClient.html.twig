@@ -49,7 +49,7 @@
 </div>
 <!-- Body main wrapper start -->
 <div class="wrapper fix">
-    {% block body %}
+
 
     <!-- Header 1
  ============================================ -->
@@ -60,24 +60,26 @@
                     <!-- Header Top -->
                     <div class="header-top-wrapper fix">
                         <div class="header-top-left text-left col-sm-6">
+                            {% if (user.telephone is defined) %}
                             <p><i class="icofont icofont-ui-call"></i><span>(+216) {{ user.telephone }}</span></p>
+                            {% endif %}
                         </div>
                         <div class="header-top-right text-right col-sm-6">
-                            <p><i class="icofont icofont-clock-time"></i><span>{{ user.user }} - <a
-                                            href="">LOGOUT</a></span></p>
+                            <p><i class="icofont icofont-clock-time"></i><span>{{ app.user.username }} - <a
+                                            href="{{ path('fos_user_security_logout') }}">LOGOUT</a></span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        {% block body %}
         <div class="header-bottom-2 sticky">
             <div class="container">
                 <div class="row">
                     <!-- Header Bottom -->
                     <div class="col-xs-12">
                         <div class="navbar-header">
-                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img
+                            <a href="{{ path('limitless_karhabti_Client_homepage') }}" class="logo navbar-brand"><img
                                         id="logo_img"
                                         src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
                                         alt="logo"/></a>
@@ -85,25 +87,23 @@
                         <div class="main-menu menu-style-6 mean-menu float-right">
                             <nav>
                                 <ul>
-                                    <li class="active"><a href="{{ path('limitless_karhabti_homepage') }}">home</a>
+                                    <li class="active"><a href="{{ path('limitless_karhabti_Client_homepage') }}">home</a>
                                     </li>
-                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="{{ path('client_index') }}">Profil</a></li>
                                     <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Offre</a></li>
-                                            <li><a href="#">Pack</a></li>
+                                            <li><a href="{{ path('client_offre_index') }}">Offre</a></li>
+                                            <li><a href="{{ path('client_pack_index') }}">Pack</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
-                                    <li><a href="#">Moniteur</a></li>
-                                    <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
                                     <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
                                         <ul>
-                                            <li><a href="#">Cour</a></li>
-                                            <li><a href="#">Examen</a></li>
+                                            <li><a href="{{ path('client_cours_index') }}">Cour</a></li>
+                                            <li><a href="{{ path('client_examens_index') }}">Examen</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
+                                    <li><a href="{{ path('client_agence_index') }}">Agences</a></li>
+                                    <li><a href="#">contact</a></li>
                                 </ul>
                             </nav>
                         </div>

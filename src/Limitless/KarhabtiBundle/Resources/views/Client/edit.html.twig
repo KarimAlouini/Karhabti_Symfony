@@ -2,66 +2,43 @@
 {% block title %}
     {{ parent() }}
 {% endblock %}
-{% block body%}
+{% block body %}
     <!-- Header 1
  ============================================ -->
-    <div class="header-area header-absolute header-transparent">
-        <div class="header-bottom-2 sticky">
-            <div class="container">
-                <div class="row">
-                    <!-- Header Bottom -->
-                    <div class="col-xs-12">
-                        <div class="navbar-header">
-                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
-                        </div>
-                        <div class="main-menu menu-style-6 mean-menu float-right">
-                        </div>
-                        <div class="main-menu menu-style-6 mean-menu float-right">
-                            <nav>
-                                <ul>
-                                    <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
-                                    <li class="active"><a href="{{ path('client_index') }}">Profil</a></li>
-                                    <li><a href="#">Pack/Offre<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="{{ path('responsable_pack_index') }}">Pack<i class="icofont icofont-simple-right"></i></a></li>
-                                            <li><a href="{{ path('responsable_offre_index') }}">Offre<i class="icofont icofont-simple-right"></i></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Plannig<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="shortcode-alert.html">Plannig client</a></li>
-                                            <li><a href="shortcode-button.html">Plannig Moniteur</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="gallery.html">Vehicule<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="gallery-2-column.html">rechercher Vehicule</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="service.html">Agence</a>
-                                        <ul>
-                                            <li><a href="page-title-default.html">Consulter agences</a></li>
-                                            <li><a href="page-title-parallax.html">rechercher agences</a></li>
-                                        </ul>
-
-                                    </li>
-
-                                    <li><a href="blog.html">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="blog.html">Consulter Cours</a></li>
-                                            <li><a href="blog-details.html">Consulter examen</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">contact</a></li>
-
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="mobile-menu"></div>
+    <div class="header-bottom-2 sticky">
+        <div class="container">
+            <div class="row">
+                <!-- Header Bottom -->
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img"
+                                                                                                           src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
+                                                                                                           alt="logo"/></a>
                     </div>
+                    <div class="main-menu menu-style-6 mean-menu float-right">
+                        <nav>
+                            <ul>
+                                <li class="active"><a href="{{ path('limitless_karhabti_Client_homepage') }}">home</a>
+                                </li>
+                                <li><a href="{{ path('client_index') }}">Profil</a></li>
+                                <li ><a href="{{ path('client_pack_index') }}">Pack</a></li>
+                                <li ><a href="{{ path('client_offre_index') }}">Offre</a></li>
+                                <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                    <ul>
+                                        <li><a href="{{ path('client_cours_index') }}">Cour</a></li>
+                                        <li><a href="{{ path('client_examens_index') }}">Examen</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('client_agence_index') }}">Agences</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu"></div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Banner -->
     <div class="page-banner-area overlay overlay-black overlay-70">
@@ -84,60 +61,87 @@
             <div class="row">
                 <div class="section-title text-center col-xs-12 mb-45">
                     <h3 class="heading">Modifier Votre compte</h3>
-                    <div class="excerpt">
-                        <p>Vous pouvez modifier votre compte,ici</p>
-                    </div>
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
             </div>
             <div class="row">
                 <!-- Contact Form -->
-                <div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12"style="width: 100%">
+                <div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12" style="width: 100%">
                     <style type="text/css">
                         button {
                             background-color: #dec839; /* Green */
-                            border: none;
+                            border: 1px solid #dec839;
                             color: white;
-                            padding: 10px 15px;
+                            padding: 0px 0px;
                             text-align: center;
                             text-decoration: none;
-                            display: inline-block;
                             font-size: 16px;
+                            display: inline-block;
+                            width: auto;
+                            line-height: 30px;
                         }
                     </style>
-
+                    <ul>
+                        <li style="margin-bottom: 4%"><button ><a class="btn color"   href="{{ path('client_show', { 'id': client.id }) }}">Retour à mon profil</a></button></li>
+                    </ul>
 
 
                     {{ form_start(edit_form) }}
 
                     <div class="input-2">
-
-
-                        <div class="input">{{ form_widget(edit_form.nom,{'attr':{'placeholder':'Nom'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.prenom,{'attr':{'placeholder':'Prenom'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.adresse,{'attr':{'placeholder':'Adresse'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.ville,{'attr':{'placeholder':'Ville'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.telephone,{'attr':{'placeholder':'Telephone'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.dateNaissance,{'attr':{'placeholder':'DateNaissance'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.codePostal,{'attr':{'placeholder':'CodePostale'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.villeNaissance,{'attr':{'placeholder':'VilleNaissance'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.image,{'attr':{'placeholder':'Image'}}) }}</div>
-                        <p>Si vous avez le code de la route coche :</p></br>
-                        <div class="input">{{ form_widget(edit_form.etatCode,{'attr':{'placeholder':'EtatCode'}}) }}</div>
-                        <div class="input">{{ form_widget(edit_form.civilite,{'attr':{'placeholder':'Civilité'}}) }}</div>
-
+                        <div class="input">
+                            <h3 class="panel-title">Civilite</h3>
+                            {{ form_widget(edit_form.civilite) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Nom</h3>
+                            {{ form_widget(edit_form.nom) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Prenom</h3>
+                            {{ form_widget(edit_form.prenom) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Date de naissance</h3>
+                            {{ form_widget(edit_form.dateNaissance) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Ville de naissance</h3>
+                            {{ form_widget(edit_form.villeNaissance) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Telephone</h3>
+                            {{ form_widget(edit_form.telephone) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Adresse</h3>
+                            {{ form_widget(edit_form.adresse) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Ville</h3>
+                            {{ form_widget(edit_form.ville) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Code Postal</h3>
+                            {{ form_widget(edit_form.codePostal) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Avez vous déjà votre code de la route ?</h3>
+                            {{ form_widget(edit_form.etatCode) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Image</h3>
+                            {{ form_widget(edit_form.image) }}
+                        </div>
 
 
                     </div>
-                    <div class="input input-submit"><input type="submit" value="Modifier" /></div>
-
+                    <div style="text-align: right" class="input input-submit">
+                        <input type="submit" value="Modifier"/>
+                    </div>
 
                     {{ form_end(edit_form) }}
-                    <ul>
-                        <li>
-                            <button ><a   href="{{ path('client_index') }}">Back to the list</a></button>
-                        </li>
-                    </ul>
+
 
                     <p class="form-messege"></p>
                 </div>

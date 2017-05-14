@@ -28,6 +28,41 @@ class ClientController extends Controller
         return $this->render('LimitlessKarhabtiBundle:Client:Home.html.twig');
 
     }
+    public function rechercheAgenceAction(Request $Request){
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $agence=  $em->getRepository('LimitlessKarhabtiBundle:Agence')->findAll();
+
+
+        if($Request->isMethod('POST'))
+
+        {
+            $search=$Request->get('matricule');
+            $agence=$em->getRepository('LimitlessKarhabtiBundle:Agence')->findBy(array("nom"=>$search,'agence' => $agence));
+
+        }
+
+        return $this->render('LimitlessKarhabtiBundle:Client:listAgence.html.twig',
+            array("agence"=>$agence));
+    }
+    public function rechercheReservationAction(Request $Request){
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $profil=  $em->getRepository('LimitlessKarhabtiBundle:Client')->findOneBy(array('user' => $user));
+        $reservationOffres = $em->getRepository('LimitlessKarhabtiBundle:ReservationOffre')->findBy(array('client_id' => $profil));
+        $reservationPacks = $em->getRepository('LimitlessKarhabtiBundle:ReservationPack')->findBy(array('client_id' => $profil));
+
+
+
+
+        return $this->render('LimitlessKarhabtiBundle:Client:listAgence.html.twig',
+            array(
+                'reservationPacks' => $reservationPacks,
+                'reservationOffres' => $reservationOffres,
+            ));
+    }
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -38,8 +73,8 @@ class ClientController extends Controller
 
 
 
-        return $this->render('LimitlessKarhabtiBundle:Client:index.html.twig', array(
-            'clients' => $clients,
+        return $this->render('LimitlessKarhabtiBundle:Client:show.html.twig', array(
+            'client' => $profil,
         ));
     }
 
