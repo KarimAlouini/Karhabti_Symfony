@@ -47,6 +47,16 @@ class ExamenController extends Controller
 
 
     }
+    public function ListClientAction(Request $request)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $Listeexamens=$em->getRepository('LimitlessKarhabtiBundle:Examen')->findAll();
+
+
+
+
+        return $this->render('LimitlessKarhabtiBundle:Client:listExamen.html.twig',array("examen"=>$Listeexamens));
+    }
 
     public function addAction(Request $request){
 
@@ -154,7 +164,7 @@ class ExamenController extends Controller
     }
 
 
-    public function RechercherAction(Request $request)
+    public function passerexamenAction(Request $request)
     {
         $examen=new Examen();
         $em=$this->getDoctrine()->getManager();

@@ -176,6 +176,25 @@ namespace Limitless\KarhabtiBundle\Controller;
 
 
         }
+        public function findpackClientAction(Request $Request){
+
+            $em=$this->getDoctrine()->getManager();
+
+            $modeles=  $em->getRepository('LimitlessKarhabtiBundle:Pack')->findAll();
+
+
+            if($Request->isMethod('POST'))
+
+            {
+                $search=$Request->get('prixtotal');
+                $modeles=$em->getRepository('LimitlessKarhabtiBundle:Pack')->findBy(array("prixtotal"=>$search));
+            }
+            return $this->render("LimitlessKarhabtiBundle:Pack:afficheClient.html.twig",
+                array("modeles"=>$modeles));
+
+
+
+        }
         public function showpackAction(Pack $pack)
         {
 

@@ -44,6 +44,17 @@ class CoursController extends Controller
         return $this->render('LimitlessKarhabtiBundle:Cours:list.html.twig',array("Cours"=>$cours));
     }
 
+    public function ListClientAction(Request $request)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $Listecours=$em->getRepository('LimitlessKarhabtiBundle:Cours')->findAll();
+
+
+
+
+        return $this->render('LimitlessKarhabtiBundle:Client:listCours.html.twig',array("Cours"=>$Listecours));
+    }
+
     public function DeleteAction($id)
     {
         $em=$this->getDoctrine()->getManager();

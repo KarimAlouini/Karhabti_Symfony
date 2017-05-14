@@ -18,7 +18,5 @@ responsable_examen_add:
     path:     /Add
     defaults: { _controller: "LimitlessKarhabtiBundle:Examen:add" }
 
-responsable_examen_recherche:
-    path:     /Recherche
-    defaults: { _controller: "LimitlessKarhabtiBundle:Examen:Rechercher" }
+
 

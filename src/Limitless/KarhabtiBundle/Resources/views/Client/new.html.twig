@@ -1,98 +1,54 @@
-
-{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% extends "LimitlessKarhabtiBundle::layoutClient.html.twig" %}
 
 {% block title %}
     {{ parent() }}
 {% endblock %}
-{% block body%}
+{% block body %}
     <!-- Header 1
  ============================================ -->
-    <div class="header-area header-absolute header-transparent">
-        <div class="header-bottom-2 sticky">
-            <div class="container">
-                <div class="row">
-                    <!-- Header Bottom -->
-                    <div class="col-xs-12">
-                        <div class="navbar-header">
-                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
-                        </div>
-                        <div class="main-menu menu-style-6 mean-menu float-right">
-                        </div>
-                        <div class="main-menu menu-style-6 mean-menu float-right">
-                            <nav>
-                                <ul>
-                                    <li ><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
-                                    <li class="active"><a href="{{ path('client_new') }}">Profil</a></li>
-                                    <li><a href="#">Pack/Offre<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="{{ path('responsable_pack_index') }}">Pack<i class="icofont icofont-simple-right"></i></a></li>
-                                            <li><a href="{{ path('responsable_offre_index') }}">Offre<i class="icofont icofont-simple-right"></i></a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Plannig<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="shortcode-alert.html">Plannig client</a></li>
-                                            <li><a href="shortcode-button.html">Plannig Moniteur</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="gallery.html">Vehicule<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="gallery-2-column.html">rechercher Vehicule</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="service.html">Agence</a>
-                                        <ul>
-                                            <li><a href="page-title-default.html">Consulter agences</a></li>
-                                            <li><a href="page-title-parallax.html">rechercher agences</a></li>
-                                        </ul>
-
-                                    </li>
-
-                                    <li><a href="blog.html">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="blog.html">Consulter Cours</a></li>
-                                            <li><a href="blog-details.html">Consulter examen</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">contact</a></li>
-
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="mobile-menu"></div>
+    <div class="header-bottom-2 sticky">
+        <div class="container">
+            <div class="row">
+                <!-- Header Bottom -->
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img"
+                                                                                                           src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
+                                                                                                           alt="logo"/></a>
                     </div>
+                    <div class="main-menu menu-style-6 mean-menu float-right">
+                        <nav>
+                            <ul>
+                                <li ><a href="{{ path('limitless_karhabti_Client_homepage') }}">home</a>
+                                </li>
+                                <li class="active"><a href="{{ path('client_index') }}">Profil</a></li>
+                                <li ><a href="{{ path('client_offre_index') }}">Offre</a></li>
+                                <li ><a href="{{ path('client_pack_index') }}">Pack</a></li>
+                                <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                    <ul>
+                                        <li><a href="{{ path('client_cours_index') }}">Cour</a></li>
+                                        <li><a href="{{ path('client_examens_index') }}">Examen</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('client_agence_index') }}">Agences</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="fb-root"></div>
-    <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id))
-                return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <div id="google_translate_element"></div><script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-    }
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
 
     <!-- Banner -->
     <div class="page-banner-area overlay overlay-black overlay-70">
         <div class="container">
             <div class="row">
                 <div class="page-banner text-center col-xs-12">
-                    <h1>Header One</h1>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><span>header one</span></li>
-                    </ul>
+                    <h1>Client</h1>
+
                 </div>
             </div>
         </div>
@@ -104,64 +60,88 @@
             <div class="row">
                 <div class="section-title text-center col-xs-12 mb-45">
                     <h3 class="heading">Crée Votre compte</h3>
-                    <div class="excerpt">
-                        <p>Pour vous inscrire , vous devez créer un compte Karhabti.</p>
-                    </div>
+
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
             </div>
             <div class="row">
                 <!-- Contact Form -->
-                <div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12"style="width: 100%">
+                <div class="contact-form form text-left col-md-8 col-sm-7 col-xs-12" style="width: 100%">
                     <style type="text/css">
                         button {
                             background-color: #dec839; /* Green */
-                            border: none;
+                            border: 1px solid #dec839;
                             color: white;
-                            padding: 10px 15px;
+                            padding: 0px 0px;
                             text-align: center;
                             text-decoration: none;
-                            display: inline-block;
                             font-size: 16px;
+                            display: inline-block;
+                            width: auto;
+                            line-height: 30px;
                         }
                     </style>
 
 
-
                     {{ form_start(form) }}
 
-                        <br class="input-2">
-
-
-                            <div class="input">{{ form_widget(form.nom,{'attr':{'placeholder':'Nom'}}) }}</div>
-                            <div class="input">{{ form_widget(form.prenom,{'attr':{'placeholder':'Prenom'}}) }}</div>
-                            <div class="input">{{ form_widget(form.adresse,{'attr':{'placeholder':'Adresse'}}) }}</div>
-                            <div class="input">{{ form_widget(form.ville,{'attr':{'placeholder':'Ville'}}) }}</div>
-                            <div class="input">{{ form_widget(form.telephone,{'attr':{'placeholder':'Telephone'}}) }}</div>
-                            <div class="input">{{ form_widget(form.dateNaissance,{'attr':{'placeholder':'DateNaissance'}}) }}</div>
-                            <div class="input">{{ form_widget(form.codePostal,{'attr':{'placeholder':'CodePostale'}}) }}</div>
-                            <div class="input">{{ form_widget(form.villeNaissance,{'attr':{'placeholder':'VilleNaissance'}}) }}</div>
-                            <div class="input">{{ form_widget(form.image,{'attr':{'placeholder':'Image'}}) }}</div>
-                            <p>Si vous avez le code de la route coche</p></br>
-                            <div class="input">{{ form_widget(form.etatCode,{'attr':{'placeholder':'EtatCode'}}) }}</div>
-                            <div class="input">{{ form_widget(form.civilite,{'attr':{'placeholder':'Civilité'}}) }}</div>
-
-
+                    <div class="input-2">
+                        <div class="input">
+                            <h3 class="panel-title">Civilite</h3>
+                            {{ form_widget(form.civilite) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Nom</h3>
+                            {{ form_widget(form.nom) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Prenom</h3>
+                            {{ form_widget(form.prenom) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Date de naissance</h3>
+                            {{ form_widget(form.dateNaissance) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Ville de naissance</h3>
+                            {{ form_widget(form.villeNaissance) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Telephone</h3>
+                            {{ form_widget(form.telephone) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Adresse</h3>
+                            {{ form_widget(form.adresse) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Ville</h3>
+                            {{ form_widget(form.ville) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Code Postal</h3>
+                            {{ form_widget(form.codePostal) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Avez vous déjà votre code de la route ?</h3>
+                            {{ form_widget(form.etatCode) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Image</h3>
+                            {{ form_widget(form.image) }}
                         </div>
 
 
+                    </div>
 
 
-                    <ul>
-                        <li>
-                            <div class="input input-submit"><input type="submit" value="Créer" /></div>
-                        </li>
-                    </ul>
+                    <div style="text-align: right" class="input input-submit"><input type="submit" value="Valider"/>
+                    </div>
                     {{ form_end(form) }}
                     <p class="form-messege"></p>
                 </div>
             </div>
-
         </div>
+
     </div>
 {% endblock %}

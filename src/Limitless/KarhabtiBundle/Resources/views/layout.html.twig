@@ -51,6 +51,7 @@
 <div class="wrapper fix">
 
 
+
     <!-- Header 1
  ============================================ -->
     <div class="header-area header-absolute header-transparent">
@@ -70,18 +71,15 @@
                             {% endif %}
                         </div>
                         <div class="header-top-right text-right col-sm-6">
-                            {% if (user.user is defined) %}
                                 <p><i class="icofont icofont-auto-mobile"></i><span>{{ app.user.username }}</span></p>
                                  <p>     </p><p><i class="icofont icofont-logout"></i><span><a
                                                 href="{{ path('fos_user_security_logout') }}">LOGOUT</a></span></p>
-                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         {% block body %}
-
         <div class="header-bottom-2 sticky">
             <div class="container">
                 <div class="row">
