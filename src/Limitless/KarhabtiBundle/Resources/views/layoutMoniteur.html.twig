@@ -1,0 +1,318 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>KARHABTI</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('bundles/limitlesskarhabti/img/favicon.ico') }}">
+    <!-- Fonts -->
+    <link href="{{ asset('bundles/limitlesskarhabti/fonts/lato/lato.css') }}" rel="stylesheet">
+    <!-- CSS -->
+    <!-- Bootstrap CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('bundles/limitlesskarhabti/css/bootstrap.min.css') }}">
+    <!-- Icon Font CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('bundles/limitlesskarhabti/css/icofont.css') }}">
+    <!-- Plugins CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('bundles/limitlesskarhabti/css/plugins.css') }}">
+    <!-- ShortCodes CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('bundles/limitlesskarhabti/css/shortcode/shortcodes.css') }}">
+    <!-- Style CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('bundles/limitlesskarhabti/style.css') }}">
+    <!-- Responsive CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('bundles/limitlesskarhabti/css/responsive.css') }}">
+    <!-- Color Style -->
+    <link href="{{ asset('bundles/limitlesskarhabti/css/color/color-1.css') }}" rel="stylesheet">
+    <!-- Modernizer JS
+    ============================================ -->
+    <script src="{{ asset('bundles/limitlesskarhabti/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+</head>
+<body>
+<!-- Pre Loader
+============================================ -->
+<div class="preloader">
+    <div class="loading-center">
+        <div class="loading-center-absolute">
+            <div class="object object_one"></div>
+            <div class="object object_two"></div>
+            <div class="object object_three"></div>
+        </div>
+    </div>
+</div>
+<!-- Body main wrapper start -->
+<div class="wrapper fix">
+
+
+    <!-- Header 1
+ ============================================ -->
+    <div class="header-area header-absolute header-transparent">
+        <div class="header-top hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <!-- Header Top -->
+                    <div class="header-top-wrapper fix">
+                        <div class="header-top-left text-left col-sm-6">
+                            {% if (user.telephone is defined) %}
+                            <p><i class="icofont icofont-ui-call"></i><span>(+216) {{ user.telephone }}</span></p>
+                            {% endif %}
+                        </div>
+                        <div class="header-top-right text-right col-sm-6">
+                            <p><i class="icofont icofont-clock-time"></i><span>{{ app.user.username }} - <a
+                                            href="{{ path('fos_user_security_logout') }}">LOGOUT</a></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block body %}
+        <div class="header-bottom-2 sticky">
+            <div class="container">
+                <div class="row">
+                    <!-- Header Bottom -->
+                    <div class="col-xs-12">
+                        <div class="navbar-header">
+                            <a href="{{ path('limitless_karhabti_Client_homepage') }}" class="logo navbar-brand"><img
+                                        id="logo_img"
+                                        src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
+                                        alt="logo"/></a>
+                        </div>
+                        <div class="main-menu menu-style-6 mean-menu float-right">
+                            <nav>
+                                <ul>
+                                    <li class="active"><a href="{{ path('limitless_karhabti_Moniteur_homepage') }}">home</a></li>
+                                    <li><a href="{{ path('moniteur_index') }}">Profil</a></li>
+                                    <li><a href="{{ path('moniteur_tache_index') }}">Planning</a></li>
+                                    <li><a href="{{ path('moniteur_agence_index') }}">Agences</a></li>
+                                    <li><a href="{{ path('AffichageAvis') }}">Mes Avis</a></li>
+                                    <li><a href="#">contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Slide Area
+============================================ -->
+    <div id="hero-area" class="hero-slider-area">
+        <div id="hero-slider" class="nivoSlider slider-image">
+            <img src="{{ asset('bundles/limitlesskarhabti/img/slider/1.jpg') }}" alt="main slider"
+                 title="#htmlcaption1"/>
+        </div>
+        <div id="htmlcaption1" class="nivo-html-caption">
+            <div class="slide-table container">
+                <div class="table-cell">
+                    <div class="hero-slide-content float-right text-right">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h3 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="0.8s">Bienvenue à</h3>
+                        <h1 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="1.2s">
+                            <span>Limitless Groupe</span>
+                        </h1>
+
+                        <h1 class="wow fadeInUp" data-wow-duration=".6s" data-wow-delay="1.6s">PROFITEZ DE NOTRE
+                            PLATEFORME</h1>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Feature Area
+    ============================================ -->
+        <div id="feature-area" class="feature-area bg-gray pt-90 pb-90">
+            <div class="container">
+                <!-- Section Title -->
+                <div class="row">
+                    <div class="section-title text-center col-xs-12 mb-45">
+                        <h3 class="heading">Nos mission</h3>
+                        <i class="icofont icofont-traffic-light"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Left Feature -->
+
+                    <div class="feature-wrapper feature-left text-right col-md-4 col-xs-12">
+                        <div class="single-feature">
+                            <div class="icon"><i class="icofont icofont-file-spreadsheet"></i></div>
+                            <div class="text fix">
+                                <h4>Gestion des cours</h4>
+                                <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
+                                    tempor.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="single-feature">
+                            <div class="icon"><i class="icofont icofont-video-alt"></i></div>
+                            <div class="text fix">
+                                <h4>Gestion des vehicules</h4>
+                                <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
+                                    tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature Image -->
+                    <div class="feature-image text-center col-md-4 col-xs-12">
+                        <img src="{{ asset('bundles/limitlesskarhabti/img/feature.png') }}" alt="feature"/>
+                    </div>
+                    <!-- Right Feature -->
+                    <div class="feature-wrapper feature-right text-left col-md-4 col-xs-12">
+                        <div class="single-feature">
+                            <div class="icon"><i class="icofont icofont-man-in-glasses"></i></div>
+                            <div class="text fix">
+                                <h4>Gestion des clients</h4>
+                                <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
+                                    tempor.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <div class="single-feature">
+                            <div class="icon"><i class="icofont icofont-direction-sign"></i></div>
+                            <div class="text fix">
+                                <h4>Gestions moniteurs</h4>
+                                <p>Lorem ipsum dolor sit amet to be consectetur adipiscing elit, sed do eiusmod
+                                    tempor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- Funfact Area
+============================================ -->
+{% set cos = 0 %}
+{% set agen = 0 %}
+{% set moni = 0 %}
+{% set uses = 0 %}
+
+{% for cour in cours %}
+    {% set cos = cos + 1 %}
+{% endfor %}
+{% for moniteur in moniteur %}
+    {% set moni = moni + 1 %}
+{% endfor %}
+{% for agence in agences %}
+    {% set agen = agen + 1 %}
+{% endfor %}
+{% for user in users %}
+    {% set uses = uses + 1 %}
+{% endfor %}
+<div class="funfact-area overlay overlay-white overlay-80 pt-90 pb-60">
+    <div class="container">
+        <div class="row">
+            <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+                <i class="icofont icofont-hat-alt"></i>
+                <h1 class="counter">{{ cos }}</h1>
+                <p>Nombre de cours</p>
+            </div>
+            <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+                <i class="icofont icofont-user-suited"></i>
+                <h1 class="counter">{{ moni }}</h1>
+                <p>Nombre de moniteur</p>
+            </div>
+            <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+                <i class="icofont icofont-history"></i>
+                <h1 class="counter">{{ agen }}</h1>
+                <p>Nombre d'agence</p>
+            </div>
+            <div class="single-facts text-center col-sm-3 col-xs-12 mb-30">
+                <i class="icofont icofont-users-social"></i>
+                <h1 class="counter">{{ uses }}</h1>
+                <p>Nombre d'utilisateurs</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+<!-- CTA Area
+============================================ -->
+<div class="cta-area pb-40 pt-40">
+    <div class="container">
+        <div class="row">
+            <div class="call-to-action text-left col-md-10 col-md-offset-1 col-xs-12">
+                <h3>LE spécialiste Internet des auto-écoles...</h3>
+                <a href="{{ path('limitless_karhabti_mail') }}" class="btn transparent ">Contacter nous</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer Area
+============================================ -->
+<div class="footer-area overlay overlay-black overlay-70 pb-60 pt-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 text-left"><p class="copyright">Copyright &copy; <a
+                            href="#">Limitless</a> ALL Right Reserved</p></div>
+            <div class="col-sm-6 col-xs-12 text-right">
+                <div class="footer-3-social">
+                    <a href="https://www.facebook.com/Karhabtitn-184568705363268/"><i
+                                class="icofont icofont-social-facebook"></i></a>
+                    <a href="#"><i class="icofont icofont-social-twitter"></i></a>
+                    <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+                    <a href="#"><i class="icofont icofont-social-linkedin"></i></a>
+                    <a href="#"><i class="icofont icofont-social-google-plus"></i></a>
+                    <a href="#"><i class="icofont icofont-social-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Body main wrapper end -->
+
+<!-- JS -->
+
+<!-- jQuery JS
+============================================ -->
+<script src="{{ asset('bundles/limitlesskarhabti/js/vendor/jquery-1.12.0.min.js') }}"></script>
+<!-- Bootstrap JS
+============================================ -->
+<script src="{{ asset('bundles/limitlesskarhabti/js/bootstrap.min.js') }}"></script>
+<!-- Plugins JS
+============================================ -->
+<script src="{{ asset('bundles/limitlesskarhabti/js/plugins.js') }}"></script>
+<!-- Ajax Mail JS
+============================================ -->
+<script src="{{ asset('bundles/limitlesskarhabti/js/ajax-mail.js') }}"></script>
+<!-- WOW JS
+============================================ -->
+<script src="{{ asset('bundles/limitlesskarhabti/js/wow.min.js') }}"></script>
+<!-- Main JS
+============================================ -->
+<script src="{{ asset('bundles/limitlesskarhabti/js/main.js') }}"></script>
+
+</body>
+</html>

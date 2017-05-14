@@ -3,6 +3,7 @@
 namespace Limitless\KarhabtiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -19,7 +20,7 @@ class Client
     private $id;
     /**
      * @var string
-     * @ORM\Column(name="image", type="string", length=255, nullable=false)
+     * @ORM\Column(name="image", type="string", length=255, nullable=true)
 
      */
     private $image;
@@ -45,43 +46,43 @@ class Client
     /**
      * @var string
      *
-     * @ORM\Column(name="adresse", type="string", length=255, nullable=false)
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
      */
 
     private $adresse;
     /**
      * @var string
      *
-     * @ORM\Column(name="ville", type="string",length=255, nullable=false)
+     * @ORM\Column(name="ville", type="string",length=255, nullable=true)
      */
 
     private $ville;
     /**
-     * @ORM\Column(name="codePostal", type="integer",nullable=false)
+     * @ORM\Column(name="codePostal", type="integer",nullable=true)
      */
 
     private $codePostal;
     /**
      * @var string
      *
-     * @ORM\Column(name="telephone", type="string", length=255, nullable=false)
+     * @ORM\Column(name="telephone", type="string", length=255, nullable=true)
      */
 
     private $telephone;
     /**
-     * @ORM\Column(name="dateNaissance",type="date", nullable=false)
+     * @ORM\Column(name="dateNaissance",type="date", nullable=true)
      */
 
     private $dateNaissance;
     /**
-     * @ORM\Column(name="villeNaissance", type="string", length=255, nullable=false)
+     * @ORM\Column(name="villeNaissance", type="string", length=255, nullable=true)
      */
 
     private $villeNaissance;
     /**
      * @var boolean
      *
-     * @ORM\Column(name="etatCode", type="boolean", nullable=false)
+     * @ORM\Column(name="etatCode", type="boolean", nullable=true)
      */
 
     private $etatCode;
@@ -100,6 +101,10 @@ class Client
      * @ORM\JoinColumn(name="agence_id",referencedColumnName="id")
      */
     private $agence;
+    /**
+     * @Assert\File(maxSize="6000k")
+     */
+    public $file;
 
     /**
      * @return string

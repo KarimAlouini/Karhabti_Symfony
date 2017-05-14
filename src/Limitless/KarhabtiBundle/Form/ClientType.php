@@ -18,6 +18,14 @@ class ClientType extends AbstractType
     {
         $builder->add('civilite',ChoiceType::class, array('choices'=>array('Monsieur'=>'Monsieur','Madame'=>'Madame','Mademoiselle'=>'Mademoiselle')))
             ->add('nom')
+            ->add('file',FileType::class, array(
+                    'multiple'    => false,
+                    'attr' => array(
+
+                        'accept' => 'image/*',
+                    )
+                )
+            )
             ->add('prenom')
             ->add('adresse')
             ->add('ville')

@@ -57,37 +57,37 @@ class MoniteurController extends Controller
 
         $form->handleRequest($request);
         if ($form->isValid()) {
+            $image = $form['file']->getData();
 
+            $req = $request->request->get('limitless_karhabtibundle_moniteur');
+            $id = $req['nom'];
+            if (!is_dir("bundles/limitlesskarhabti/Image/Moniteur")) {
+                mkdir("bundles/limitlesskarhabti/Image/Moniteur");
 
+            }
 
-            $file = $moniteur->getPhoto();
+            mkdir("bundles/limitlesskarhabti/Image/Moniteur/" . $id);
+            move_uploaded_file($image, "bundles/limitlesskarhabti/Image/Moniteur/" . $id . "/" . $image->getFileName());
+            rename("bundles/limitlesskarhabti/Image/Moniteur/" . $id . "/" . $image->getFileName(), "bundles/limitlesskarhabti/Image/Moniteur/" . $id . "/" . $id . ".jpg");
 
-            // Generate a unique name for the file before saving it
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-
-            // Move the file to the directory where brochures are stored
-            $file->move(
-                $this->getParameter('photos'),
-                $fileName
-            );
-
-            // Update the 'brochure' property to store the PDF file name
-            // instead of its contents
-            $moniteur->setPhoto($fileName);
 
 
             $em = $this->getDoctrine()->getManager();
 
             $moniteur->setUser($user);
             $em->persist($moniteur);
+            $roles=array('ROLE_MONITEUR');
+            $user->setRoles($roles);
+
+            $token = $this->get('security.token_storage')->getToken()->setAuthenticated(False);
             $em->flush();
-            return $this->redirectToRoute('AffichageMoniteur');
+            return $this->redirectToRoute('moniteur_index');
 
         }
 
 
 
-        return $this->render('LimitlessKarhabtiBundle:Moniteur:ajoutmon.html.twig', array(
+        return $this->render('LimitlessKarhabtiBundle:Moniteur:new.html.twig', array(
             'form' => $form->createView()));
     }
 
@@ -108,28 +108,50 @@ class MoniteurController extends Controller
         $user = $em->getRepository('LimitlessKarhabtiBundle:Moniteur')->find($id);
         $form = $this->createForm(UpdateMoniteurType::class, $user);
         if ($form->handleRequest($request)->isValid()) {
-            $file = $user->getPhoto();
 
-            // Generate a unique name for the file before saving it
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-
-            // Move the file to the directory where brochures are stored
-            $file->move(
-                $this->getParameter('photos'),
-                $fileName
-            );
-
-            // Update the 'brochure' property to store the PDF file name
-            // instead of its contents
-            $user->setPhoto($fileName);
 
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
+
             $em->flush();
-            return($this->redirectToRoute('AffichageMoniteur'));
+            return($this->redirectToRoute('moniteur_index'));
         }
         return $this->render("LimitlessKarhabtiBundle:Moniteur:updateMoniteur.html.twig", array('form' => $form->createView()));
+    }
+
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $profil=  $em->getRepository('LimitlessKarhabtiBundle:Moniteur')->findOneBy(array('user' => $user));
+
+        $moniteur=  $em->getRepository('LimitlessKarhabtiBundle:Moniteur')->findBy(array('id' => $profil));
+
+
+
+        return $this->render('LimitlessKarhabtiBundle:Moniteur:show.html.twig', array(
+            'client' => $profil,
+        ));
+    }
+
+    public function rechercheAgenceAction(Request $Request){
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $agence=  $em->getRepository('LimitlessKarhabtiBundle:Agence')->findAll();
+
+
+        if($Request->isMethod('POST'))
+
+        {
+            $search=$Request->get('matricule');
+            $agence=$em->getRepository('LimitlessKarhabtiBundle:Agence')->findBy(array("nom"=>$search,'agence' => $agence));
+
+        }
+
+        return $this->render('LimitlessKarhabtiBundle:Moniteur:listAgence.html.twig',
+            array("agence"=>$agence));
     }
 
 

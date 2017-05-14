@@ -1,0 +1,172 @@
+{% extends "LimitlessKarhabtiBundle::layoutMoniteur.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+
+    <!-- Header 1
+ ============================================ -->
+    <div class="header-bottom-2 sticky">
+        <div class="container">
+            <div class="row">
+                <!-- Header Bottom -->
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img"
+                                                                                                           src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
+                                                                                                           alt="logo"/></a>
+                    </div>
+                    <div class="main-menu menu-style-6 mean-menu float-right">
+                        <nav>
+                            <ul>
+                                <li ><a href="{{ path('limitless_karhabti_Moniteur_homepage') }}">home</a></li>
+                                <li ><a href="{{ path('moniteur_index') }}">Profil</a></li>
+                                <li ><a href="{{ path('moniteur_tache_index') }}">Planning</a></li>
+                                <li class="active"><a href="{{ path('moniteur_agence_index') }}">Agences</a></li>
+                                <li><a href="{{ path('AffichageAvis') }}">Mes Avis</a></li>
+                                <li><a href="{{ path('limitless_karhabti_mail_moniteur') }}">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Banner -->
+    <div class="page-banner-area overlay overlay-black overlay-70">
+        <div class="container">
+            <div class="row">
+                <div class="page-banner text-center col-xs-12">
+                    <h1>Moniteur</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        /*Table Style - This is what you want*/
+        button {
+            background-color: #dec839; /* Green */
+            border: 1px solid #dec839;
+            color: white;
+            padding: 0px 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            width: auto;
+            line-height: 30px;
+        }
+
+    </style>
+
+    <div class="blog-area bg-white pt-90 pb-90">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-xs-12 mb-45">
+                    <h3 class="heading">Liste des Agences</h3>
+
+                    <i class="icofont icofont-traffic-light"></i>
+                </div>
+            </div>
+            <div class="row">
+                <style type="text/css">
+                    /*Table Style - This is what you want*/
+                    button {
+                        background-color: #dec839; /* Green */
+                        border: 1px solid #dec839;
+                        color: white;
+                        padding: 0px 0px;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 16px;
+                        display: inline-block;
+                        width: auto;
+                        line-height: 30px;
+                    }
+
+                </style>
+
+
+
+
+
+                <div class="blog-wrapper row mb-20">
+                    {% for agence in agence %}
+                        <div class="blog-item col-md-4 col-sm-6 col-xs-12">
+
+                            <a href="{{ asset('bundles/limitlesskarhabti/Image/Agence/'~agence.nom~'/'~agence.nom~'.jpg') }}" class="image">
+
+                                <img
+                                        style="width: 370px;height: 260px;"
+                                        src="{{ asset('bundles/limitlesskarhabti/Image/Agence/'~agence.nom~'/'~agence.nom~'.jpg') }}"
+                                        alt=""/>
+
+                                <i class="icofont icofont-link-alt"></i>
+                            </a>
+                            <div class="meta fix">
+                                <p class="float-left"></p>
+
+                            </div>
+                            <h3 style="text-align: center;text-transform: uppercase;"><a href="#">{{ agence.nom }}</a></h3>
+                            <div class="description">
+                                <p>
+
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="width: 50%">
+                                            <label>Ouvre le : </label> {{ agence.ouverture }}
+                                        </td>
+                                        <td style="width: 50%">
+                                            <label>Ferme le : </label> {{ agence.fermeture }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%">
+                                            <label>Telephone : </label> {{ agence.telephone }}
+                                        </td>
+                                        <td style="width: 50%">
+                                            <label>Numéro fiscal : </label> {{ agence.numFiscal }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%">
+                                            <label>Adresse : </label> {{ agence.adresse }}
+                                        </td>
+                                        <td style="width: 50%">
+                                            <label>Ville : </label> {{ agence.ville }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 50%">
+                                            <label>Code postal : </label> {{ agence.codePostal }}
+                                        </td>
+                                        <td style="width: 50%">
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                                <ul>
+                                    <li style="text-align: right">
+                                        <button><a class="btn color " href="{{ path('limitless_karhabti_mail_moniteur') }}">Contacter</a></button>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -184,6 +184,58 @@ class TacheController extends Controller
 
     }
 
+    public function listMoniteurAction(Request $Request){
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $profil=  $em->getRepository('LimitlessKarhabtiBundle:Moniteur')->findOneBy(array('user' => $user));
+
+
+
+        if($Request->isMethod('POST'))
+
+        {
+            $search=$Request->request->get('client');
+            $tache=$em->getRepository('LimitlessKarhabtiBundle:Tache')->findBy(array("client"=>$search,'moniteur' => $profil));
+
+        }else{
+            $tache=  $em->getRepository('LimitlessKarhabtiBundle:Tache')->findBy(array('moniteur' => $profil));
+        }
+
+        return $this->render('LimitlessKarhabtiBundle:Moniteur:listTache.html.twig',
+            array('taches' => $tache)
+        );
+
+
+
+    }
+    public function listMoniteurClientAction(Request $Request){
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $profil=  $em->getRepository('LimitlessKarhabtiBundle:Moniteur')->findOneBy(array('user' => $user));
+
+
+
+        if($Request->isMethod('POST'))
+
+        {
+            $search=$Request->request->get('client');
+            $tache=$em->getRepository('LimitlessKarhabtiBundle:Tache')->findBy(array("client"=>$search,'moniteur' => $profil));
+
+        }else{
+            $tache=  $em->getRepository('LimitlessKarhabtiBundle:Tache')->findBy(array('moniteur' => $profil));
+        }
+
+
+        return $this->render('LimitlessKarhabtiBundle:Moniteur:listClient.html.twig',
+            array('taches' => $tache)
+        );
+
+
+
+    }
+
 
 
 }

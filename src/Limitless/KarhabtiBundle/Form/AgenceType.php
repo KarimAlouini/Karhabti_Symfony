@@ -49,6 +49,7 @@ class AgenceType extends AbstractType
 
 
                 )))
+
             ->add('adresse')
             ->add('code_postal')
             ->add('telephone')

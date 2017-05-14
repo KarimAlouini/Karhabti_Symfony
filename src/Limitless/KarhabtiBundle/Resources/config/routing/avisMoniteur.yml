@@ -1,0 +1,15 @@
+AjoutAvis:
+    path:     /ajouter
+    defaults: { _controller: LimitlessKarhabtiBundle:AvisMoniteur:AjoutAvis }
+
+AffichageAvis:
+    path:     /liste
+    defaults: { _controller: LimitlessKarhabtiBundle:AvisMoniteur:AffichageAvis }
+
+DeleteAvis:
+    path:     /DeleteAvis/{id}
+    defaults: { _controller: LimitlessKarhabtiBundle:AvisMoniteur:Delete }
+
+UpdateAvis:
+    path:     /UpdateAvis/{id}
+    defaults: { _controller: LimitlessKarhabtiBundle:AvisMoniteur:UpdateAvis }

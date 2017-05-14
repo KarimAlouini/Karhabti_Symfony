@@ -106,6 +106,10 @@ class ClientController extends Controller
 
 
             $em->persist($client);
+            $roles=array('ROLE_CLIENT');
+            $user->setRoles($roles);
+
+            $token = $this->get('security.token_storage')->getToken()->setAuthenticated(False);
             $em->flush();
 
             return $this->redirectToRoute('client_index', array('id' => $client->getId()));

@@ -1,11 +1,17 @@
+
+
 {% extends "LimitlessKarhabtiBundle::layoutMoniteur.html.twig" %}
 
 {% block title %}
     {{ parent() }}
 {% endblock %}
 {% block body %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/font-awesome/css/font-awesome.min.css') }}"/>
     <!-- Header 1
- ============================================ -->
+     ============================================ -->
     <div class="header-bottom-2 sticky">
         <div class="container">
             <div class="row">
@@ -20,10 +26,10 @@
                         <nav>
                             <ul>
                                 <li ><a href="{{ path('limitless_karhabti_Moniteur_homepage') }}">home</a></li>
-                                <li class="active"><a href="{{ path('moniteur_index') }}">Profil</a></li>
-                                <li><a href="{{ path('moniteur_tache_index') }}">Planning</a></li>
-                                <li><a href="{{ path('moniteur_agence_index') }}">Agences</a></li>
-                                <li><a href="{{ path('AffichageAvis') }}">Mes Avis</a></li>
+                                <li ><a href="{{ path('moniteur_index') }}">Profil</a></li>
+                                <li ><a href="{{ path('moniteur_tache_index') }}">Planning</a></li>
+                                <li ><a href="{{ path('moniteur_agence_index') }}">Agences</a></li>
+                                <li class="active"><a href="{{ path('AffichageAvis') }}">Mes Avis</a></li>
                                 <li><a href="{{ path('limitless_karhabti_mail_moniteur') }}">contact</a></li>
                             </ul>
                         </nav>
@@ -52,7 +58,7 @@
             <!-- Section Title -->
             <div class="row">
                 <div class="section-title text-center col-xs-12 mb-45">
-                    <h3 class="heading">Modifier Votre compte</h3>
+                    <h3 class="heading">Ajouter une note</h3>
 
                     <i class="icofont icofont-traffic-light"></i>
                 </div>
@@ -74,50 +80,23 @@
                             line-height: 30px;
                         }
                     </style>
-
-
+                    <ul>
+                        <li style="margin-bottom: 4%"><button ><a class="btn color"   href="{{ path('AffichageAvis') }}">Retour à la liste</a></button></li>
+                    </ul>
                     {{ form_start(form) }}
 
                     <div class="input-2">
                         <div class="input">
-                            <h3 class="panel-title">Civilite</h3>
-                            {{ form_widget(form.civilite) }}
+                            <h3 class="panel-title">Client</h3>
+                            {{ form_widget(form.client) }}
                         </div>
                         <div class="input">
-                            <h3 class="panel-title">Nom</h3>
-                            {{ form_widget(form.nom) }}
+                            <h3 class="panel-title">Contenue</h3>
+                            {{ form_widget(form.contenu) }}
                         </div>
                         <div class="input">
-                            <h3 class="panel-title">Prenom</h3>
-                            {{ form_widget(form.prenom) }}
-                        </div>
-                        <div class="input">
-                            <h3 class="panel-title">Date de naissance</h3>
-                            {{ form_widget(form.dateNaissance) }}
-                        </div>
-                        <div class="input">
-                            <h3 class="panel-title">Lieu de naissance</h3>
-                            {{ form_widget(form.lieuNaissance) }}
-                        </div>
-                        <div class="input">
-                            <h3 class="panel-title">E-mail</h3>
-                            {{ form_widget(form.mail) }}
-                        </div>
-                        <div class="input">
-                            <h3 class="panel-title">Telephone</h3>
-                            {{ form_widget(form.telephone) }}
-                        </div>
-                        <div class="input">
-                            <h3 class="panel-title">Adresse</h3>
-                            {{ form_widget(form.adresse) }}
-                        </div>
-                        <div class="input">
-                            <h3 class="panel-title">Ville</h3>
-                            {{ form_widget(form.ville) }}
-                        </div>
-                        <div class="input">
-                            <h3 class="panel-title">Code Postal</h3>
-                            {{ form_widget(form.codePostal) }}
+                            <h3 class="panel-title">Raiting</h3>
+                            {{ form_widget(form.rating) }}
                         </div>
 
 
@@ -127,6 +106,10 @@
                     <div style="text-align: right" class="input input-submit"><input type="submit" value="Valider"/>
                     </div>
                     {{ form_end(form) }}
+
+
+
+
                     <p class="form-messege"></p>
                 </div>
             </div>

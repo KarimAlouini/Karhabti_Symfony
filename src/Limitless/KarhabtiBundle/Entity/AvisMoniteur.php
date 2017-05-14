@@ -34,13 +34,16 @@ class AvisMoniteur
      *
      * @ORM\Column(name="mail", type="string", length=255, nullable=false)
      */
-
-    private $mail;
     /**
-     * @ORM\ManyToOne(targetEntity="Moniteur")
-     * @ORM\JoinColumn(name="moniteur_id",referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Client")
+     * @ORM\JoinColumn(name="client_id",referencedColumnName="id")
      */
-    private $moniteur;
+    private $client;
+    /**
+     * @ORM\Column(name="rating", type="integer",nullable=false)
+     */
+
+    private $rating;
 
     /**
      * @return mixed
@@ -75,35 +78,37 @@ class AvisMoniteur
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getMail()
+    public function getClient()
     {
-        return $this->mail;
+        return $this->client;
     }
 
     /**
-     * @param string $mail
+     * @param mixed $client
      */
-    public function setMail($mail)
+    public function setClient($client)
     {
-        $this->mail = $mail;
+        $this->client = $client;
     }
 
     /**
      * @return mixed
      */
-    public function getMoniteur()
+    public function getRating()
     {
-        return $this->moniteur;
+        return $this->rating;
     }
 
     /**
-     * @param mixed $moniteur
+     * @param mixed $rating
      */
-    public function setMoniteur($moniteur)
+    public function setRating($rating)
     {
-        $this->moniteur = $moniteur;
+        $this->rating = $rating;
     }
+
+
 
 }

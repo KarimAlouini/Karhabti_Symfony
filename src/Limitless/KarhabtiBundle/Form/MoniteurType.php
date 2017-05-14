@@ -26,6 +26,14 @@ class MoniteurType extends AbstractType
                     'Melle.' => 'Melle.',
                 ),
             ))
+            ->add('file',FileType::class, array(
+                    'multiple'    => false,
+                    'attr' => array(
+
+                        'accept' => 'image/*',
+                    )
+                )
+            )
 
             ->add('nom')
             ->add('prenom')
@@ -35,32 +43,48 @@ class MoniteurType extends AbstractType
                 'choices'  => array(
                     'Tunis' => 'Tunis',
                     'Ariana' => 'Ariana',
+                    'Mannouba' => 'Mannouba',
                     'Sfax' => 'Sfax',
+                    'Kairouan' => 'Kairouan',
                     'Sousse' => 'Sousse',
-                    'Gabes' => 'Gabes',
+                    'Monastir' => 'Monastir',
                     'Nabeul' => 'Nabeul',
+                    'Tozeur' => 'Tozeur',
+                    'Gabès' => 'Gabès',
+                    'Le Kef' => 'Le Kef',
+                    'Mednine' => 'Mednine',
+                    'Kbeli' => 'Kbeli',
+                    'Gafssa' => 'Gafssa',
+                    'Gassrine' => 'Gassrine',
+                    'Sidi Bouzid' => 'Sidi Bouzid',
+                    'Siliana' => 'Siliana',
+                    'Jandouba' => 'Jandouba',
+                    'Beja' => 'Beja',
+                    'Bizert' => 'Bizert ',
+                    'Mahdia' => 'Mahdia',
+                    'Ben arous' => 'Ben arous',
+                    'Zagwen' => 'Zagwen',
+                    'Tataouine' => 'Tataouine',
                 ),
             ))
             ->add('codePostal')
             ->add('telephone')
-            ->add('dateNaissance' , DateType::class, array(
-                'years'=> range(1920,1999),
-                ))
+            ->add('dateNaissance',DateType::class , array( 'widget' =>
+                'single_text', 'format' => 'dd-MM-yyyy','attr' =>
+                array('class' => 'input','data-provide' =>
+                    'datepicker','data-date-format' => 'dd-mm-yyyy')))
             ->add('lieuNaissance')
             /*     ->add('rating', RatingType::class, [
                      'label' => 'Rating'
                  ])*/
-            ->add('agence', EntityType::class, array(
+            /*->add('agence', EntityType::class, array(
                 'class' => 'LimitlessKarhabtiBundle:Agence',
 
                 'choice_label' => 'nom',
 
-            ))
+            ))*/
 
 
-          ->add('photo', FileType::class, array('label' => 'Photo de profile','data_class'=>null))
-
-            ->add('save', SubmitType::class, array('label' => 'Ajouter'))// ->add('agence')
         ;
     }
 
