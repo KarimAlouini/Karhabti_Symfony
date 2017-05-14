@@ -17,26 +17,12 @@
                         <div class="main-menu menu-style-6 mean-menu float-right">
                             <nav>
                                 <ul>
-                                    <li><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
-                                    <li ><a href="{{ path('agence_index') }}">Profil</a></li>
-                                    <li><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
-                                            <li><a href="{{ path('limitless_karhabti_responsable_reservationoffre') }}">Réservation Offre</a></li>
-                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
-                                            <li><a href="{{ path('limitless_karhabti_responsable_reservationpack') }}">Réservation Pack</a></li>
-                                        </ul>
-                                    </li>
-                                    <li ><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
-                                    <li class="active"><a href="{{ path('moniteur_reponsable_index') }}">Moniteur</a></li>
-                                    <li><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
-                                    <li><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li ><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
-                                            <li ><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
-                                        </ul>
-                                    </li>
-                                    <li ><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
+                                    <li class="active"><a href="{{ path('limitless_karhabti_Client_homepage') }}">home</a></li>
+                                    <li><a href="{{ path('moniteur_index') }}">Profil</a></li>
+                                    <li><a href="{{ path('moniteur_tache_index') }}">Planning</a></li>
+                                    <li><a href="{{ path('moniteur_agence_index') }}">Agences</a></li>
+                                    <li><a href="{{ path('AffichageAvis') }}">Mes Avis</a></li>
+                                    <li><a href="#">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -91,21 +77,20 @@
                     <h3>Rechercher : <input  placeholder="Nom/Prenom" type="text" name="nom">
                     <input  type="submit" value="Recherche"></h3>
                 </form>
-                {% for moniteur in moniteur %}
+                {% for tache in taches %}
                 <div id="offre">
 
                     <div class="col-md-4" >
 
                 <div class="thumbnail" align="center" style="background-color: ghostwhite">
 
-                    <h1 style="color: #efe24b"><a style="text-transform: uppercase;" href="#"> <b>{{ moniteur.civilite}} {{moniteur.nom}} {{moniteur.prenom }}</b></a><br></h1>
+                    <h1 style="color: #efe24b"><a style="text-transform: uppercase;" href="#"> <b>{{ tache.client.civilite}} {{ tache.client.nom}} {{ tache.client.prenom }}</b></a><br></h1>
 
-                    <label>Date de naissance : </label>{{ moniteur.dateNaissance|date('Y-m-d')  }} <br>
-                    <label>Lieu de naissance :</label> {{ moniteur.lieuNaissance }} <br>
-                    <label>E_Mail :</label> {{ moniteur.mail }}<br>
-                    <label>Telephone :</label> {{ moniteur.telephone }}<br>
-                    <label>Ville :</label> {{ moniteur.ville }}<br>
-                    <label>Code Postal :</label> {{ moniteur.codePostal }}<br>
+                    <label>Date de naissance : </label>{{ tache.client.dateNaissance|date('Y-m-d')  }} <br>
+                    <label>Lieu de naissance :</label> {{ tache.client.villeNaissance }} <br>
+                    <label>Telephone :</label> {{ tache.client.telephone }}<br>
+                    <label>Ville :</label> {{ tache.client.ville }}<br>
+                    <label>Code Postal :</label> {{ tache.client.codePostal }}<br>
 
 
 

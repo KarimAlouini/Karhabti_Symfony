@@ -1,4 +1,4 @@
-{% extends "LimitlessKarhabtiBundle::layout.html.twig" %}
+{% extends "LimitlessKarhabtiBundle::layoutMoniteur.html.twig" %}
 {% block title %}
     {{ parent() }}
 {% endblock %}
@@ -33,6 +33,25 @@
                         <p></p>
                         <i class="icofont icofont-traffic-light"></i>
                     </div>
+                    {% for x in moniteur %}
+                        <tr>
+                            <th scope="row">{{ loop.index }}</th>
+                            <td>
+                                <img src="{{ asset('uploads/photos/' ~ x.photo) }}" height="100" width="100">
+                            </td>
+                            <td>{{ x.prenom }}  {{ x.nom }}</td>
+                            <td>{{ x.mail }}</td>
+                            <td>{{ x.telephone }}</td>
+                            <td>{{ x.adresse }}</td>
+                            <td>{{ x.ville }}</td>
+                            <td>{{ x.civilite }}</td>
+                            <td>
+                                <a class="btn color" href="{{ path('UpdateMoniteur',{id:x.id}) }}">Modifier</a>
+                                <a class="btn color" href="{{ path('DeleteMoniteur',{id:x.id}) }}">Supprimer</a>
+                            </td>
+                        </tr>
+
+                    {% endfor %}
 
 
                 </div>

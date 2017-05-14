@@ -40,30 +40,25 @@ class AgenceController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $image= $form['file']->getData();
+            $image = $form['file']->getData();
 
             $req = $request->request->get('limitless_karhabtibundle_agence');
-            $id=$req['nom'];
-            if(!is_dir("bundles/limitlesskarhabti/Image/Agence")){
+            $id = $req['nom'];
+            if (!is_dir("bundles/limitlesskarhabti/Image/Agence")) {
                 mkdir("bundles/limitlesskarhabti/Image/Agence");
 
             }
 
-            mkdir("bundles/limitlesskarhabti/Image/Agence/".$id);
-            move_uploaded_file ($image,"bundles/limitlesskarhabti/Image/Agence/".$id."/".$image->getFileName());
-            rename("bundles/limitlesskarhabti/Image/Agence/".$id."/".$image->getFileName(), "bundles/limitlesskarhabti/Image/Agence/".$id."/".$id.".jpg");
-
+            mkdir("bundles/limitlesskarhabti/Image/Agence/" . $id);
+            move_uploaded_file($image, "bundles/limitlesskarhabti/Image/Agence/" . $id . "/" . $image->getFileName());
+            rename("bundles/limitlesskarhabti/Image/Agence/" . $id . "/" . $image->getFileName(), "bundles/limitlesskarhabti/Image/Agence/" . $id . "/" . $id . ".jpg");
 
 
             $em = $this->getDoctrine()->getManager();
             $agence->setUser($user);
 
             $em->persist($agence);
-            $roles=array('ROLE_AGENCE');
-            $user->setRoles($roles);
             $em->flush();
-            $token = $this->get('security.token_storage')->getToken()->setAuthenticated(False);
-
             return $this->redirectToRoute('agence_index', array('id' => $agence->getId()));
         }
 
@@ -200,4 +195,6 @@ class AgenceController extends Controller
         $ob->series($series);
         return $this > render('LimitlessKarhabtiBundle:Graphe:chart.html.twig', array('chart' => $ob));
     }
+
+
 }

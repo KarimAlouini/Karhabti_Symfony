@@ -7,6 +7,7 @@ limitless_karhabti_responsable_marque:
 limitless_karhabti_responsable_vehicule:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/modele.yml"
     prefix:   /superadmin/modele
+
 limitless_karhabti_responsable_modele:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/marque.yml"
     prefix:   /superadmin/marque
@@ -32,6 +33,10 @@ limitless_karhabti_responsable_pack:
 limitless_karhabti_moniteur:
     resource: "@LimitlessKarhabtiBundle/Resources/config/routing/moniteurM.yml"
     prefix:   /moniteur
+
+limitless_karhabti_moniteur_avis:
+    resource: "@LimitlessKarhabtiBundle/Resources/config/routing/avisMoniteur.yml"
+    prefix:   /moniteur/avis
 
 
 limitless_karhabti_client:
@@ -65,8 +70,18 @@ limitless_karhabti_agence_moniteur:
     prefix:   /responsable/moniteurs
 
 agence_new:
-    path:     /preresponsable/ajouter
+    path:     /responsable/ajouter
     defaults: { _controller: "LimitlessKarhabtiBundle:Agence:new" }
+    methods:  [GET, POST]
+
+client_new:
+    path:     /preclient/ajouter
+    defaults: { _controller: "LimitlessKarhabtiBundle:Client:new" }
+    methods:  [GET, POST]
+
+moniteur_new:
+    path:     /premoniteur/ajouter
+    defaults: { _controller: "LimitlessKarhabtiBundle:Moniteur:Ajout" }
     methods:  [GET, POST]
 
 
@@ -77,12 +92,21 @@ limitless_karhabti_homepage:
 limitless_karhabti_Client_homepage:
     path:     /client/accueil
     defaults: { _controller: LimitlessKarhabtiBundle:Default:indexClient }
+
+limitless_karhabti_Moniteur_homepage:
+    path:     /moniteur/accueil
+    defaults: { _controller: LimitlessKarhabtiBundle:Default:indexMoniteur }
+
 test:
     path:     /test
     defaults: { _controller: LimitlessKarhabtiBundle:Default:test }
 
 limitless_karhabti_mail:
     path:     /responsable/mail
+    defaults: { _controller: LimitlessKarhabtiBundle:Contact:mail }
+
+limitless_karhabti_mail_moniteur:
+    path:     /moniteur/mail
     defaults: { _controller: LimitlessKarhabtiBundle:Contact:mail }
 limitless_karhabti_mail_client:
     path:     /client/mail
@@ -93,6 +117,10 @@ limitless_karhabti_accuse_mail:
 limitless_karhabti_pdf:
     path:     /pdf
     defaults: { _controller: LimitlessKarhabtiBundle:PDF:pdf }
+
+limitless_karhabti_pdf_moniteur:
+    path:     /pdf_moniteur
+    defaults: { _controller: LimitlessKarhabtiBundle:PDF:pdfMoniteur }
 
 limitless_karhabti_allmarque:
     path:     /allmarque

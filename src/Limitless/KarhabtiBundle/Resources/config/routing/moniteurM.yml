@@ -5,16 +5,31 @@ test:
     path:     /test
     defaults: { _controller: LimitlessKarhabtiBundle:Default:test }
 AffichageMoniteur:
-    path:     /ListMoniteur
+    path:     /listeMoniteur
     defaults: { _controller: LimitlessKarhabtiBundle:Moniteur:Affichage }
 
-Ajout:
-    path:     /Ajout
-    defaults: { _controller: LimitlessKarhabtiBundle:Moniteur:Ajout }
+moniteur_tache_index:
+    path:     /listeTache
+    defaults: { _controller: LimitlessKarhabtiBundle:Tache:listMoniteur }
+
+moniteur_client_index:
+    path:     /listeClient
+    defaults: { _controller: LimitlessKarhabtiBundle:Tache:listMoniteurClient }
+
+
 DeleteMoniteur:
     path:     /DeleteMoniteur/{id}
     defaults: { _controller: LimitlessKarhabtiBundle:Moniteur:Delete }
 
 UpdateMoniteur:
-    path:     /UpdateMoniteur/{id}
+    path:     /update/{id}
     defaults: { _controller: LimitlessKarhabtiBundle:Moniteur:Update }
+
+moniteur_index:
+    path:     /profil
+    defaults: { _controller: "LimitlessKarhabtiBundle:Moniteur:index" }
+    methods:  GET
+
+moniteur_agence_index:
+    path:     /agences
+    defaults: { _controller: "LimitlessKarhabtiBundle:Moniteur:rechercheAgence" }

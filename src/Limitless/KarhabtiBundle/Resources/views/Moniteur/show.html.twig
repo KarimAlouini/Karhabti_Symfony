@@ -1,0 +1,170 @@
+{% extends "LimitlessKarhabtiBundle::layoutMoniteur.html.twig" %}
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    <!-- Header 1
+    ============================================ -->
+    <div class="header-bottom-2 sticky">
+        <div class="container">
+            <div class="row">
+                <!-- Header Bottom -->
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img"
+                                                                                                           src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png') }}"
+                                                                                                           alt="logo"/></a>
+                    </div>
+                    <div class="main-menu menu-style-6 mean-menu float-right">
+                        <nav>
+                            <ul>
+                                <li ><a href="{{ path('limitless_karhabti_Moniteur_homepage') }}">home</a></li>
+                                <li class="active"><a href="{{ path('moniteur_index') }}">Profil</a></li>
+                                <li><a href="{{ path('moniteur_tache_index') }}">Planning</a></li>
+                                <li><a href="{{ path('moniteur_agence_index') }}">Agences</a></li>
+                                <li><a href="{{ path('AffichageAvis') }}">Mes Avis</a></li>
+                                <li><a href="{{ path('limitless_karhabti_mail_moniteur') }}">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Banner -->
+    <div class="page-banner-area overlay overlay-black overlay-70">
+        <div class="container">
+            <div class="row">
+                <div class="page-banner text-center col-xs-12">
+                    <h1>Moniteur</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-area bg-white pt-90 pb-90">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row">
+                <div class="section-title text-center col-xs-12 mb-45">
+                    <h3 class="heading">Votre Profil</h3>
+                    <i class="icofont icofont-traffic-light"></i>
+                </div>
+            </div>
+            <div class="row">
+
+                <style type="text/css">
+                    /*Table Style - This is what you want*/
+                    button {
+                        background-color: #dec839; /* Green */
+                        border: 1px solid #dec839;
+                        color: white;
+                        padding: 0px 0px;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 16px;
+                        display: inline-block;
+                        width: auto;
+                        line-height: 30px;
+                    }
+
+                </style>
+                {% set myVal = 0 %}
+                {% if(client.civilite) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.nom) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.prenom) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.adresse) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.ville) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.codePostal) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.telephone) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.dateNaissance) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.lieuNaissance) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+                {% if(client.mail) %}
+                    {% set myVal = myVal + 10 %}
+                {% endif %}
+
+                <div style="width: 100%  ;  " class="blog-wrapper float-right col-md-8 col-xs-12">
+
+                    <p class="progress-text">
+                        <h4>Votre profil est complété à {{ myVal }}%</h4>
+                    </p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active" style="width: {{ myVal }}%;"></div>
+                    </div>
+
+                    <div class="single-blog">
+
+                        <div class="avatar float-left">
+                            <a href="{{ asset('bundles/limitlesskarhabti/Image/Moniteur/'~client.nom~'/'~client.nom~'.jpg') }}"
+                               class="gallery-image image-popup">
+                                <img
+
+                                        src="{{ asset('bundles/limitlesskarhabti/Image/Moniteur/'~client.nom~'/'~client.nom~'.jpg') }}"
+                                        alt=""/>
+                                <div class="content">
+                                    <i class="icofont icofont-search"></i>
+                                    <h4>VOIR</h4>
+                                </div>
+                            </a>
+                        </div>
+
+
+
+                        <div class="content fix" style="padding-left: 5%;">
+                            <h3 class="heading">{{ client.civilite }} {{ client.nom }} {{ client.prenom }}</h3>
+                            <br>
+                            <h5>
+                                Né(e)
+                                le {% if client.dateNaissance %}{{ client.dateNaissance|date('Y-m-d') }}{% endif %}
+                                à {{ client.lieuNaissance }}
+                            </h5>
+                            <h5>
+                                Habite à {{ client.adresse }}, {{ client.ville }}
+                            </h5>
+
+                            <h5>
+                                Mon code postal : {{ client.codePostal }}
+                            </h5>
+
+                            <h5>
+                                Numéro : (+216) {{ client.telephone }}
+                            </h5>
+                            <h5>
+                                E-mail : {{ client.mail }}
+                            </h5>
+                            <p class="float-right">
+                                <button><a class="btn color" href="{{ path('UpdateMoniteur', { 'id': client.id }) }}">Modifier</a></button>
+                            </p>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

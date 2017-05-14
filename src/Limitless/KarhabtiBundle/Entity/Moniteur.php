@@ -46,46 +46,46 @@ class Moniteur
     /**
      * @var string
      *
-     * @ORM\Column(name="adresse", type="string", length=255, nullable=false)
+     * @ORM\Column(name="adresse", type="string", length=255, nullable=true)
      */
 
     private $adresse;
     /**
      * @var string
      *
-     * @ORM\Column(name="mail", type="string", length=255, nullable=false)
+     * @ORM\Column(name="mail", type="string", length=255, nullable=true)
      */
 
     private $mail;
     /**
      * @var string
      *
-     * @ORM\Column(name="ville", type="string", length=255, nullable=false)
+     * @ORM\Column(name="ville", type="string", length=255, nullable=true)
      */
 
     private $ville;
     /**
-     * @ORM\Column(name="codePostal", type="integer",nullable=false)
+     * @ORM\Column(name="codePostal", type="integer",nullable=true)
      */
 
     private $codePostal;
     /**
      * @var string
      *
-     * @ORM\Column(name="telephone", type="string", length=255, nullable=false)
+     * @ORM\Column(name="telephone", type="string", length=255, nullable=true)
      */
 
     private $telephone;
     /**
      * @var  \DateTime
-     * @ORM\Column(name="dateNaissance",type="date", nullable=false)
+     * @ORM\Column(name="dateNaissance",type="date", nullable=true)
      */
 
     private $dateNaissance;
     /**
      * @var string
      *
-     * @ORM\Column(name="lieuNaissance", type="string", length=255, nullable=false)
+     * @ORM\Column(name="lieuNaissance", type="string", length=255, nullable=true)
      */
 
     private $lieuNaissance;
@@ -95,17 +95,20 @@ class Moniteur
      */
     private $agence;
     /**
-     * @ORM\OneToOne(targetEntity="User")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumn(name="user_id",referencedColumnName="id")
      */
     private $user;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      *
-     * @Assert\NotBlank(message="Please, upload the profile image.")
      * @Assert\File(mimeTypes={ "image/jpeg", "image/gif", "image/png" })
      */
     private $photo;
+    /**
+     * @Assert\File(maxSize="6000k")
+     */
+    public $file;
 
     /**
      * @return mixed

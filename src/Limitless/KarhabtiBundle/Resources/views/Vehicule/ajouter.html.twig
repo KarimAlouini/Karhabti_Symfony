@@ -5,47 +5,47 @@
 {% block body%}
     <!-- Header 1
  ============================================ -->
-        <div class="header-bottom-2 sticky">
-            <div class="container">
-                <div class="row">
-                    <!-- Header Bottom -->
-                    <div class="col-xs-12">
-                        <div class="navbar-header">
-                            <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
-                        </div>
-                        <div class="main-menu menu-style-6 mean-menu float-right">
-                            <nav>
-                                <ul>
-                                    <li><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
-                                    <li ><a href="{{ path('agence_index') }}">Profil</a></li>
-                                    <li ><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
-                                            <li><a href="{{ path('limitless_karhabti_responsable_reservationoffre') }}">Réservation Offre</a></li>
-                                            <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
-                                            <li><a href="{{ path('limitless_karhabti_responsable_reservationpack') }}">Réservation Pack</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="active"><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
-                                    <li ><a href="{{ path('moniteur_reponsable_index') }}">Moniteur</a></li>
-                                    <li ><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
-                                    <li ><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
-                                        <ul>
-                                            <li ><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
-                                            <li ><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
-                                        </ul>
-                                    </li>
-                                    <li ><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="mobile-menu"></div>
+    <div class="header-bottom-2 sticky">
+        <div class="container">
+            <div class="row">
+                <!-- Header Bottom -->
+                <div class="col-xs-12">
+                    <div class="navbar-header">
+                        <a href="{{ path('limitless_karhabti_homepage') }}" class="logo navbar-brand"><img id="logo_img" src="{{ asset('bundles/limitlesskarhabti/img/logo/color-1.png')}}" alt="logo" /></a>
                     </div>
+                    <div class="main-menu menu-style-6 mean-menu float-right">
+                        <nav>
+                            <ul>
+                                <li><a href="{{ path('limitless_karhabti_homepage') }}">home</a></li>
+                                <li ><a href="{{ path('agence_index') }}">Profil</a></li>
+                                <li ><a href="#">Offre/Pack<i class="icofont icofont-simple-down"></i></a>
+                                    <ul>
+                                        <li><a href="{{ path('responsable_offre_index') }}">Offre</a></li>
+                                        <li><a href="{{ path('limitless_karhabti_responsable_reservationoffre') }}">Réservation Offre</a></li>
+                                        <li><a href="{{ path('responsable_pack_index') }}">Pack</a></li>
+                                        <li><a href="{{ path('limitless_karhabti_responsable_reservationpack') }}">Réservation Pack</a></li>
+                                    </ul>
+                                </li>
+                                <li class="active"><a href="{{ path('responsable_vehicule_index') }}">Vehicule</a></li>
+                                <li ><a href="{{ path('moniteur_reponsable_index') }}">Moniteur</a></li>
+                                <li ><a href="{{ path('reponsable_tache_index') }}">Planning</a></li>
+                                <li ><a href="#">Cour/Examen<i class="icofont icofont-simple-down"></i></a>
+                                    <ul>
+                                        <li ><a href="{{ path('responsable_cours_List') }}">Cour</a></li>
+                                        <li ><a href="{{ path('responsable_examen_Liste') }}">Examen</a></li>
+                                    </ul>
+                                </li>
+                                <li ><a href="{{ path('limitless_karhabti_mail') }}">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu"></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Banner -->
+    </div>
+<!-- Banner -->
     <div class="page-banner-area overlay overlay-black overlay-70">
         <div class="container">
             <div class="row">
@@ -94,52 +94,52 @@
                     {{ form_start(form) }}
 
 
-                        <div class="input-2">
-                            <div class="input">
-                                <h3 class="panel-title">Matricule</h3>
-                                {{ form_widget(form.matricule) }}
-                            </div>
-                            <div class="input">
-                                <h3 class="panel-title">Type Vehicule</h3>
-                                {{ form_widget(form.typeV) }}
-                            </div>
-                            <div class="input">
-                                <h3 class="panel-title">Marque</h3>
-                                {{ form_widget(form.marque) }}
-                            </div>
-                            <div class="input">
-                                <h3 class="panel-title">Modele</h3>
-                                {{ form_widget(form.modele) }}
-                            </div>
-                            <div class="input">
-                                <h3 class="panel-title">Image</h3>
-                                {{ form_widget(form.file) }}
-                            </div>
-                            <div class="input">
-                                <h3 class="panel-title">Date expiration assurance</h3>
-                                <label style="color: red;">{{ err1 }}</label>
-                                {{ form_widget(form.date_expiration_assurance) }}
-                            </div>
-                            <div class="input">
-                                <h3 class="panel-title">Date expiration vignette</h3>
-                                <label style="color: red;">{{ err2 }}</label>
-                                {{ form_widget(form.date_expiration_vignette) }}
-                            </div>
-                            <div class="input">
-                                <h3 class="panel-title">Date expiration visite</h3>
-                                <label style="color: red;">{{ err3 }}</label>
-                                {{ form_widget(form.date_expiration_visite) }}
-                            </div>
-
-
-
+                    <div class="input-2">
+                        <div class="input">
+                            <h3 class="panel-title">Matricule</h3>
+                            {{ form_widget(form.matricule) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Type Vehicule</h3>
+                            {{ form_widget(form.typeV) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Marque</h3>
+                            {{ form_widget(form.marque) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Modele</h3>
+                            {{ form_widget(form.modele) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Image</h3>
+                            {{ form_widget(form.file) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Date expiration assurance</h3>
+                            <label style="color: red;">{{ err1 }}</label>
+                            {{ form_widget(form.date_expiration_assurance) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Date expiration vignette</h3>
+                            <label style="color: red;">{{ err2 }}</label>
+                            {{ form_widget(form.date_expiration_vignette) }}
+                        </div>
+                        <div class="input">
+                            <h3 class="panel-title">Date expiration visite</h3>
+                            <label style="color: red;">{{ err3 }}</label>
+                            {{ form_widget(form.date_expiration_visite) }}
                         </div>
 
 
 
-                        <div style="text-align: right" class="input input-submit">
-                            <input type="submit" value="Valider" />
-                        </div>
+                    </div>
+
+
+
+                    <div style="text-align: right" class="input input-submit">
+                        <input type="submit" value="Valider" />
+                    </div>
 
 
                     {{ form_end(form) }}
@@ -151,5 +151,5 @@
     </div>
     <script src="{{ asset('bundles/limitlesskarhabti/js/jquery-1.9.1.min.js')}}"></script>
     <script src="{{ asset('bundles/limitlesskarhabti/js/marque.js')}}"></script>
-    <!-- Ajax Mail JS --!>
-    {% endblock %}
+<!-- Ajax Mail JS --!>
+{% endblock %}

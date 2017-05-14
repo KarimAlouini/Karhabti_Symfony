@@ -42,6 +42,24 @@ class DefaultController extends Controller
         ));
 
     }
+    public function indexMoniteurAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $profil=  $em->getRepository('LimitlessKarhabtiBundle:Client')->findOneBy(array('user' => $user));
+        $moniteur=  $em->getRepository('LimitlessKarhabtiBundle:Moniteur')->findAll();
+        $users=  $em->getRepository('LimitlessKarhabtiBundle:User')->findAll();
+        $agences=  $em->getRepository('LimitlessKarhabtiBundle:Agence')->findBy(array('user' => $user));
+        $cours=$em->getRepository('LimitlessKarhabtiBundle:Cours')->findAll();
+        return $this->render('LimitlessKarhabtiBundle::layoutMoniteur.html.twig',array(
+            'users' => $users,
+            'cours' => $cours,
+            'moniteur' => $moniteur,
+            'agences' => $agences,
+            'user' => $profil,
+        ));
+
+    }
     public function testAction()
     {
         return $this->render('LimitlessKarhabtiBundle:Default:test.html.twig');

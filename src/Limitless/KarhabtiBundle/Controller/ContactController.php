@@ -60,6 +60,29 @@ class ContactController extends Controller
         }
         return $this->render('@LimitlessKarhabti/Contact/form.html.twig',array('form'=>$form->createView()));
     }
+    public function mailMoniteurAction(Request $request)
+    {
+        $mail = new Mail();
+        $client = new Client();
+        $form=$this->createForm(MailType::class,$mail);
+        $form->handleRequest($request);
+        if($form->isValid())
+        {
+            $message= \Swift_Message::newInstance()
+                ->setSubject('Contact')
+                ->setFrom($mail->getEmail())
+                ->setTo('karhabti210@gmail.com')
+                ->setBody(
+                    $this->renderView(
+                        '@LimitlessKarhabti/Contact/email.html.twig',
+                        array('text'=> $mail->getText(),'mail'=>$mail->getEmail(),'Username'=>$mail->getNom())
+                    ), 'text/html'
+                );
+            $this->get('mailer')->send($message);
+            return $this->redirect($this->generateUrl('limitless_karhabti_accuse_mail'));
+        }
+        return $this->render('@LimitlessKarhabti/Contact/form.html.twig',array('form'=>$form->createView()));
+    }
 
     public function successAction()
     {
